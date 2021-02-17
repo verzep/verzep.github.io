@@ -3,10 +3,15 @@ layout: post
 title: You're up and running!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+## Equations
 
-$$ f(x) = x^3 $$
+- Linear equation: $$ y = \alpha x + \beta $$
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+- Quadratic equation: $$ax^2 + bx + c = 0$$. <br>
+When $$a \ne 0$$, there are two solutions to the above equation:
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+- Integral:
+\begin{equation}\label{label}
+\frac{\mathrm{d}}{\mathrm{d} x} \int_{a}^{x} f(s)ds = f(x)
+\end{equation}
