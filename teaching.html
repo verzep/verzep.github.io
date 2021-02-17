@@ -1,0 +1,18 @@
+---
+layout: page
+title: Teaching
+permalink: /teaching/
+---
+
+<h2>Teaching Assistant</h2>
+I've been a TA in various courses, spanning different fields.
+<br>
+<br>
+{% for course in site.data.courses %}
+<a href="{{course.link}}">{{course.title}}</a>
+@  
+{{ course.description }} ({{ course.period }})
+<br>
+{% endfor %}
+
+

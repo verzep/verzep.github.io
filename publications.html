@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Publications
+title: Publications and Talks
 permalink: /publications/
 ---
 
+<h2> Journals and Proceedings</h2>
 
 {% for pub in site.data.publications %}
     <a href="{{pub.link}}">{{pub.title}}.</a>
@@ -28,4 +29,15 @@ permalink: /publications/
     {% endif %}
     <br><br>
 {% endfor %}
+
+
+<h2> Conference Talks </h2>
+{%for conf in site.data.talks %}
+    <a href="{{conf.link}}">{{conf.conference}} ({{conf.year}})</a>
+    <br>
+    Talk: <i>{{ conf.title }}</i>
+    <br><br>
+{% endfor %}
+
+
 
