@@ -32,6 +32,17 @@
   doi: https://doi.org/10.1038/s41598-019-50158-4
   year: 2019
 
+- title: Hyper-spherical Reservoirs for Echo State Networks
+  authors: P. Verzelli, C. Alippi, L. Livi
+  venue: International Conference on Artificial Neural Networks (ICANN)
+  link: https://link.springer.com/chapter/10.1007/978-3-030-30493-5_9
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: https://doi.org/10.1007/978-3-030-30493-5_9
+  year: 2019
+
+
 - title: A study of dependency features of spike trains through copulas
   authors: P. Verzelli, L. Sacerdote
   venue: Biosystems
