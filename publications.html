@@ -1,0 +1,33 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+
+
+{% for pub in site.data.publications %}
+    <a href="{{pub.link}}">{{pub.title}}.</a>
+    <br>
+    <i>{{pub.authors}}.</i>
+    <br>
+    <i>{{pub.venue}} ({{pub.year}})</i>.
+    {% if pub.code or pub.code-tf or pub.code-pt or pub.doi %}
+    <br>
+    {% endif %}
+    {% if pub.code %} 
+    <a href="{{pub.code}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code</a>&nbsp;
+    {% endif %}
+    {% if pub.code-tf %} 
+    <a href="{{pub.code-tf}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code (TF/Keras)</a>&nbsp;
+    {% endif %}
+    {% if pub.code-pt %} 
+    <a href="{{pub.code-tf}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code (PyTorch)</a>&nbsp;
+    {% endif %}
+    {% if pub.doi %} 
+    <a href="{{pub.doi}}" style="border-bottom: none;"><i class="fas fa-book"></i> DOI</a>&nbsp;
+    {% endif %}
+    <br><br>
+{% endfor %}
+
+<hr>
+<span>* Equal contribution</span>

@@ -1,0 +1,56 @@
+
+
+- title: Learn to synchronize, synchronize to learn (preprint)
+  authors: P. Verzelli, C. Alippi, L. Livi
+  venue: 
+  link: https://arxiv.org/abs/2010.02860
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: 
+  year: 2021
+
+- title: Input-to-State Representation in linear reservoirs dynamics
+  authors: P. Verzelli, C. Alippi, L. Livi, P. Tino
+  venue: IEEE Transactions on Neural Networks and Learning Systems (TNNLS) [ACCEPTED]
+  link: https://arxiv.org/abs/2003.10585
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: 
+  year: 2021
+
+
+
+- title: Echo State Networks with Self-Normalizing Activations on the Hyper-Sphere
+  authors: P. Verzelli, C. Alippi, L. Livi
+  venue: Scientific Reports
+  link: https://www.nature.com/articles/s41598-019-50158-4
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: https://doi.org/10.1038/s41598-019-50158-4
+  year: 2019
+
+- title: A study of dependency features of spike trains through copulas
+  authors: P. Verzelli, L. Sacerdote
+  venue: Biosystems
+  link: https://www.sciencedirect.com/science/article/abs/pii/S0303264719300863
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: https://doi.org/10.1016/j.biosystems.2019.104014
+  year: 2019
+
+
+- title: A characterization of the edge of criticality in binary echo state networks
+  authors: P. Verzelli, L. Livi, C. Alippi
+  venue: International Workshop on Machine Learning for Signal Processing (MLSP)
+  link: https://ieeexplore.ieee.org/document/8516959
+  code: 
+  code-tf: 
+  code-pt: 
+  doi: 10.1109/MLSP.2018.8516959
+  year: 2018
+
+
