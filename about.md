@@ -11,4 +11,4 @@ My research focuses on the relationships between dynamical systems and machine l
 I mainly deal with the pointless aspects of important things.
 ### Contact me
 
-[namedotsurnameatgmaildotcom](mailto:namedotsurnameatgmaildotcom)
+[name.surnameatgmail.com](mailto:namedotsurnameatgmaildotcom)
