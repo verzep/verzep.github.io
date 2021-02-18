@@ -5,13 +5,14 @@ tags: dynamical_systems, maps
 category: dynamical_systems
 ---
 
+![]({{ site.url }}/images/2021-02-18/trajectory.jpg)
+
 In this first post I'll simply be discussing some basic aspects of my field of study, which lies at the intersection of Dynamical Systems (DS) and Machine Learning. The scope of this post (and presumably, the following ones) is two-fold: on one hand, it will be used to develop the notation that I'm going to use through the blog posts. 
 On the other hand, it'll be nice way do familiarize with markdown and the blog format, learning the technical aspects and improving scientific writing.
 
 I'm well aware of the enormous amount of material concerning this topic which can be found in books and on the web, but I'm willing to address practictioners of one of this two fields (ML or DS) which aims at deepening their knwoledge about the other one. It will also give me chance to give my ''vision'' of the concepts I'm discussing, in a way which does not usually fit in perr-reviewed papers.
 Being a forme phisics student, I will tend to neglect much of the mathematical details (where the devil lies) and to present all the material in a ''intuitive'' way, the focusing on the ''physical'' implications of the concepts I'm discussing. The interested reader may refer to specific (i.e., written by mathematicians) contents, which I will sometimes metion.
 
-![]({{ site.url }}/images/2021-02-18/trajectory.jpg)
 
 ## Discrete dynamical systems
 
