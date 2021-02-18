@@ -11,9 +11,11 @@ On the other hand, it'll be nice way do familiarize with markdown and the blog f
 I'm well aware of the enormous amount of material concerning this topic which can be found in books and on the web, but I'm willing to address practictioners of one of this two fields (ML or DS) which aims at deepening their kwoledge about the other one. It will also give me chance to give my ''vision'' of the concepts I'm discussing, in a way which does not usually fit in perr-reviewed papers.
 Being a forme phisics student, I will tend to neglect much of the mathematical details (where the devil lies) and to present all the material in a ''intuitive'' way, the focusing on the ''physical'' implications of the concepts I'm discussing. The interested reader may refer to specific (i.e., written by mathematicians) contents, which I will sometimes metion.
 
+![]({{ site.url }}/images/2021-02-18/trajectory.jpg)
+
 ## Discrete dynamical systems
 
-![]({{ site.url }}/images/2021-02-18/trajectory.jpg)
+
 
 Let's start by introducing the basic notions concerning dynamical systems.
 Dynamical systems can be divided in __discrete__-time and __continuos__-time: much of the theory will hold for both kind of systems, but there are also some differences which - sometimes - are insidious. 
