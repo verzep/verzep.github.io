@@ -120,7 +120,7 @@ Lots of confusion may raise from this, for example when people erroneusly relate
 If we want to introduce a discrete-time analogous of $$f$$ we would need to describe the system variation and write \eqref{eqn:discrete_system}:
 
 $$
-x_{t+1} - x{t} = M(x_t) - x{t}
+x_{t+1} - x_{t} = M(x_t) - x{t}
 $$
 
 which of course resemble the _difference quotient_ which is used to define the derivative. But since in the discrete case we don't have a concept of time length, we cannot define a the limit which lead us to the concept of time derivative for a map.
