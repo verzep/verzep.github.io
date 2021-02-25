@@ -6,7 +6,8 @@ category: dynamical_systems
 ---
 
 
->*If you do not expect the unexpected you will not find it, for it is not to be reached by search or trail.*
+>*If you do not expect the unexpected you will not find it, for it is not to be reached by search or trail.* 
+>
 >(Heraclitus)
 
 
