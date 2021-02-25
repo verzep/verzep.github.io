@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PROVA"
+title: "The Butterfly Effect"
 tags: dynamical_systems, lorenz, chaos
 category: dynamical_systems
 ---
