@@ -19,11 +19,11 @@ In this brief post, I will reproduce its experiment using a basic `numpy` simula
 In 1963, [Edward Lorenz](https://en.wikipedia.org/wiki/Edward_Norton_Lorenz) developed a simplified mathematical model for atmospheric convection. The model is a system of three ordinary differential equations which are now named after him: 
 
 $$
-\begin{aligned}
+\begin{align}
 \frac{dx}{dt} &= \sigma (y - x) \\
 \frac{dy}{dt} &= x (\rho - z) - y\\
 \frac{dz}{dt} &= x y - \beta z. \\
-\end{aligned}
+\end{align}
 $$
 
 
