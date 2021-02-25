@@ -7,8 +7,9 @@ category: dynamical_systems
 
 
 >*If you do not expect the unexpected you will not find it, for it is not to be reached by search or trail.* 
->
-> - Heraclitus
+> 
+> — Heraclitus
+
 
 
 The _butterfly effect_ is the popular concept that "the flap of a butterfly’s wings in Brazil can set off a tornado in Texas". 
