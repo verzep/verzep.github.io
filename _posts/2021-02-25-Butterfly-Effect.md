@@ -324,7 +324,7 @@ ax.set_title("Lorenz Attractor")
 ![png]({{ site.url }}/images/2021-02-25/output_21_1.png)
 
 
-Apparently, the two systems start from the same point but, after a while, the diverge.
+Apparently, the two systems start from the same point but, after a while, they diverge.
 To better see what's happening, we also plot the distance between the two trajectories:
 
 
