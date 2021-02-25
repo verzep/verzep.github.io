@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The butterfly effect: the birth of chaos theory"
+title: "PROVA"
 tags: dynamical_systems, lorenz, chaos
 category: dynamical_systems
 ---
