@@ -18,11 +18,13 @@ In this brief post, I will reproduce its experiment using a basic `numpy` simula
 
 In 1963, [Edward Lorenz](https://en.wikipedia.org/wiki/Edward_Norton_Lorenz) developed a simplified mathematical model for atmospheric convection. The model is a system of three ordinary differential equations which are now named after him: 
 
-$$\begin{align}
-\frac{\mathrm{d}x}{\mathrm{d}t} &= \sigma (y - x), \\
-\frac{\mathrm{d}y}{\mathrm{d}t} &= x (\rho - z) - y, \\
-\frac{\mathrm{d}z}{\mathrm{d}t} &= x y - \beta z.
-\end{align}$$
+$$
+\begin{aligned}
+\frac{dx}{dt} &= \sigma (y - x) \\
+\frac{dy}{dt} &= x (\rho - z) - y\\
+\frac{dz}{dt} &= x y - \beta z. \\
+\end{aligned}
+$$
 
 
 this sets of equation can not be solved analytically but Lorenz had an early electronic computer, called the Royal McBee, whose vacuum tubes could perform sixty ($60$!) multiplications a second. This seems ridicolous when compared to modern-day computers, but it is still way faster than a human. In fact Lorenz did not conduct this set of equations, but with a more complex one using $12$ variables. 
@@ -99,8 +101,9 @@ for i in range(0, T):
     #we only print 1 value every 1000
     if ((i+1)%1000 == 0):
         print (i+1, S[i+1])
-    
 ```
+
+The output will be:
 
     0 [1. 1. 1.]
     1000 [-9.109 -8.42  28.648]
@@ -239,9 +242,6 @@ L = 70000
 S_n = np.zeros([T+1,3])
 #and we inizialize the 70000-th with those values
 S_n[L] = np.array( [7.387,  3.210,  30.627] )
-
-
-
 ```
 
 Now we can run our second simulation:
@@ -254,6 +254,8 @@ for i in range(L, T): #this times the loop starts from L = 70000
     if ((i+1)%1000 == 0):
         print (i+1, S_n[i+1])
 ```
+
+and get
 
     70000 [ 7.387  3.21  30.627]
     71000 [ 5.606  8.729 16.767]
