@@ -7,7 +7,7 @@ category: dynamical_systems
 
 
 In this first post I'll simply be discussing some basic aspects of my field of study, which lies at the intersection of Dynamical Systems (DS) and Machine Learning. The scope of this post (and presumably, the following ones) is two-fold: on one hand, it will be used to develop the notation that I'm going to use through the blog posts. 
-On the other hand, it'll be nice way do familiarize with markdown and the blog format, learning the technical aspects and improving scientific writing.
+On the other hand, it'll be nice way to familiarize with markdown and the blog format, learning the technical aspects and improving scientific writing.
 
 ![]({{ site.url }}/images/2021-02-18/trajectory.jpg)
 
