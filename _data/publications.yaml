@@ -13,11 +13,11 @@
 - title: Input-to-State Representation in Linear Reservoirs Dynamics
   authors: P. Verzelli, C. Alippi, L. Livi, P. Tino
   venue: IEEE Transactions on Neural Networks and Learning Systems (TNNLS) [ACCEPTED]
-  link: https://arxiv.org/abs/2003.10585
+  link: https://ieeexplore.ieee.org/document/9366982
   code: 
   code-tf: 
   code-pt: 
-  doi: 
+  doi: 10.1109/TNNLS.2021.3059389
   year: 2021
 
 
