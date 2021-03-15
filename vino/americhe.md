@@ -3,6 +3,15 @@ layout: page
 title: Americhe
 ---
 
+# AMERICA DEL NORD
+--------------------------------
+# Canada
+
+Principalmente Ontario e Brtish Columbia (e Qebec). Ice Wine di qualita', il resto e' di pessima qualita'.
+
+**Ice Wine**: stile europeo sono quelli di piu' bassa qualita', particolari quelli a base di Vidal (incrocio tra Ugni Blanc e Seibel).
+-----------------------------------------------------------------------
+
 # USA
 
 Principalmente le due coste
@@ -91,11 +100,7 @@ Coltivano diverse varieta' europee: Chardonnay, G.Traminer, taglio bordolese, et
 
 Simile al veneto.
 
-# Canada
 
-Principalmente Ontario. Ice Wine di qualita', il resto e' di pessima qualita'. 
-
-**Ice Wine**: stile europeo sono quelli di piu' bassa qualita', particolari quelli a base di Vidal (incrocio tra Ugni Blanc e Seibel).
 
 ---------------------------------------
 # Sud America
