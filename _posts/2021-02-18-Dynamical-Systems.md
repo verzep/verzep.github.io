@@ -5,9 +5,6 @@ tags: dynamical_systems, maps
 category: dynamical_systems
 ---
 
-> *An intellect which at a certain moment would know all forces that set nature in motion, and all positions of all items of which nature is composed, if this intellect were also vast enough to submit these data to analysis, it would embrace in a single formula the movements of the greatest bodies of the universe and those of the tiniest atom; for such an intellect nothing would be uncertain and the future just like the past would be present before its eyes.*
-> 
-> — Pierre Simon Laplace
 
 In this first post I'll simply be discussing some basic aspects of my field of study, which lies at the intersection of Dynamical Systems (DS) and Machine Learning. The scope of this post (and presumably, the following ones) is two-fold: on one hand, it will be used to develop the notation that I'm going to use through the blog posts. 
 On the other hand, it'll be nice way to familiarize with markdown and the blog format, learning the technical aspects and improving scientific writing.
