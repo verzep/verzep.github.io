@@ -198,9 +198,6 @@ Now all we have is a model with random parameters. Let us see how it performs by
 #apply the predictor to all the points the the training sett
 predictions = vmap(partial(net_apply, net_params))(X_train)
 
-#compute the loss for each point
-losses = vmap(partial(loss, net_params))(X_train, Y_train) # per-input loss
-
 ```
 
 ![png]({{ site.url }}/images/2021-03-28/output_13_0.png)
