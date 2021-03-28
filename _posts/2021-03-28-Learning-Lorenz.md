@@ -156,11 +156,11 @@ For this purpose, we will use a neural network, which can be simply though of as
 y = F(x|\theta)
 \end{equation}
 
-Our goal is to find the parameters configuration $\theta^*$ fow which $F(x|\theta^*)$ is as ''close'' as possible to $G$, using only the data.
+Our goal is to find the parameters configuration $\theta^{*}$ for which $F(x|\theta^{*})$ is as ''close'' as possible to $G$, using only the data.
 But what what do we mean by ''close''?
 This question is harder than one may think, expecially when dealing with dynamical systems. 
 
-But first, let us describe what our approach will be: we define a _loss function_ $L(\hat{y}_i,{y}_i)$ which accounts for the difference between the predicted output $\hat{y}_i = F(x_i|\theta)$ and the expected output ${y}_i$( which is $G(x_i)$). 
+But first, let us describe what our approach will be: we define a _loss function_ $L(\hat{y}_i,{y}_i)$ which accounts for the difference between the predicted output $\hat{y}_{i} = F(x_{i}| \theta)$ and the expected output ${y}_i$( which is $G(x_i)$). 
 We then search for the parameter configuration which minimizes this loss: this is the _training_ of a neural network.
 
 
