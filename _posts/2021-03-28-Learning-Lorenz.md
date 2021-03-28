@@ -38,11 +38,13 @@ As an example we will use the [Lorenz system](https://verzep.github.io/Butterfly
 So first of all we need to generate the data. 
 The Lorenz System is described by a differential equation that reads:
 
+$$
 \begin{aligned}
 \frac{dx}{dt} &= \sigma (y - x) \\
 \frac{dy}{dt} &= x (\rho - z) - y\\
 \frac{dz}{dt} &= x y - \beta z. \\
 \end{aligned}
+$$
 
 but since we are not interested in the particular details of our system (we are not even supposed to know them!) we will simply refer to it as:
 
