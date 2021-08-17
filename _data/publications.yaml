@@ -1,13 +1,13 @@
 
 
-- title: "Learn to Synchronize, Synchronize to Learn  (to appear on 'Chaos')"
+- title: "Learn to Synchronize, Synchronize to Learn"
   authors: P. Verzelli, C. Alippi, L. Livi
-  venue: 
-  link: https://arxiv.org/abs/2010.02860
+  venue: Chaos: An Interdisciplinary Journal of Nonlinear Science 
+  link: https://aip.scitation.org/doi/full/10.1063/5.0056425
   code: 
   code-tf: 
   code-pt: 
-  doi: 
+  doi:  https://doi.org/10.1063/5.0056425
   year: 2021
 
 - title: Input-to-State Representation in Linear Reservoirs Dynamics
