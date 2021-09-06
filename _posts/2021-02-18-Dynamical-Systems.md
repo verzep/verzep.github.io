@@ -62,28 +62,28 @@ where the interpretation of this symbols is now (hopefully) clear.
 The study of of dynamical systems mainly deals with various aspects of the *trajectories* of a system, defined as the set of points $$\{M^t(x_0)\}$$ with $$t \in \mathbb{N}$$ (or a subset). As the name suggests, a trajectory is the set of the states in which the system ''goes'' when starting from $$x_0$$.
 
 
-## Continuos dynamical systems
+## Continuous dynamical systems
 
-Continuos dynamical systems are described in term of differential equations. If we use the dot-notation for derivatives ( $$\dot{x} := dx/dt$$), we express a *continuous* dynamical system as:
+Continuous dynamical systems are described in term of differential equations. If we use the dot-notation for derivatives ( $$\dot{x} := dx/dt$$), we express a *continuous* dynamical system as:
 
-\begin{equation}\label{eqn:continuos_system}
+\begin{equation}\label{eqn:continuous_system}
 	\dot{x}(t) = f(x(t))
 \end{equation}
 
-which I will usually write $$\dot{x} = f(x)$$. Moreover, for notational convenience, I will use $$x(t)$$ when referring function of the continuos time and use the pedices $$x_t$$ for discrete series.
+which I will usually write $$\dot{x} = f(x)$$. Moreover, for notational convenience, I will use $$x(t)$$ when referring function of the continuous time and use the pedices $$x_t$$ for discrete series.
 Note that here we are taking the derivative w.r.t *time* $$t$$, meaning that we need to have that notion underlying the framework. 
 
 Moreover, note that here we describing the system in terms of its variation in time (the derivative reflects this fact): it tells us how the system is changing, as opposed to \eqref{eqn:discrete_system} which _directly_ describe where the system will go.
 
-To recover this concept, we need the notion of _flux_ $$F_t$$:
+To recover this concept, we need the notion of _flow_ $$F_t$$:
 
-\begin{equation}\label{eqn:flux}
+\begin{equation}\label{eqn:flow}
 	x_t = F_t(x_0)
 \end{equation}
 
-i.e., the flux _evolves_ the initial point $$x_0$$ in time. A concept of a (continuos) trajectory can be now defined, analogous to the one introduced for the discrete case. 
+i.e., the flow _evolves_ the initial point $$x_0$$ in time. A concept of a (continuous) trajectory can be now defined, analogous to the one introduced for the discrete case. 
 
-If you have attended any basic calculus class you will surely know that the flux is simply given by the integral of $$f$$
+If you have attended any basic calculus class you will surely know that the flow is simply given by the integral of $$f$$
 
 $$
 F_t(x) = \int_0^t dt f(x(t))
@@ -95,8 +95,8 @@ Isn't it strange?
 
 ## Discretization (with an important remark)
 
-As I wrote earlier, discrete system can be think of as a discretization of continuos one. In particular imagine, as common in practical cases, that our system is varying continuosly in time, but we are only able to sample it every $$\Delta t$$. So what we have is a series of measure of the system $$x(0), x(\Delta t), x(2 \Delta t), x(3 \Delta t), \dots $$ and so on. 
-The relation which relates each observation to the following one can be given in terms of the flux \eqref{eqn:flux} as
+As I wrote earlier, discrete system can be thought of as a discretization of continuous one. In particular imagine, as common in practical cases, that our system is varying continuosly in time, but we are only able to sample it every $$\Delta t$$. So what we have is a series of measure of the system $$x(0), x(\Delta t), x(2 \Delta t), x(3 \Delta t), \dots $$ and so on. 
+The relation which relates each observation to the following one can be given in terms of the flow \eqref{eqn:flow} as
 
 $$
 x(k \Delta t + \Delta t  ) = F_{\Delta t}x(k \Delta t)
@@ -113,8 +113,8 @@ which is just \eqref{eqn:discrete_system} where $$F_{\Delta t}$$ plays the role 
 
 A **crucial remark** is now mandatory: 
 discrete systems are usually expressed using an equation \eqref{eqn:discrete_system}, 
-while continuos systems are described using \eqref{eqn:continuos_system}.
-This may lead to think of $$f$$ as the _continuos time analog_ to $$M$$: but this is crearly **incorrect**! As we just showed, it is the flux \eqref{eqn:flux} which plays the role of the map (i.e., describing where a state will be in the future as a function of the present) in the continuos-time case.
+while continuous systems are described using \eqref{eqn:continuous_system}.
+This may lead to think of $$f$$ as the _continuous time analog_ to $$M$$: but this is crearly **incorrect**! As we just showed, it is the flow \eqref{eqn:flow} which plays the role of the map (i.e., describing where a state will be in the future as a function of the present) in the continuous-time case.
 Lots of confusion may raise from this, for example when people erroneusly relate [logistic equation]( https://en.wikipedia.org/wiki/Logistic_function#Logistic_differential_equation) with the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
 
 If we want to introduce a discrete-time analogous of $$f$$ we would need to describe the system variation and write \eqref{eqn:discrete_system}:
