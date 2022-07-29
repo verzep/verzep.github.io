@@ -22,7 +22,7 @@ This faith in the predicting role of mathematical modelization was evocatively e
 
 Difficulties related to this view were already evident to Poincaré, who realized that some problems (like the infamous [three-body problem](https://en.wikipedia.org/wiki/Three-body_problem)) were _impossible_ to solve, in the sense of obtaining precise formulas for the motion of the objects under study.
 But  an even more radical form of uncertainty was discovered. 
-Leaving aside the stochastic nature of quantum phenomena, also fully-deterministic systems may display an inherent unpredictability, which goes under the name of \emph{deterministic chaos}. 
+Leaving aside the stochastic nature of quantum phenomena, also fully-deterministic systems may display an inherent unpredictability, which goes under the name of _deterministic chaos_. 
 The findings of Edward Lorenz are usually considered the beginning of the study of chaotic phenomena. 
 He talked about his discovery in an interview:
     
@@ -31,12 +31,14 @@ He talked about his discovery in an interview:
  
     
 The discovery that a 3-dimensional dynamical system displays _sensitive dependence to initial conditions_ undermined the belief about the predictability of systems, even when they are modeled to be deterministic and low-dimensional.
-Chaos theory has greatly developed since then due to theoretical studies and the numerical simulations made possible by the improvement of computational power.[^1] But yet, the unpredictability is still at the core of these systems.This means that even when having a perfect model of a phenomenon, an accurate prediction of its future state might be impossible.\\
+Chaos theory has greatly developed since then due to theoretical studies and the numerical simulations made possible by the improvement of computational power.[[^1]] 
+But yet, the unpredictability is still at the core of these systems. 
+This means that even when having a perfect model of a phenomenon, an accurate prediction of its future state might be impossible.
     
 Yet, the key-role of models in today science is far from being obsolete. 
  In fact, the discovery that even simple models can display complex behaviors led researchers to provide simple explanations to complicated phenomena. 
 Scientists in the past century have been able to describe behaviors which appeared heterogeneous and intricate simply by starting from few assumptions. Particle physics, neuroscience, fluidodynamics and, more recently, complex networks are just some notable examples of this trend.
-Basically any scientific field involves the creation of a (mathematical) model encoding the fundamental feature of a natural (or artificial) phenomenon. \\
+Basically any scientific field involves the creation of a (mathematical) model encoding the fundamental feature of a natural (or artificial) phenomenon. 
     
 But for many of the most challenging applications in science exact models are notably hard to produce due to the enormous number of variables involved and the complexity of their interactions.
 Yet, in recent years the incredible amount of available data has driven researchers to study these complex systems by using machine learning techniques. 
@@ -44,7 +46,7 @@ These techniques are valuable in settings where no model can be formulated expli
 This approach led to incredible achievements in fields like image classification, text and speech processing, and autonomous driving, just to name a few. 
 Machine learning uses the concept of  _model_ in a novel sense: instead of formulating a mathematical model that aims at encoding the fundamental feature of the object under study, the models used in machine learning are constructed to learn a specific behavior, which would mimic the one of the system of interest. 
 This might seem to be something alien to the scientific method: instead of understanding the rules governing reality, one simply tries to imitate its behavior.
-This issue generates some vibrant discussions among experts, not only from an epistemological point of view, but also regarding the usage of machine learning in real word tasks, where some guarantees might be needed.\\
+This issue generates some vibrant discussions among experts, not only from an epistemological point of view, but also regarding the usage of machine learning in real word tasks, where some guarantees might be needed.
 
 
 [^1]:Lorenz's electronic computer, the Royal McBee, was able to perform only sixty (60!) multiplications a second.}
