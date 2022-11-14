@@ -1,3 +1,9 @@
+- title: "Everything is a computer (if you are breve enough)"
+  conference: Emergent AI Retreat
+  link: https://emergent-ai.uni-mainz.de/
+  video:
+  year: 2022
+
 - title: On the Role of Synchronization in Reservoir Computing
   conference: Internation Joint Conference on Neural Networks (IJCNN)
   link: https://events.femto-st.fr/DLUNH/en
@@ -6,7 +12,7 @@
 
 
 - title: Learning Dynamical Systems Using Dynamical Systems
-  conference: Dynamics internal seminar (University of Exeter)
+  conference: Dynamics Internal Seminar (University of Exeter)
   link: http://blogs.exeter.ac.uk/csdc/activities/dynamics-internal-seminar/
   video:
   year: 2020
