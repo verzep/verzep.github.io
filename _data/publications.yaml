@@ -1,4 +1,14 @@
 
+- title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
+  authors: P. Verzelli, A. Nolds,  C. Sun, M. Heilemann, E. Schuman , T. Tchumatchenko
+  venue: "Scientific Reports"
+  link: https://www.nature.com/articles/s41598-022-27074-1
+  code:
+  code-tf:
+  code-pt:
+  doi: https://doi.org/10.1038/s41598-022-27074-1
+  year: 2022
+
 
 - title: "Learn to Synchronize, Synchronize to Learn"
   authors: P. Verzelli, C. Alippi, L. Livi
