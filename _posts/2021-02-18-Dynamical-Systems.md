@@ -13,8 +13,8 @@ On the other hand, it'll be nice way to familiarize with markdown and the blog f
 
 
 
-I'm well aware of the enormous amount of material concerning this topic which can be found in books and on the web, but I'm willing to address practictioners of one of this two fields (ML or DS) which aims at deepening their knwoledge about the other one. It will also give me chance to give my ''vision'' of the concepts I'm discussing, in a way which does not usually fit in perr-reviewed papers.
-Being a forme phisics student, I will tend to neglect much of the mathematical details (where the devil lies) and to present all the material in a ''intuitive'' way, the focusing on the ''physical'' implications of the concepts I'm discussing. The interested reader may refer to specific (i.e., written by mathematicians) contents, which I will sometimes metion.
+I'm well aware of the enormous amount of material concerning this topic which can be found in books and on the web, but I'm willing to address practitioners of one of this two fields (ML or DS) which aims at deepening their knwoledge about the other one. It will also give me chance to give my ''vision'' of the concepts I'm discussing, in a way which does not usually fit in perr-reviewed papers.
+Being a former physics student, I will tend to neglect much of the mathematical details (where the devil lies) and to present all the material in a ''intuitive'' way, the focusing on the ''physical'' implications of the concepts I'm discussing. The interested reader may refer to specific (i.e., written by mathematicians) contents, which I will sometimes metion.
 
 
 ## Discrete dynamical systems
@@ -22,11 +22,11 @@ Being a forme phisics student, I will tend to neglect much of the mathematical d
 
 
 Let's start by introducing the basic notions concerning dynamical systems.
-Dynamical systems can be divided in __discrete__-time and __continuos__-time: much of the theory will hold for both kind of systems, but there are also some differences which - sometimes - are insidious. 
-From now on, when referring to discrete (continuos) systems I will always mean that the **time** is discrete (continuos): the *space* (i.e., where this systems ''live'') can take various forms and I will discuss them when (and if) needed. Most of the time, it will just be a continuos space, subset of 
+Dynamical systems can be divided in __discrete__-time and __continuous__-time: much of the theory will hold for both kind of systems, but there are also some differences which - sometimes - are insidious. 
+From now on, when referring to discrete (continuous) systems I will always mean that the **time** is discrete (continuous): the *space* (i.e., where this systems ''live'') can take various forms and I will discuss them when (and if) needed. Most of the time, it will just be a continuos space, subset of 
 $$ \mathbb{R}^n $$.
 
-As a former physicist, I tend to consider discrete systems as *discretized* version of continuos one: in fact, when I was first introduced to the topic, the professor started with the continuos case. 
+As a former physicist, I tend to consider discrete systems as *discretized* version of continuos one: in fact, when I was first introduced to the topic, the professor started with the continuous case. 
 Yet, I believe that it is easier to present the discrete case first, as it allows one to introduce fewer concepts when discussing the main ideas.
 
 In particular, we only need a *space* $$X$$ and a *map* $$M: X \to X$$. Notably, we __do not__ need an explicit definition of what *time* is).
@@ -95,7 +95,7 @@ Isn't it strange?
 
 ## Discretization (with an important remark)
 
-As I wrote earlier, discrete system can be thought of as a discretization of continuous one. In particular imagine, as common in practical cases, that our system is varying continuosly in time, but we are only able to sample it every $$\Delta t$$. So what we have is a series of measure of the system $$x(0), x(\Delta t), x(2 \Delta t), x(3 \Delta t), \dots $$ and so on. 
+As I wrote earlier, discrete system can be thought of as a discretization of continuous one. In particular imagine, as common in practical cases, that our system is varying continuously in time, but we are only able to sample it every $$\Delta t$$. So what we have is a series of measure of the system $$x(0), x(\Delta t), x(2 \Delta t), x(3 \Delta t), \dots $$ and so on. 
 The relation which relates each observation to the following one can be given in terms of the flow \eqref{eqn:flow} as
 
 $$
@@ -115,7 +115,7 @@ A **crucial remark** is now mandatory:
 discrete systems are usually expressed using an equation \eqref{eqn:discrete_system}, 
 while continuous systems are described using \eqref{eqn:continuous_system}.
 This may lead to think of $$f$$ as the _continuous time analog_ to $$M$$: but this is crearly **incorrect**! As we just showed, it is the flow \eqref{eqn:flow} which plays the role of the map (i.e., describing where a state will be in the future as a function of the present) in the continuous-time case.
-Lots of confusion may raise from this, for example when people erroneusly relate [logistic equation]( https://en.wikipedia.org/wiki/Logistic_function#Logistic_differential_equation) with the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
+Lots of confusion may raise from this, for example when people erroneously relate [logistic equation]( https://en.wikipedia.org/wiki/Logistic_function#Logistic_differential_equation) with the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
 
 If we want to introduce a discrete-time analogous of $$f$$ we would need to describe the system variation and write \eqref{eqn:discrete_system}:
 
