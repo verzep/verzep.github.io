@@ -137,6 +137,7 @@ The solution to this equation was known in Einstein's time, so he simply wrote i
 ----------------------------------------
 
 [^1]: This erroneously led him to conclude that the motion was related to the fact that pollen was "alive".
+
 [^2]: Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
-tein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
+
 [^3]: The careful reader might have noticed that this is due to the fact that we only took the linear term when performing the Taylor's expansion in time (Eq. \ref{eqn:taylor_time}). By including the second order term, one would have obtained the [Telegraph Equation](https://en.wikipedia.org/wiki/Telegrapher%27s_equations): $$ \partial_t p + \frac{\tau}{2}\partial_t^2 p = D \partial_x^2 p $$.
