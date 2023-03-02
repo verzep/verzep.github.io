@@ -115,7 +115,7 @@ In which $\langle \Delta^2 \rangle$ is the variance of the displacement.
 Since we have $p(x,t)$ on both sides, they will simplify and the Kramers-Moyal expansion for Eq.\ref{eqn:CKE} reduces to:
 
 \begin{equation}\label{eqn:heat}
-    \frac{\partial p}{\partial t} = \frac{\partial^2 p}{\partial x^2}
+    \frac{\partial p}{\partial t} = D\frac{\partial^2 p}{\partial x^2}
 \end{equation}
 
 in which we have defined the _diffusion coefficient_:
