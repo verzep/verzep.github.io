@@ -7,7 +7,7 @@ category: stochastic_processes
 
 The study of Brownian motion laid the ground for developing the field of stochastic processes. 
 Einstein was the first to shed light on this phenomenon, but I think this work's importance is usually underestimated. 
-In this series of 3 blog posts, I want to argue that this work is conceptually and practically even more groundbreaking the special relativity. 
+In this series of 3 blog posts, I want to argue that this work is conceptually and practically even more groundbreaking than special relativity. 
 In this first part, we will show how Einstein drew the analogy between the Brownian motion and the (seemingly unrelated) heat diffusion.
 
 
@@ -78,9 +78,9 @@ Plugging \eqref{eqn:taylor_time} and \eqref{eqn:taylor_space} into \eqref{eqn:CK
     p(x,t) + \tau \frac{\partial p}{\partial t} &= 
     \int d\Delta ~(p(x,t) - \Delta \frac{\partial p}{\partial x} + \frac{1}{2} \Delta^2 \frac{\partial^2 p}{\partial x^2}) \phi(\Delta,\tau) \\
     & = 
-    \int d\Delta ~p(x,t)\phi(\Delta,\tau) 
-    - \int d\Delta \Delta \frac{\partial p}{\partial x}\phi(\Delta,\tau) 
-    + \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
+    \int d\Delta ~p(x,t)\phi(\Delta,\tau) \\
+    &- \int d\Delta \Delta \frac{\partial p}{\partial x}\phi(\Delta,\tau)\\ 
+    &+ \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
 \end{split}
 \end{equation}
 
