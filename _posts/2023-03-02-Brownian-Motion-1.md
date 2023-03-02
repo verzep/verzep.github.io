@@ -23,8 +23,8 @@ But how is the movement of particles suspended in a liquid connected to the stru
 
 ## The Brownian motion
 
-In 1828, the botanist Robert Brown observed that pollen particles suspended in water would move following apparently random trajectories.[1]
-Einstein gave the theoretical explanation for this strange behavior many years later [2]. 
+In 1828, the botanist Robert Brown observed that pollen particles suspended in water would move following apparently random trajectories.[^1]
+Einstein gave the theoretical explanation for this strange behavior many years later [^2]. 
 In his reasoning, Einstein hypothesizes that the erratic movement is due to the collision of the suspended particle with the fluid molecules.
 These collisions are too high in number to even try to predict, but we can describe them in _probabilistic_ terms. 
 In turn, this will lead to a probabilistic description of our particle position. 
@@ -129,7 +129,7 @@ Its dimensions are a squared length over time.
 This might be somehow puzzling, since it means that it depends on the ratio between the _square_ of the space length we are considering and the time length. 
 This will be fundamental later.
 
-Eq.\ref{eqn:heat} is known as  the _heat equation_, the diffusion equation, or the Fourier equation[3]. 
+Eq.\ref{eqn:heat} is known as  the _heat equation_, the diffusion equation, or the Fourier equation[^3]. 
 So, what we have managed to do so far is to show that the problem of a particle suspended in a fluid is analogous to the problem of heat propagation. By solving the heat equation, we can then infer some properties of the Brownian motion.
 
 The solution to this equation was known in Einstein's time, so he simply wrote it down in his paper. But I think it is pretty interesting to solve it ourselves: so my next blog post will be devoted to this problem.
@@ -137,7 +137,7 @@ The solution to this equation was known in Einstein's time, so he simply wrote i
 
 ----------------------------------------
 
-[1] This erroneously led him to conclude that the motion was related to the fact that pollen was "alive".
-[2] Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
+[^1]: This erroneously led him to conclude that the motion was related to the fact that pollen was "alive".
+[^2]: Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
 tein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
-[3] The careful reader might have noticed that this is due to the fact that we only took the linear term when performing the Taylor's expansion in time (Eq. \ref{eqn:taylor_time}). By including the second order term, one would have obtained the [Telegraph Equation](https://en.wikipedia.org/wiki/Telegrapher%27s_equations): $$ \partial_t p + \frac{\tau}{2}\partial_t^2 p = D \partial_x^2 p $$.
+[^3]: The careful reader might have noticed that this is due to the fact that we only took the linear term when performing the Taylor's expansion in time (Eq. \ref{eqn:taylor_time}). By including the second order term, one would have obtained the [Telegraph Equation](https://en.wikipedia.org/wiki/Telegrapher%27s_equations): $$ \partial_t p + \frac{\tau}{2}\partial_t^2 p = D \partial_x^2 p $$.

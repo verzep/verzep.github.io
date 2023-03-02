@@ -48,6 +48,6 @@ Machine learning uses the concept of  _model_ in a novel sense: instead of formu
 This might seem to be something alien to the scientific method: instead of understanding the rules governing reality, one simply tries to imitate its behavior.
 This issue generates some vibrant discussions among experts, not only from an epistemological point of view, but also regarding the usage of machine learning in real word tasks, where some guarantees might be needed.
 
-
+----------------------------------------------------------
 [^1]:Lorenz's electronic computer, the Royal McBee, was able to perform only sixty (60!) multiplications a second.}
     
