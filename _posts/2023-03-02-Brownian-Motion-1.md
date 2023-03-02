@@ -112,7 +112,7 @@ In which $\langle \Delta^2 \rangle$ is the variance of the displacement.
 
 ## The Heat Equation
 
-Since we have $p(x,t)$ on both sides, they will simplify and the Kramers-Moyal expansion for Eq.\eqref{CKE} reduces to:
+Since we have $p(x,t)$ on both sides, they will simplify and the Kramers-Moyal expansion for Eq.\ref{eqn:CKE} reduces to:
 
 \begin{equation}\label{eqn:heat}
     \frac{\partial p}{\partial t} = \frac{\partial^2 p}{\partial x^2}
