@@ -97,8 +97,8 @@ as $p$ does not depend on $\Delta$ and we assumed that $\int d\Delta ~\phi(\Delt
     =
     -  \frac{\partial p}{\partial x} \int d\Delta \Delta\phi(\Delta,\tau) = 0
 \end{equation}
-as we assumed that $\phi$ is symmetric, implying that $\int d\Delta \Delta\phi(\Delta,\tau)=0$.
-Note that $d\Delta \Delta\phi(\Delta,\tau) =: \langle\Delta \rangle$ is the expected value (the mean) of the displacement.
+as we assumed that $\phi$ is symmetric, implying that $\int d\Delta \Delta\phi(\Delta,\tau)=0$.\\
+Note that $\int d\Delta \Delta\phi(\Delta,\tau) =: \langle \Delta \rangle$ is the expected value (the mean) of the displacement.
 
 \begin{equation}
 \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
