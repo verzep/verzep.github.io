@@ -73,15 +73,16 @@ This approach is called the _Kramers-Moyal Expansion_.
 Plugging \eqref{eqn:taylor_time} and \eqref{eqn:taylor_space} into \eqref{eqn:CKE} leads to:
 
 
-\begin{align}\label{eqn:KME}
+\begin{equation}\label{eqn:KME}
+\begin{aligned}
     p(x,t) + \tau \frac{\partial p}{\partial t} &= 
     \int d\Delta ~(p(x,t) - \Delta \frac{\partial p}{\partial x} + \frac{1}{2} \Delta^2 \frac{\partial^2 p}{\partial x^2}) \phi(\Delta,\tau) \\
     & = 
     \int d\Delta ~p(x,t)\phi(\Delta,\tau) \\
     &- \int d\Delta \Delta \frac{\partial p}{\partial x}\phi(\Delta,\tau)\\ 
     &+ \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
-\end{align}
-
+\end{aligned}
+\end{equation}
 Let's now examine the right-hand-side term by term:
 
 \begin{equation}
