@@ -75,12 +75,11 @@ Plugging \eqref{eqn:taylor_time} and \eqref{eqn:taylor_space} into \eqref{eqn:CK
 
 $$
 \begin{aligned}
-    p(x,t) + \tau \frac{\partial p}{\partial t} &= 
-    \int d\Delta ~(p(x,t) - \Delta \frac{\partial p}{\partial x} + \frac{1}{2} \Delta^2 \frac{\partial^2 p}{\partial x^2}) \phi(\Delta,\tau) \\
-    & = 
-    \int d\Delta ~p(x,t)\phi(\Delta,\tau) \\
-    &- \int d\Delta \Delta \frac{\partial p}{\partial x}\phi(\Delta,\tau)\\ 
-    &+ \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
+p(x,t) + \tau \frac{\partial p}{\partial t} 
+&=\int d\Delta ~(p(x,t) - \Delta \frac{\partial p}{\partial x} + \frac{1}{2} \Delta^2 \frac{\partial^2 p}{\partial x^2}) \phi(\Delta,\tau) \\
+&=\int d\Delta ~p(x,t)\phi(\Delta,\tau) \\
+&- \int d\Delta \Delta \frac{\partial p}{\partial x}\phi(\Delta,\tau)\\ 
+&+ \frac{1}{2} \int d\Delta \Delta^2 \frac{\partial^2 p}{\partial x^2} \phi(\Delta,\tau)
 \end{aligned}
 $$
 
