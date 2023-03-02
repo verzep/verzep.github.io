@@ -32,13 +32,13 @@ In turn, this will lead to a probabilistic description of our particle position.
 In the one-dimensional case, let us define $p(x,t)$ as the _probability_ (density) of the particle being in the position $x$ at time $t$.
 We are looking for the probability $p(x, t + \tau)$, i.e., the probability distribution after a time $\tau$ has elapsed.
 
-Let us define the *displacement* as $\Delta(t-s) := x(t) - x(s) = x(s+\tau) - x(s) = \Delta(\tau)$ .
+Let us define the *displacement* as $\Delta(t-s) := x(t) - x(s) = x(s+\tau) - x(s) = \Delta(\tau)$.
 As we mentioned, it would be impossible to describe it deterministically, so we are again interested in its _probability distribution_ $\phi(\Delta, \tau)$, which is the probability of having a displacement $\Delta$ given that a time $\tau$ has elapsed.
 Some assumptions can be made about this distribution:
 
-* The displacement probability $\phi(\Delta, \tau)$ does not depend on the particle position $x$.
-* As a probability distribution, it must be normalized $\int d\Delta \phi(\Delta,\tau)=1$. Physically, this is simply the requirement that the particle must go somewhere.
-* The probability of negative and positive displacement are equal (_isotropy_). This means that the $\phi$ must be an even function $(\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
+* The displacement probability $\phi(\Delta, \tau)$ does **not** depend on the particle position $x$.
+* As a probability distribution, it must be _normalized_ $\int d\Delta \phi(\Delta,\tau)=1$. Physically, this is simply the requirement that the particle must go somewhere.
+* The probability of negative and positive displacement are equal (_isotropy_). This means that the $\phi$ must be an _even_ function $(\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
 
 
 The probability of finding the particle at $x$ at time $t+\tau$ can be computed using the probability that it was in $x-\Delta$ at time $t$ multiplied by the probability that a displacement $\Delta$ occurred and integrating ("summing") over all the possible displacements.
