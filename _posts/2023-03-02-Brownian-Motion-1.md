@@ -38,7 +38,7 @@ Some assumptions can be made about this distribution:
 
 * The displacement probability $\phi(\Delta, \tau)$ does **not** depend on the particle position $x$.
 * As a probability distribution, it must be _normalized_ $\int d\Delta \phi(\Delta,\tau)=1$. Physically, this is simply the requirement that the particle must go somewhere.
-* The probability of negative and positive displacement are equal (_isotropy_). This means that the $\phi$ must be an _even_ function $(\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
+* The probability of negative and positive displacement are equal (_isotropy_). This means that the $\phi$ must be an _even_ function, $\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
 
 
 The probability of finding the particle at $x$ at time $t+\tau$ can be computed using the probability that it was in $x-\Delta$ at time $t$ multiplied by the probability that a displacement $\Delta$ occurred and integrating ("summing") over all the possible displacements.
