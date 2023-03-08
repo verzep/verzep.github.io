@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Brownian Motion - Part 1
-tags: stochastic_processes
+tags: stochastic_processes, fourier transform
 category: stochastic_processes
 ---
 
