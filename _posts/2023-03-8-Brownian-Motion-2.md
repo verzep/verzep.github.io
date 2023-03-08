@@ -179,7 +179,7 @@ we can plug it into our solution \eqref{eqn:solution_FT_noIC} to obtain:
 
 Which is the solution of the Heat equation \eqref{eqn:heat} in the Fourier space.
 
-#### Interlude: Initial Condition
+#### Step 3: Anti-Transform
 
 To obtain the solution in the physical space (sometimes called _the propagator_), we simply need to plug anti-transform $\hat{p}$, i.e., to insert \eqref{eqn:solution_FT} into \eqref{eqn:AFT}.
 
