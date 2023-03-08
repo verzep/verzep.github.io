@@ -230,7 +230,7 @@ Finally, by remembering that $\int dy~e^{-\alpha y^2}=\sqrt{\frac{\pi}{\alpha}} 
       p(x,t | x_0, 0) = \frac{1}{\sqrt{4\pi D t}}e^{-\frac{(x-x_0)^2}{4Dt}}
 \end{equation}
 
-This means the _propagator_ $p(x,t | x_0, 0)$ is a _Gaussian distribution_ with mean $x_0$ and variance $\sigma^2 = 2Dt$.
+This means *the propagator*  $p(x,t| x_0, 0)$ is a _Gaussian distribution_ with mean $x_0$ and variance $\sigma^2 = 2Dt$.
 
 
 ### The propagator
