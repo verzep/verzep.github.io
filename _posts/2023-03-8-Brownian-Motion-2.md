@@ -80,6 +80,7 @@ This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fo
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
 ### Solution
+
 #### Step 1: using the Fourier Transform
 
 Now that we know the $p$ can be expressed in terms of the Fourier coefficients via \eqref{eqn:AFT}, we can try to plug this representation into the Heat equation \eqref{eqn:heat}. This leads to the following equation:
