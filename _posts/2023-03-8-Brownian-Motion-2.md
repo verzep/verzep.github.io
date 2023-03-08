@@ -264,7 +264,7 @@ As we will see in the next blog post, he used this result to prove the existence
 -------------------------------------------------------
 
 [^1]: as $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
-The reason for choosing $x$ will be clear later.
+    The reason for choosing $x$ will be clear later.
 
 [^2]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
 
