@@ -55,13 +55,13 @@ The [Fourier inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_
 I like to think of the Fourier transform as a sort of 'improper' change of basis. 
 In fact, when we express a vector $\mathbf{v}$ given a set of basis vectors $\{ \mathbf{\phi}_i\}$ we write
 
-\begin{equation}
+\begin{equation} 
 \mathbf{v} = \sum_j c_j \mathbf{\phi}_i
 \end{equation}
 
 or, using coordinates:
 
-\begin{equation}
+\begin{equation} \label{eqn:v_e}
 v_i = \sum_k c_k \phi_{ik}
 \end{equation}
 
@@ -80,11 +80,11 @@ This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fo
 Finally, if instead of using a discrete set of basis-function  we use a continuous one we need to parametrize it using a continuous variable instead of discrete one ($\phi_k(x) \rightarrow \phi(k,x)$) .
 Moreover, the summation will turn into an integral ($\sum_k \rightarrow \int dk$).
 
-\begin{equation}
+\begin{equation} \label{eqn:f_e}
 f(x) = \int dk ~ c(k) \phi(k,x)
 \end{equation}
 
-
+Note the similarity between \eqref{eqn:f_e) and \eqref{eqn:v_e).
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
 ### Solution
