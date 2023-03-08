@@ -62,20 +62,28 @@ $$
 or, using coordinates:
 
 $$
-v_i = \sum_j c_j e_{ij}
+v_i = \sum_k c_k e_{ik}
 $$
 
-in which ${c_j}$ are the coefficients. 
+in which ${c_k}$ are the coefficients. 
 This means that, given the basis, knowing the set of coefficients is the same as knowing the vector (which is in fact expressed in this basis by the coefficients themselves).
 
-The same principle can hold for a function $f(x)$ that we can express as a combination of basis-function ${\phi_j(x)}$.
+The same principle can hold for a function $f(x)$ that we can express as a combination of basis-function ${\phi_k(x)}$.
 
 $$
-f(x) = \sum_j c_j \phi_j(x)
+f(x) = \sum_k c_k \phi_k(x)
 $$
 
 and, just like before, for a given set of basis functions, knowing the coefficients gives us all the information we need to reconstruct the original function.
 This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fourier_series) (a discrete version of the Fourier Transform). 
+
+Finally, if instead of using a discrete set of basis we use a continuous one we need to parametrize it using a continuous variable instead of discrete one ($\phi_k(x) \rightarrow \phi(k,x)$) .
+Moreover, the summation will turn into an integral ($\sum_k \rightarrow \int dk$).
+
+$$
+f(x) = \int dk ~ c(k) \phi(k,x)
+$$
+
 
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
