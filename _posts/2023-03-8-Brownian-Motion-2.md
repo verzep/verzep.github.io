@@ -42,7 +42,7 @@ Roughly speaking, we start by saying that any 'good' function admits a _Fourier 
     \hat{p}(k,t) := \frac{1}{2\pi} \int dx~ e^{-ikx} p(x,t)   
 \end{equation}
 
-Note that here we are performing the Fourier transform _in space_ [1^] so that $\hat{p}(k,t)$ does not depend on $x$ anymore, but only on time $t$ and on the wave number $k$ (i.e., the spatial frequency).
+Note that here we are performing the Fourier transform _in space_ [[^1]] so that $\hat{p}(k,t)$ does not depend on $x$ anymore, but only on time $t$ and on the wave number $k$ (i.e., the spatial frequency).
 
 The [Fourier inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_theorem) allows us to write our original function using its Fourier Transform \eqref{eqn:FT}:
 
@@ -110,7 +110,7 @@ and we can easily perform the derivative:
     \int dk~ (-Dk~^2)e^{ikx}\hat{p}(k,t)
 \end{equation}
 
-in which the minus sign is because $i^2 = -1$.[2^]
+in which the minus sign is because $i^2 = -1$.[[^2]]
 
 
 #### Step 2: Decoupling
@@ -193,7 +193,7 @@ $$
 e^{ikx} e^{-ikx_0}e^{- Dk^2t} = e^{ik(x-x_0)- k^2Dt}
 $$
 
-and then, by completing the square [3^], we obtain
+and then, by completing the square [[^3]], we obtain
 
 $$
     e^{ik(x-x_0)- k^2Dt} 
@@ -256,10 +256,10 @@ As we will see in the next blog post, he used this result to prove the existence
 
 -------------------------------------------------------
 
-[1^]: as $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
+[^1]: as $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
 The reason for choosing $x$ will be clear later.
-[2^]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
-[3^]: The method of completing the squares simply relies on the fact that since
+[^2]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
+[^3]: The method of completing the squares simply relies on the fact that since
 $$
 (ax+b)^2 = ax^2 + b^2 +2axb
 $$
