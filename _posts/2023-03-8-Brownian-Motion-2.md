@@ -53,38 +53,38 @@ The [Fourier inversion theorem](https://en.wikipedia.org/wiki/Fourier_inversion_
 ### Digression: Fourier as a change of basis
 
 I like to think of the Fourier transform as a sort of 'improper' change of basis. 
-In fact, when we express a vector $\mathbf{v}$ given a set of basis vectors $\{ \mathbf{e}_i\}$ we write
+In fact, when we express a vector $\mathbf{v}$ given a set of basis vectors $\{ \mathbf{\phi}_i\}$ we write
 
-$$
-\mathbf{v} = \sum_j c_j \mathbf{e}_i
-$$
+\begin{equation}\label{eqn:v_four)
+\mathbf{v} = \sum_j c_j \mathbf{\phi}_i
+\end{equation}
 
 or, using coordinates:
 
-$$
-v_i = \sum_k c_k e_{ik}
-$$
+\begin{equation}
+v_i = \sum_k c_k \phi_{ik}
+\end{equation}
 
-in which ${c_k}$ are the coefficients. 
+in which ${c_k}$ are the coefficients and $\phi_{ik}$ is a (really bad) notation for the $k$-th element of the $i$-th vector. 
 This means that, given the basis, knowing the set of coefficients is the same as knowing the vector (which is in fact expressed in this basis by the coefficients themselves).
 
 The same principle can hold for a function $f(x)$ that we can express as a combination of basis-function ${\phi_k(x)}$.
 
-$$
+\begin{equation}
 f(x) = \sum_k c_k \phi_k(x)
-$$
+\end{equation}
 
 and, just like before, for a given set of basis functions, knowing the coefficients gives us all the information we need to reconstruct the original function.
 This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fourier_series) (a discrete version of the Fourier Transform). 
 
-Finally, if instead of using a discrete set of basis we use a continuous one we need to parametrize it using a continuous variable instead of discrete one ($\phi_k(x) \rightarrow \phi(k,x)$) .
+Finally, if instead of using a discrete set of basis-function  we use a continuous one we need to parametrize it using a continuous variable instead of discrete one ($\phi_k(x) \rightarrow \phi(k,x)$) .
 Moreover, the summation will turn into an integral ($\sum_k \rightarrow \int dk$).
 
-$$
+\begin{equation} \label{eqn:f_four)
 f(x) = \int dk ~ c(k) \phi(k,x)
-$$
+\end{equation}
 
-
+Note the similarity between \eqref{eqn:f_four) and \eqref{eqn:v_four).
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
 ### Solution
@@ -98,7 +98,7 @@ Now that we know the $p$ can be expressed in terms of the Fourier coefficients v
        \frac{\partial^2}{\partial x^2}  \int dk~ e^{ikx} \hat{p}(k,t)
 \end{equation}
 
-Concerning the **left-hand-side**, we see that the only time dependency is in $\hat{p}$, thus we can bring the derivative inside the integral:
+Concerning the **left-hand-side**, we see that the only time dependency is in $\hat{p}$, thus by bringing the derivative inside the integral we get:
 
 \begin{equation}\label{eqn:heat_FT_left}
        \frac{\partial}{\partial t}  \int dk~ e^{ikx} \hat{p}(k,t)  = 
