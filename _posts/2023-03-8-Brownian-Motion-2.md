@@ -239,7 +239,7 @@ As the notation suggests, it is the probability (density) of being in position $
 To find the explicit form of the propagator, we assumed that our initial condition $p(x,0)$ was a Dirac's delta, but now that we have it, we can build the solution for a _generic_ initial condition $p_0$ by:
 
 \begin{equation}
-    p(x,t) = int dy ~ p(x,t|y,0) p_0(y) 
+    p(x,t) = \int dy ~ p(x,t|y,0) p_0(y) 
 \end{equation}
 
 This is simply the [_Superposition principle_](https://en.wikipedia.org/wiki/Superposition_principle), which follows directly from the linearity of the original equation.
