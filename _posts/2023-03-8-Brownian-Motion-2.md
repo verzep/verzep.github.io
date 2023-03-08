@@ -69,7 +69,7 @@ in which ${c_k}$ are the coefficients and $\phi_{ik}$ is a (really bad) notation
 This means that, given the basis, knowing the set of coefficients is the same as knowing the vector (which is in fact expressed in this basis by the coefficients themselves).
 
 The same principle can hold for a function $f(x)$ that we can express as a combination of basis-function ${\phi_k(x)}$.
-
+ 
 \begin{equation}
 f(x) = \sum_k c_k \phi_k(x)
 \end{equation}
