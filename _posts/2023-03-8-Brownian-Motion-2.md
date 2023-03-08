@@ -62,7 +62,7 @@ $$
 or, using coordinates:
 
 $$
-v_i = \sum_j c_j e_ij
+v_i = \sum_j c_j e_{ij}
 $$
 
 in which ${c_j}$ are the coefficients. 
@@ -239,9 +239,9 @@ This is simply the [_Superposition principle_](https://en.wikipedia.org/wiki/Sup
 
 Now that we know how a particle subject to Brownian motion behaves, we can draw some really _important conclusions_.
 For example, we can ask ourselves what will be the _average position_ of the particle in time. 
-Since we know $p$ is a Gaussian, the _expected value_ of the position $\langle x(t) \rangle = \int dx^ x p(x,t|x_0,0)$ will simply be equal to its mean $x_0$, for every $t$. 
+Since we know $p$ is a Gaussian, the _expected value_ of the position $\langle x(t) \rangle = \int dx~ x p(x,t|x_0,0)$ will simply be equal to its mean $x_0$, for every $t$. 
 So if we know that the particle starts in $x_0$, we expect its (average) position not to vary in time. This is an obvious consequence of the symmetry of equation \eqref{eqn:heat}, which in turn derives from the parity of the probability functions of the displacement $\phi(\Delta)$ (see my [previous post](https://verzep.github.io/Brownian-Motion-1/)).
-Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2 \rangle =\int dx^ x^2 p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
+Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2(t)) \rangle = \int dx~ x^{2} p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
 
 $$
 \langle x^2\rangle = \sigma^2 = 2Dt
@@ -258,7 +258,9 @@ As we will see in the next blog post, he used this result to prove the existence
 
 [^1]: as $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
 The reason for choosing $x$ will be clear later.
+
 [^2]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
+
 [^3]: The method of completing the squares simply relies on the fact that since
 $$
 (ax+b)^2 = ax^2 + b^2 +2axb
