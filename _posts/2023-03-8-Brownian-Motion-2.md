@@ -79,7 +79,7 @@ This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fo
 
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
-
+### Solution
 #### Step 1: using the Fourier Transform
 
 Now that we know the $p$ can be expressed in terms of the Fourier coefficients via \eqref{eqn:AFT}, we can try to plug this representation into the Heat equation \eqref{eqn:heat}. This leads to the following equation:
@@ -178,7 +178,7 @@ we can plug it into our solution \eqref{eqn:solution_FT_noIC} to obtain:
 
 Which is the solution of the Heat equation \eqref{eqn:heat} in the Fourier space.
 
-##### Step 4: Anti-transforming
+#### Interlude: Initial Condition
 
 To obtain the solution in the physical space (sometimes called _the propagator_), we simply need to plug anti-transform $\hat{p}$, i.e., to insert \eqref{eqn:solution_FT} into \eqref{eqn:AFT}.
 
@@ -239,12 +239,12 @@ This is simply the [_Superposition principle_](https://en.wikipedia.org/wiki/Sup
 
 Now that we know how a particle subject to Brownian motion behaves, we can draw some really _important conclusions_.
 For example, we can ask ourselves what will be the _average position_ of the particle in time. 
-Since we know $p$ is a Gaussian, the _expected value_ of the position $\langlex(t)\rangle = \int dx^ x p(x,t|x_0,0)$ will simply be equal to its mean $x_0$, for every $t$. 
+Since we know $p$ is a Gaussian, the _expected value_ of the position $\langle x(t) \rangle = \int dx^ x p(x,t|x_0,0)$ will simply be equal to its mean $x_0$, for every $t$. 
 So if we know that the particle starts in $x_0$, we expect its (average) position not to vary in time. This is an obvious consequence of the symmetry of equation \eqref{eqn:heat}, which in turn derives from the parity of the probability functions of the displacement $\phi(\Delta)$ (see my [previous post](https://verzep.github.io/Brownian-Motion-1/)).
-Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langlex^2\rangle =\int dx^ x^2 p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
+Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2 \rangle =\int dx^ x^2 p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
 
 $$
-\langlex^2\rangle = \sigma^2 = 2Dt
+\langle x^2\rangle = \sigma^2 = 2Dt
 $$
 
 Which depends **linearly** on time. This is the _defining feature of diffusion processes_! Note that this means the average displacement (i.e., the standard deviation $\sigma$) of the Brownian particle is _not_ proportional to the time elapsed but to its square root!
