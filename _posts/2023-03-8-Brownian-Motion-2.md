@@ -84,7 +84,7 @@ Moreover, the summation will turn into an integral ($\sum_k \rightarrow \int dk$
 f(x) = \int dk ~ c(k) \phi(k,x)
 \end{equation}
 
-Note the similarity between \eqref{eqn:solution_FT_noIC} and \eqref{eqn:solution_FT_noIC}.
+Note the similarity between \eqref{eqn:f_e} and \eqref{eqn:solution_FT_noIC}.
 In the Fourier transform, $\hat{p}$ are the coefficients, and the complex exponential functions are the basis on which we express $p$.
 
 ### Solution
