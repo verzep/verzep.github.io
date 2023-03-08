@@ -251,7 +251,7 @@ So if we know that the particle starts in $x_0$, we expect its (average) positio
 Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2(t) \rangle = \int dx~ x^{2} p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
 
 $$
-\langle x^2\rangle = \sigma^2 = 2Dt
+\langle x^2 \rangle = \sigma^2 = 2Dt
 $$
 
 Which depends **linearly** on time. This is the _defining feature of diffusion processes_! Note that this means the average displacement (i.e., the standard deviation $\sigma$) of the Brownian particle is _not_ proportional to the time elapsed but to its square root!
