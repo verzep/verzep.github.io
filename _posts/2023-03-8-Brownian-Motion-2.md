@@ -271,15 +271,15 @@ The reason for choosing $x$ will be clear later.
 [^2]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
 
 [^3]: The method of completing the squares simply relies on the fact that since
-$$
-(ax+b)^2 = ax^2 + b^2 +2axb
-$$
-then
-$$
-ax^2 + 2axb =  (ax+b)^2 -b^2
-$$
-in our example one has $a=-Dt$ and $b = \frac{-i(x-x_0}{2Dt}$, and we can use this formula to rewrite the exponent.
-
+    $$
+    (ax+b)^2 = ax^2 + b^2 +2axb
+    $$
+    then
+    $$
+    ax^2 + 2axb =  (ax+b)^2 -b^2
+    $$
+    in our example one has $a=-Dt$ and $b = \frac{-i(x-x_0}{2Dt}$, and we can use this formula to rewrite the exponent.
+    
 
 
 
