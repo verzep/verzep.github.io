@@ -216,7 +216,7 @@ Thus, \eqref{eqn:propagator} becomes:
      p(x,t | x_0, 0) = \frac{e^{-\frac{(x-x_0)^2}{4Dt}}}{2\pi} \int dk~ e^{-Dt(k-i(x-x_0))^{2}}
 \end{equation}
 
-and by using the change of variables $q =(k-i(x-x_0)$ we have.
+and by using the change of variables $q =k-i(x-x_0)$ we have.
 
 \begin{equation}
       p(x,t | x_0, 0) = \frac{e^{-\frac{(x-x_0)^2}{4Dt}}}{2\pi} \int dq~ e^{-Dtq^{2}}
@@ -224,13 +224,11 @@ and by using the change of variables $q =(k-i(x-x_0)$ we have.
 
 Finally, by remembering that $\int dy~e^{-\alpha y^2}=\sqrt{\frac{\pi}{\alpha}} $ we obtain the solution
 
-
-
 \begin{equation}
       p(x,t | x_0, 0) = \frac{1}{\sqrt{4\pi D t}}e^{-\frac{(x-x_0)^2}{4Dt}}
 \end{equation}
 
-This means *the propagator*  $p(x,t| x_0, 0)$ is a _Gaussian distribution_ with mean $x_0$ and variance $\sigma^2 = 2Dt$.
+This means *the propagator*  is a _Gaussian distribution_ with mean $x_0$ and variance $\sigma^2 = 2Dt$.
 
 
 ### The propagator
@@ -250,7 +248,7 @@ Now that we know how a particle subject to Brownian motion behaves, we can draw 
 For example, we can ask ourselves what will be the _average position_ of the particle in time. 
 Since we know $p$ is a Gaussian, the _expected value_ of the position $\langle x(t) \rangle = \int dx~ x p(x,t|x_0,0)$ will simply be equal to its mean $x_0$, for every $t$. 
 So if we know that the particle starts in $x_0$, we expect its (average) position not to vary in time. This is an obvious consequence of the symmetry of equation \eqref{eqn:heat}, which in turn derives from the parity of the probability functions of the displacement $\phi(\Delta)$ (see my [previous post](https://verzep.github.io/Brownian-Motion-1/)).
-Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2(t)) \rangle = \int dx~ x^{2} p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
+Let's now set for simplicity $x_0=0$ and consider the _variance_ of our process $\langle x^2(t) \rangle = \int dx~ x^{2} p(x,t|x_0,0)$. Since $p$ is a Gaussian, we know that it is equal to:
 
 $$
 \langle x^2\rangle = \sigma^2 = 2Dt
@@ -278,7 +276,7 @@ The reason for choosing $x$ will be clear later.
     $$
     ax^2 + 2axb =  (ax+b)^2 -b^2
     $$
-    in our example one has $a=-Dt$ and $b = \frac{-i(x-x_0}{2Dt}$, and we can use this formula to rewrite the exponent.
+    .In our example one has $a=-Dt$ and $b = \frac{-i(x-x_0}{2Dt}$, and we can use this formula to rewrite the exponent.
     
 
 
