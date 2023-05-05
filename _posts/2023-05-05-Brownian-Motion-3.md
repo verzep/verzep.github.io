@@ -59,7 +59,7 @@ This simply accounts for the fact that particles will tend to diffuse from highe
 
 Equating \eqref{eqn:J_in_v} and \eqref{eqn:flick} we obtain:
 
-\begin{equation}\label{eqn:J_equality}
+\begin{equation}
     v \rho =  -D \frac{d\rho}{dx} 
 \end{equation}
 
