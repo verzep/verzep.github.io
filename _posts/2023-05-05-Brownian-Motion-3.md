@@ -132,7 +132,7 @@ So, if we know $R$, $\eta$, and $T$, and measure $D$, we can obtain the _Avogadr
 
 The formula he had derived for expressing the diffusion coefficient in terms of atomic dimensions and the size of the particles would now make it possible to extract information about the atomic scale from the irregular motion of the suspended particles to the atomic scale, if this motion of individual particles could be related to the bulk property of diffusion.
 Einstein himself also recognized that failure to observe this motion would be a strong argument against the molecular-kinetic theory of heat.
-But, luckily, in 1908 (two years after Boltzmann death), Jean Baptiste Perrin, a brilliant experimental physicist, performed a series of experiments, that confirmed Einstein's prediction [[^2]]. He was awarded the Nobel Prize for physics in 1926.
+But, luckily, in 1908 (two years after Boltzmann death), Jean Baptiste Perrin, a brilliant experimental physicist, performed a series of experiments, that confirmed Einstein's prediction [[^2],[^3]]. He was awarded the Nobel Prize for physics in 1926.
 
 
 Richard Feynmann famously said that the most informative sentence about our knowledge of the world would be:
@@ -140,12 +140,10 @@ Richard Feynmann famously said that the most informative sentence about our know
 > All things are made of atoms—little particles that move around in perpetual motion, attracting each other when they are a little distance apart, but repelling upon being squeezed into one another.
 
 The proof that this is in fact true is due to Einstein! This is why I consider Einstein's explanation of Brownian motion a contribution that is conceptually groundbreaking, even more revolutionary than special relativity. 
-And if you are interested about this topic and want to know more about the historical and philosophical background, you can refer to this [[^3]].
+And if you are interested about this topic and want to know more about the historical and philosophical background, you can refer to this [[^4]].
 
 [^1]: Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
 [^2]: **Original Paper**: J. Perrin, “Brownian movement and molecular reality,” translated by F. Soddy (1910). The original paper, “Le Mouvement Brownien et la Réalité Moleculaire” appeared in the Ann. Chimi. Phys. 18. (1909)  
-    **A modern replication with a really interesting disccusion**: Newburgh, Ronald, Joseph Peidle, and Wolfgang Rueckner. "Einstein, Perrin, and the reality of atoms: 1905 revisited." American journal of physics 74.6 (2006): 478-481.
-[^3]: Renn, Jürgen. "Einstein's invention of Brownian motion." Annalen der Physik 14.S1 (2005): 23-37.
+[^3]: **A modern replication with a really interesting disccusion**: Newburgh, Ronald, Joseph Peidle, and Wolfgang Rueckner. "Einstein, Perrin, and the reality of atoms: 1905 revisited." American journal of physics 74.6 (2006): 478-481.
+[^4]: Renn, Jürgen. "Einstein's invention of Brownian motion." Annalen der Physik 14.S1 (2005): 23-37.
 
-
-\end{document}
