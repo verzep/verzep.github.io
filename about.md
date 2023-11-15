@@ -21,7 +21,7 @@ I mainly deal with the pointless aspects of important things.
 ### Where to find me
 
 AG Tchumatchenko\
-Bonn University Hospital, Bonn, Germany.\ 
+Bonn University Hospital, Bonn, Germany\ 
 Poppeldorfer Allee 24\
 53115 Bonn, Germany
 
