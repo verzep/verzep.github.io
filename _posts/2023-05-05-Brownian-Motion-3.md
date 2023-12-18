@@ -144,6 +144,6 @@ And if you are interested about this topic and want to know more about the histo
 
 [^1]: Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
 [^2]: **Original Paper**: J. Perrin, “Brownian movement and molecular reality,” translated by F. Soddy (1910). The original paper, “Le Mouvement Brownien et la Réalité Moleculaire” appeared in the Ann. Chimi. Phys. 18. (1909)  
-[^3]: **A modern replication with a really interesting discussion**: Newburgh, Ronald, Joseph Peidle, and Wolfgang Rueckner. "Einstein, Perrin, and the reality of atoms: 1905 revisited." American journal of physics 74.6 (2006): 478-481.
+[^3]: **A modern replication with a really interesting discusion**: Newburgh, Ronald, Joseph Peidle, and Wolfgang Rueckner. "Einstein, Perrin, and the reality of atoms: 1905 revisited." American journal of physics 74.6 (2006): 478-481.
 [^4]: Renn, Jürgen. "Einstein's invention of Brownian motion." Annalen der Physik 14.S1 (2005): 23-37.
 
