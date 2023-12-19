@@ -1,9 +1,9 @@
 
-- title: "Beyond Invasive Monitoring: A Machine Learning Framework for Video-Driven Seizure Forecastin"
+- title: "Beyond Invasive Monitoring: A Machine Learning Framework for Video-Driven Seizure Forecasting"
   conference: Emergent AI Conference
   link: https://emergent-ai.uni-mainz.de/
   video:
-  year: 2022
+  year: 2023
 
 
 - title: "Everything is a Computer (if You are Brave Enough)"
@@ -13,7 +13,7 @@
   year: 2022
 
 - title: On the Role of Synchronization in Reservoir Computing
-  conference: Internation Joint Conference on Neural Networks (IJCNN)
+  conference: International Joint Conference on Neural Networks (IJCNN)
   link: https://events.femto-st.fr/DLUNH/en
   video:
   year: 2021
