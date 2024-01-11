@@ -1,4 +1,14 @@
 
+- title: "Editorial overview: Computational neuroscience as a bridge between artificial intelligence, modeling and data"
+  authors: P. Verzelli, T. Tchumatchenko, J. Kotaleski
+  venue: "Current Opinion in Neurobioly"
+  link: https://www.sciencedirect.com/science/article/pii/S0959438823001605
+  code:
+  code-tf:
+  code-pt:
+  doi: https://doi.org/10.1016/j.conb.2023.102835
+  year: 2024
+
 - title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
   authors: P. Verzelli, A. Nolds,  C. Sun, M. Heilemann, E. Schuman , T. Tchumatchenko
   venue: "Scientific Reports"
