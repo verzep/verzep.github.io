@@ -1,4 +1,4 @@
-- title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
+- title: "Astrocytes enhance plasticity response during reversal learning"
   authors: L. Squadrani, C. Wert-Carvajal, D. Mueller-Komorowska, K. Bohmbach, C. Henneberger, P.   Verzelli *, T. Tchumatchenko*
   venue: "Communications Biology"
   link: https://doi.org/10.1038/s42003-024-06540-8
@@ -28,15 +28,6 @@
   doi: https://doi.org/10.1016/j.conb.2023.102835
   year: 2024
 
-- title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
-  authors: L. Squadrani, C. Wert-Carvajal, D. Mueller-Komorowska, K. Bohmbach, C. Henneberger, P.   Verzelli *, T. Tchumatchenko*
-  venue: "Communications Biology"
-  link: https://doi.org/10.1038/s42003-024-06540-8
-  code:
-  code-tf:
-  code-pt:
-  doi: https://doi.org/10.1038/s42003-024-06540-8
-  year: 2024
 
 - title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
   authors: P. Verzelli, A. Nolds,  C. Sun, M. Heilemann, E. Schuman , T. Tchumatchenko
