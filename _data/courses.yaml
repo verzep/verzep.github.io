@@ -1,5 +1,21 @@
 - title: Lead TA
   description: Neuromatch Academy - Computational Neuroscience
+  period: 2025
+  link: "https://academy.neuromatch.io/about"
+
+- title: Computational Methods in Neuroscience
+  description: UniBonn, MsC in Neuroscience, spring semester
+  period: 2025
+  link: "https://www.neurosciences.uni-bonn.de/curriculum"
+
+- title: Introduction to Python for Data Analysis
+  description: UniBonn, MsC in Neuroscience, spring semester
+  period: 2025
+  link: "https://www.neurosciences.uni-bonn.de/curriculum"
+
+
+- title: Lead TA
+  description: Neuromatch Academy - Computational Neuroscience
   period: 2024
   link: "https://academy.neuromatch.io/about"
 
