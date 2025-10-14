@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Coronavirus: The Mathematics of Contagion"
-author: "Pietro Verzelli"
-mathjax: true
+tags: epidemiology, dynamical systems
+category: dynamical_systems
 ---
 
 A recent [article in *Corriere*](https://www.corriere.it) did the great service of spreading the foundations of epidemiological modeling, explaining that the heart of the problem is a number, \(R_0\), which controls the spread rate of the coronavirus: every disease has its own, and that of this coronavirus appears to be about 2.5.
