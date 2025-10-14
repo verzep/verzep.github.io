@@ -201,7 +201,7 @@ This is an enormous — and alarming — number. But that’s not the end of the
 Let’s also examine how \(s\) and \(r\) evolve over time, alongside the infected population.
 
 
-![png]({{ site.url }}/images/2025-10-15/sir_R0_full.png)
+![png]({{ site.url }}/images/2025-10-15/sir_full.png)
 
 
 Incredible, isn’t it? By the end of the epidemic — that is, when \(i = 0\) — almost **80% of the population** has been infected and moved into the *removed* category!
