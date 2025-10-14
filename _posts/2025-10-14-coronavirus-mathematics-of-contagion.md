@@ -12,7 +12,7 @@ If this number is less than 1, the disease will not spread; if it is greater tha
 
 Since 2.5 is clearly not a very small value—so much so that we all found ourselves confined at home—I decided to write an article explaining the **mathematics of contagion**.
 
----
+
 
 ## The SIR Model
 
@@ -44,7 +44,6 @@ Armed with these two assumptions, we can now ask: if at time $t = 0$ we know the
 
 To answer this question, we first need to understand how the disease spreads.
 
----
 
 ## Contagion
 
@@ -75,7 +74,6 @@ $$
 \frac{dS}{dt} = - \beta \, k \, I \, \frac{S}{N}
 $$
 
----
 
 ## Recovery
 
@@ -117,7 +115,6 @@ the number of recovered individuals can only increase (its rate of change is the
 
 What becomes interesting is the evolution of the infected population $i$, which has both a positive and a negative term — meaning it can rise and fall over time, showing a non-monotonic behavior.
 
----
 
 ## Epidemic or Not?
 
@@ -171,8 +168,6 @@ It is simply a **time-scaling factor**: diseases with the same $R_0$ but differe
 ![png]({{ site.url }}/images/2025-10-15/sir_mu_vs_R0(1).png)
 
 Notice in the figure that the **maximum fraction of infected individuals** reached is always the same — only shifted in time depending on the value of $\mu$.
-
----
 
 ## The Danger of an Epidemic
 
