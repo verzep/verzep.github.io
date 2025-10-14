@@ -131,7 +131,11 @@ We see that the exponent changes sign when \(R_0 < 1\). If \(R_0 < 1\), then \(i
 
 In the figure in the original article, I plotted the evolution of infected individuals for diseases with different \(R_0\) values. As expected, when \(R_0 < 1\), infected decline right away, while for higher \(R_0\) values they rise to a peak before declining.
 
+![png]({{ site.url }}/images/2025-10-15/sir_R0_vs_mu.png)
+
 This behaviour happens because the exponential approximation holds only when infected are few and there are enough susceptibles to infect. Over time, susceptibles are replaced by infected or recovered (who cannot be re-infected in this model), which saturates the spread. The parameter \(\mu\) only affects how fast the dynamics happen in time; diseases with the same \(R_0\) but different \(\mu\) behave similarly but on different time scales.
+
+![png]({{ site.url }}/images/2025-10-15/sir_mu_vs_R0(1).png)
 
 ---
 
@@ -139,7 +143,12 @@ This behaviour happens because the exponential approximation holds only when inf
 
 Let’s consider a disease with \(R_0 = 2\) (optimistic compared to coronavirus). The exponential approximation diverges fairly quickly; assuming time in days, after three weeks saturation is already underway. The peak of infections occurs around day 40, then declines, and by day 150 there are virtually no infected individuals.
 
+![png]({{ site.url }}/images/2025-10-15/sir_i_only.png)
+
 I emphasize that these numbers are not quantitative predictions, but are intended to illustrate the phenomenon qualitatively.
+
+![png]({{ site.url }}/images/2025-10-15/sir_R0_full.png)
+
 
 At the peak (day ~40), almost 18% of the population is infected! In a population of 60 million, that’s nearly 11 million people — an enormous and alarming number. If we also consider the evolution of \(s\) and \(r\), at the end of the epidemic (when \(i = 0\)), almost 80% of the population will have been infected and become removed.
 
