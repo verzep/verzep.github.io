@@ -1,3 +1,24 @@
+
+- title: "Linking Behavior and Brain activity in C. Elegans"
+  conference: iBehave Science Retreat
+  link: https://ibehave.nrw/
+  video:
+  year: 2025
+
+
+- title: " Behavioral Biomarkers of Epilepsy: A Machine Learning Approach to Seizure Prediction"
+  conference: Bernstein Conference of Computational Neuroscience
+  link: https://bernstein-network.de/en/bernstein-conference/
+  video:
+  year: 2025
+
+- title: "Stable Learning in the Presence of Synaptic Variation"
+  conference: Computational and Systems Neuroscience (Cosyne) conference
+  link: https://cosyne.org/
+  video:
+  year: 2025
+
+
 - title: "Linking Spontaneous Synaptic Activity to Learning"
   conference: Bernstein Conference of Computational Neuroscience
   link: https://bernstein-network.de/en/bernstein-conference/
@@ -5,7 +26,7 @@
   year: 2024
 
 - title: "Predictive Power of Behavior: Robust Low-dimensional Representation from Pose Data"
-  conference: iBhevae Summer School
+  conference: iBehave Summer School
   link: https://ibehave.nrw/
   video:
   year: 2024
