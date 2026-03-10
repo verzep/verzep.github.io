@@ -31,11 +31,11 @@ permalink: /publications/
 {% endfor %}
 
 <img src="{{ site.url}}/images/ICANN_talk.jpg">
-<h2> Conference Talks </h2>
+<h2> Conference Talks and Posters </h2>
 {%for conf in site.data.talks %}
     <a href="{{conf.link}}">{{conf.conference}} ({{conf.year}})</a>
     <br>
-    Talk: <i>{{ conf.title }}</i>
+    {{ conf.contribution }}: <i>{{ conf.title }}</i>
     <br><br>
 {% endfor %}
 

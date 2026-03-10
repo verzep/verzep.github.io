@@ -1,110 +1,135 @@
+- title: "Behavioral Biomarkers of Epilepsy: A Machine Learning Approach to Seizure Prediction"
+  conference: Bonn Brain Meeting
+  link: https://bonnbrain.de/program-2026/
+  contribution: Poster
+  year: 2026
+
+
+- title: "Modelling Neural Population Dynamics in C. elegans to Reveal Behaviour-Embedded Manifold Structures"
+  conference: Computational and Systems Neuroscience (Cosyne) conference
+  link: https://cosyne.org/
+  contribution: Poster
+  year: 2026
+
+
 
 - title: "Linking Behavior and Brain activity in C. Elegans"
   conference: iBehave Science Retreat
   link: https://ibehave.nrw/
-  video:
+  contribution: Contributed Talk
   year: 2025
 
 
-- title: " Behavioral Biomarkers of Epilepsy: A Machine Learning Approach to Seizure Prediction"
+- title: "Behavioral Biomarkers of Epilepsy: A Machine Learning Approach to Seizure Prediction"
   conference: Bernstein Conference of Computational Neuroscience
   link: https://bernstein-network.de/en/bernstein-conference/
-  video:
+  contribution: Poster
   year: 2025
 
 - title: "Stable Learning in the Presence of Synaptic Variation"
   conference: Computational and Systems Neuroscience (Cosyne) conference
   link: https://cosyne.org/
-  video:
+  contribution: Poster
   year: 2025
 
 
 - title: "Linking Spontaneous Synaptic Activity to Learning"
   conference: Bernstein Conference of Computational Neuroscience
   link: https://bernstein-network.de/en/bernstein-conference/
-  video:
+  contribution: Poster
   year: 2024
 
 - title: "Predictive Power of Behavior: Robust Low-dimensional Representation from Pose Data"
   conference: iBehave Summer School
   link: https://ibehave.nrw/
-  video:
+  contribution: Contributed Talk
   year: 2024
 
 - title: "Linking Spontaneous Synaptic Activity to Learning"
   conference: Conference of the Italian Network for Computational Neuroscience (INCN)
   link: https://incn.it/
-  video:
+  contribution: Poster
   year: 2024
 
 - title: "Predictive Power of Behavior: Robust Low-dimensional Representation from Pose Data"
   conference: Bonn Brain Meeting
   link: https://bonnbrain.de/program-2024/
-  video:
+  contribution: Poster
   year: 2024
 
 - title: "Astrocyte-mediated D-serine Regulation Bridges the Gap between BCM Theory, Neurobiology and Behavior"
   conference: FENS Forum 2024
   link: https://fensforum.org/
-  video:
+  contribution: Poster
   year: 2024
 
 - title: "Beyond Invasive Monitoring: A Machine Learning Framework for Video-Driven Seizure Forecasting"
   conference: Emergent AI Conference
   link: https://emergent-ai.uni-mainz.de/
-  video:
+  contribution: Invited Talk
   year: 2023
 
+- title: "Beyond Invasive Monitoring: A Machine Learning Framework for Video-Driven Seizure Forecasting"
+  conference: Bernstein Conference of Computational Neuroscience
+  link: https://bernstein-network.de/en/bernstein-conference/
+  contribution: Poster
+  year: 2023
+
+- title: "Beyond Invasive Monitoring: A Machine Learning Framework for Video-Driven Seizure Forecasting"
+  conference: Bonn Brain Meeting
+  link: https://bonnbrain.de/program-2023/
+  contribution: Poster
+  year: 2023
 
 - title: "Everything is a Computer (if You are Brave Enough)"
   conference: Emergent AI Retreat
   link: https://emergent-ai.uni-mainz.de/
-  video:
+  contribution: Invited Talk
   year: 2022
 
 - title: On the Role of Synchronization in Reservoir Computing
   conference: International Joint Conference on Neural Networks (IJCNN)
   link: https://events.femto-st.fr/DLUNH/en
-  video:
+  contribution: Contributed Talk
   year: 2021
 
 
 - title: Learning Dynamical Systems Using Dynamical Systems
   conference: Dynamics Internal Seminar (University of Exeter)
   link: http://blogs.exeter.ac.uk/csdc/activities/dynamics-internal-seminar/
-  video:
+  contribution: Invited Talk
   year: 2020
 
 
 - title: "Learn to Synchronize, Synchronize to Learn: Measuring the Echo State Property"
   conference: Symposium on Machine Learning and Dynamical Systems
   link: https://sites.google.com/site/boumedienehamzi/second-symposium-on-machine-learning-and-dynamical-systems
-  video:
+  contribution: Contributed Talk
   year: 2020
 
 
 - title: Hyper-spherical Reservoirs for Echo State Networks
   conference: International Conference on Artificial Neural Networks (ICANN)
   link: https://e-nns.org/icann2019/
-  video:
+  contribution: Contributed Talk
   year: 2019
 
 - title: Echo State Networks with Self-Normalizing Activations on the Hyper-sphere
   conference: Workshop on Dynamical Systems and Brain-inspired Information Processing
   link: https://www.gsds.uni-konstanz.de/tt8ftuxr56xq3ybzwr/grigoryeva/2019-workshop-on-dynamical-systems-and-brain-inspired-information-processing/
-  video:
+  contribution: Poster 
   year: 2019
 
 - title: A characterization of the edge of criticality in binary echo state networks
   conference: Machine Learning for Signal Processing (MLSP) 
   link: https://signalprocessingsociety.org/blog/mlsp-2018-2018-ieee-international-workshop-machine-learning-signal-processing
-  video:
+  contribution: Poster
   year: 2018
 
 - title: A study of dependency features of spike trains through copula
   conference: Neural Coding 
   link: http://www.neuralcoding2018.unito.it/
-  video:
+  contribution: Poster
   year: 2018
 
 
