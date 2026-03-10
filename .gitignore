@@ -1,10 +1,15 @@
-_site
-.DS_Store
-.jekyll
+_site/
+.jekyll/
+.jekyll-cache/
 .jekyll-metadata
-.bundle
-.sass-cache
-Gemfile
-Gemfile.lock
-node_modules
-package.json
+.sass-cache/
+
+# Local Ruby/Bundler artifacts
+.bundle/
+vendor/bundle/
+
+# OS/editor noise
+.DS_Store
+*.swp
+*.swo
+*~
