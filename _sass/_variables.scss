@@ -3,8 +3,14 @@
 // VARIABLES
 //
 
-// Colors
-$blue: #4183C4;
+// Primary Colors (Teal + Coral)
+$teal: #17a2b8;
+$coral: #ff6b6b;
+$cream: #f8f9fa;
+$darkText: #2c3e50;
+
+// Legacy color support
+$blue: #17a2b8;
 
 // Grays
 $black: #000;
@@ -13,6 +19,7 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+$borderGray: #e9ecef;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;
@@ -22,6 +29,18 @@ $georgia: Georgia, serif;
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 769px) {
     @content;
   }
 }

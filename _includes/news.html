@@ -1,0 +1,13 @@
+<h2 class="news-title">News</h2>
+<div class="news-list">
+  {% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+  {% for item in sorted_news limit:10 %}
+    <div class="news-card">
+      <div class="news-card-date">{{ item.date | date: "%b %Y" }}</div>
+      <div class="news-card-content">
+        <h3 class="news-card-title">{{ item.title }}</h3>
+        <p class="news-card-desc">{{ item.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>

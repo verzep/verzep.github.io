@@ -1,0 +1,11 @@
+---
+layout: page
+title: Blog
+permalink: /Blog/
+---
+
+<div class="blog-posts-grid">
+  {% for post in site.posts %}
+    {% include featured-post-card.html post=post %}
+  {% endfor %}
+</div>

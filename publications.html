@@ -6,6 +6,8 @@ permalink: /publications/
 
 <h2> Journals and Proceedings</h2>
 
+<div style="margin-bottom: 1rem;"></div>
+
 {% for pub in site.data.publications %}
     <a href="{{pub.link}}">{{pub.title}}.</a>
     <br>
@@ -32,6 +34,9 @@ permalink: /publications/
 
 <img src="{{ site.url}}/images/ICANN_talk.jpg">
 <h2> Conference Talks and Posters </h2>
+
+<div style="margin-bottom: 1rem;"></div>
+
 {%for conf in site.data.talks %}
     <a href="{{conf.link}}">{{conf.conference}} ({{conf.year}})</a>
     <br>

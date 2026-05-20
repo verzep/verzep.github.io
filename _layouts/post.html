@@ -3,15 +3,43 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+  <h1 class="post-title">{{ page.title }}</h1>
+  
+  <div class="post-metadata">
+    <span class="post-date">
+      <i class="meta-icon">📅</i>
+      {{ page.date | date: "%B %e, %Y" }}
+    </span>
+    <span class="post-reading-time">
+      <i class="meta-icon">⏱️</i>
+      {% assign words = content | number_of_words %}
+      {% if words < 360 %}
+        Less than 1 min
+      {% else %}
+        {{ words | divided_by: 180 | ceil }} min read
+      {% endif %}
+    </span>
+  </div>
 
-  <div class="entry">
+  <div class="post-content">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  <div class="post-footer">
+    {% include disqus.html %}
   </div>
-
-  {% include disqus.html %}
 </article>
+
+{% if site.posts.size > 1 %}
+<section class="related-posts">
+  <h3>More Posts</h3>
+  <div class="related-posts-grid">
+    {% assign current_post = page %}
+    {% for post in site.posts limit: 3 %}
+      {% unless post.url == current_post.url %}
+        {% include featured-post-card.html post=post %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

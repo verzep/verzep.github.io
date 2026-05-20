@@ -26,12 +26,11 @@
             <p class="site-description">{{ site.description }}</p>
           </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-            <a href="{{ site.baseurl }}/research">Research</a>
-            <a href="{{ site.baseurl }}/publications">Publications</a>
-            <a href="{{ site.baseurl }}/teaching">Teaching</a>
+          <nav class="site-nav">
+            <a href="{{ site.baseurl }}/Blog" {% if page.title == 'Blog' %}class="active"{% endif %}>Blog</a>
+            <a href="{{ site.baseurl }}/research" {% if page.title == 'Research' %}class="active"{% endif %}>Research</a>
+            <a href="{{ site.baseurl }}/publications" {% if page.title == 'Publications' %}class="active"{% endif %}>Publications</a>
+            <a href="{{ site.baseurl }}/teaching" {% if page.title == 'Teaching' %}class="active"{% endif %}>Teaching</a>
           </nav>
         </header>
       </div>
@@ -45,6 +44,7 @@
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
+          <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
         </footer>
       </div>
       <!-- Script -->
@@ -54,5 +54,6 @@
     
     {% include analytics.html %}
   </body>
+
 </html>
 
