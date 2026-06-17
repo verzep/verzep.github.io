@@ -2,7 +2,7 @@
 layout: post
 title: On Forecasting
 tags: dynamical_systems
-category: dynamical_systems
+category: opinion
 ---
 
 Predicting the future has always been a crucial goal for humans. 
