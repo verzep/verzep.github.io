@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Everything is a computer, if you are brave enough"
+title: "Everything is a computer (if you are brave enough) - Part 1"
 tags: computation, neuroscience, artificial-intelligence, neural-networks, philosophy
 category: opinion
 ---
