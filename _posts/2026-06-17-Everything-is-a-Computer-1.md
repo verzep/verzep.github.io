@@ -6,9 +6,7 @@ tags: computation, neuroscience, artificial-intelligence, neural-networks, philo
 category: opinion
 ---
 
-There is a question that computational neuroscientists are not supposed to ask too casually, because it sounds either obvious or meaningless:
-
-> Is the brain a computer?
+There is a question that computational neuroscientists are not supposed to ask too casually, because it sounds either obvious or meaningless: **Is the brain a computer?**
 
 If by *computer* we mean a laptop, then the answer is clearly no. The brain does not have a keyboard, a hard drive, a central processor, or a program written somewhere inside the skull.
 
