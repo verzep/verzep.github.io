@@ -380,12 +380,12 @@ But then we need to ask the dangerous question again:
 > If many things can compute, what makes something a computer?
 
 ---------------------
-[^1]: But you can [play Doom a pregnancy tester](https://www.youtube.com/watch?v=V1gcoyo5Ssk) (ok, it is not true, they are just using it as a screen but it is too funny not to mention).
+[^1]: But you can [play Doom on a pregnancy tester](https://www.youtube.com/watch?v=V1gcoyo5Ssk) (OK, that is not really true: they are just using it as a screen, but it is too funny not to mention).
 
 [^2]: Correctly.
 
-[^3]: Gottfried Leibniz, *De arte characteristica ad perficiendas scientias ratione nitentes* (Concerning the art of characterization for perfecting the sciences relying on reason.), 1668
+[^3]: Gottfried Leibniz, *De arte characteristica ad perficiendas scientias ratione nitentes* (Concerning the art of characterization for perfecting the sciences relying on reason), 1668.
 
-[^4]: McCulloch, W.S., Pitts, W. _A logical calculus of the ideas immanent in nervous activity_,1943.
+[^4]: McCulloch, W.S., Pitts, W. _A logical calculus of the ideas immanent in nervous activity_, 1943.
 
 [^5]: He literally [built it](https://en.wikipedia.org/wiki/Mark_I_Perceptron).
