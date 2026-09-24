@@ -1,9 +1,16 @@
+---
+layout: post
+title: "Temporal Convolutional Networks"
+tags: neural_networks, time_series
+category: machine_learning
+---
+
 ```python
 import torch
 from torch import nn
 ```
 
-Let assume we have a sequence of len 8.
+Let's assume we have a sequence of length 8.
 
 
 ```python
@@ -17,7 +24,7 @@ print(input_signal)
     tensor([[-1.3639,  1.9589,  1.4127, -1.5098, -0.1000, -0.8651, -0.5435,  0.0509]])
 
 
-We want to apply a 1d convolution this input time series. We take a kernel size of 3 with 1 filter.
+We want to apply a 1D convolution to this input time series. We take a kernel size of 3 with 1 filter.
 
 
 ```python
@@ -29,16 +36,16 @@ print(out.detach())
     tensor([[-0.1855, -0.9900, -0.6422, -0.9425,  0.8591,  0.1868]])
 
 
-We notice that the `len` is shorter than the original sequence. This is because we do not do any padding, so the sequence length is actually:
+We notice that the output length is shorter than the original sequence. This is because we do not do any padding, so the sequence length is actually:
 
 $$
 T_{out} = T_{in} - (k -1)
 $$
 
-where $k$ is the kernel size (so, 8 - (3-1)) = 6.
+where $k$ is the kernel size (so, 8 - (3-1) = 6).
 
 ### DILATION
-TCN work in a similar way, with an addictional factor called _dilation_.
+TCNs work in a similar way, with an additional factor called _dilation_.
 Dilation increases the _receptive field_ size of a network at a low computational cost.
 Let us now perform a similar convolution, but with a dilation $D= 2$.
 
@@ -58,24 +65,24 @@ $$
 T_{out} = T_{in} - (k-1)*D
 $$
 
-Of course, this boils down to ''regular'' convolution when $D=1$.
+Of course, this boils down to a ''regular'' convolution when $D=1$.
 
-Another important thing to consider is the Receptive Field Size (RFS), i.e., how much of the time series each ouput node sees for computation.
-In this simple case the formulas is
+Another important thing to consider is the Receptive Field Size (RFS), i.e., how much of the time series each output node sees for computation.
+In this simple case, the formula is
 
 $$
 RFS = (k-1)*D + 1
 $$
 
-So, for the first case we had an RFS=3 (the kernel size), while now we had a RFS=5.
+So, in the first case we had an RFS=3 (the kernel size), while now we have an RFS=5.
 
 ### PADDING
 
 When working with time series, we usually want the network to be _causal_, i.e., without looking into the future. For this we need _padding_.
 We need to use zero-padding to the left of the sequence.
-Unfortunatly, the implementation of `Conv1d` in Pytorch can only do symmetric padding, so we need to do it ecplivitely.
+Unfortunately, the implementation of `Conv1d` in PyTorch can only do symmetric padding, so we need to do it explicitly.
 
-The size of the padding for having a sequence of exacly the same length as the input depends on both the kernel size and the dilation
+The size of the padding for having a sequence of exactly the same length as the input depends on both the kernel size and the dilation
 
 $$
 Padding = (k-1)*D
@@ -131,7 +138,7 @@ print(out.detach().size())
     torch.Size([1, 1, 8])
 
 
-Now, we would like our residual block to have actualy residual connections (as the name suggests), as since they are a _parallel_ operation we cannot use `nn.Sequential`.
+Now, we would like our residual block to have actual residual connections (as the name suggests), but since they are a _parallel_ operation we cannot use `nn.Sequential`.
 
 
 ```python
@@ -182,7 +189,7 @@ print(out.detach().size())
     torch.Size([1, 1, 8])
 
 
-We can stack multiple blocks now
+We can now stack multiple blocks:
 
 
 
@@ -216,8 +223,8 @@ print(out.detach().size())
 
 
 Usually, one increases the dilation exponentially for every layer.
-If we wonder what is the RFS of such a network id, we need to consider that each residual block will have a RFS of $2 \times (k-1) \times D$.
-Since at each $D$ increase exponentially, we have that for a network with $N$ layers
+If we wonder what the RFS of such a network is, we need to consider that each residual block will have an RFS of $2 \times (k-1) \times D$.
+Since $D$ increases exponentially at each layer, we have that for a network with $N$ layers
 
 $$
 RFS_{N} =  1 + \sum_{i=1}^N 2 D^{i-1} (k-1) = 1 + 2(k-1)\frac{D^N-1}{D-1}
@@ -361,7 +368,7 @@ plot_samples_from_dataset(X_train, y_train, num_samples=4)
 
 ```
 
-![png](2025-05-02/TCN_examples_26_0.png)
+![png]({{site.url}}/images/2025-05-02/TCN_examples_26_0.png)
     
 
 
@@ -518,7 +525,7 @@ plot_confusion_matrix(model, test_loader, device)
 
 
     
-![png](2025-05-02/TCN_examples_30_0.png)
+![png]({{site.url}}/images/2025-05-02/TCN_examples_30_0.png)
     
 
 

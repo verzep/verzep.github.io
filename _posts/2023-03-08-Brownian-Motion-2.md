@@ -5,8 +5,8 @@ tags: stochastic_processes, fourier transform
 category: stochastic_processes
 ---
 
-In this second post about Brownian Motion I will discuss how to solve the Heat Equation. 
-This will lead to a brief introduction to the Fourier Transform and what it is, in my opinion, a nice way of thinking about its meaning.
+In this second post about Brownian Motion, I will discuss how to solve the Heat Equation. 
+This will lead to a brief introduction to the Fourier Transform and what is, in my opinion, a nice way of thinking about its meaning.
 Once we have the explicit form of the solution, we can derive the distinctive feature of all diffusion phenomena: the linear dependence of their variance with respect to time.
 
 
@@ -68,7 +68,7 @@ v_i = \sum_k c_k \phi_{ik}
 in which ${c_k}$ are the coefficients and $\phi_{ik}$ is a (really bad) notation for the $k$-th element of the $i$-th vector. 
 This means that, given the basis, knowing the set of coefficients is the same as knowing the vector (which is in fact expressed in this basis by the coefficients themselves).
 
-The same principle can hold for a function $f(x)$ that we can express as a combination of basis-function ${\phi_k(x)}$.
+The same principle can hold for a function $f(x)$ that we can express as a combination of basis functions ${\phi_k(x)}$:
  
 \begin{equation}
 f(x) = \sum_k c_k \phi_k(x)
@@ -77,7 +77,7 @@ f(x) = \sum_k c_k \phi_k(x)
 and, just like before, for a given set of basis functions, knowing the coefficients gives us all the information we need to reconstruct the original function.
 This is the case, e.g., of the [Fourier Series](https://en.wikipedia.org/wiki/Fourier_series) (a discrete version of the Fourier Transform). 
 
-Finally, if instead of using a discrete set of basis-function  we use a continuous one we need to parametrize it using a continuous variable instead of discrete one ($\phi_k(x) \rightarrow \phi(k,x)$) .
+Finally, if instead of using a discrete set of basis functions we use a continuous one, we need to parametrize it using a continuous variable instead of a discrete one ($\phi_k(x) \rightarrow \phi(k,x)$).
 Moreover, the summation will turn into an integral ($\sum_k \rightarrow \int dk$).
 
 \begin{equation} \label{eqn:f_e}
@@ -91,21 +91,21 @@ In the Fourier transform, $\hat{p}$ are the coefficients, and the complex expone
 
 #### Step 1: using the Fourier Transform
 
-Now that we know the $p$ can be expressed in terms of the Fourier coefficients via \eqref{eqn:AFT}, we can try to plug this representation into the Heat equation \eqref{eqn:heat}. This leads to the following equation:
+Now that we know that $p$ can be expressed in terms of the Fourier coefficients via \eqref{eqn:AFT}, we can try to plug this representation into the Heat equation \eqref{eqn:heat}. This leads to the following equation:
 
 \begin{equation}\label{eqn:heat_FT}
        \frac{\partial}{\partial t}  \int dk~ e^{ikx} \hat{p}(k,t)  = 
        \frac{\partial^2}{\partial x^2}  \int dk~ e^{ikx} \hat{p}(k,t)
 \end{equation}
 
-Concerning the **left-hand-side**, we see that the only time dependency is in $\hat{p}$, thus by bringing the derivative inside the integral we get:
+Concerning the **left-hand side**, we see that the only time dependency is in $\hat{p}$, thus by bringing the derivative inside the integral we get:
 
 \begin{equation}\label{eqn:heat_FT_left}
        \frac{\partial}{\partial t}  \int dk~ e^{ikx} \hat{p}(k,t)  = 
         \int dk~ e^{ikx} \frac{\partial}{\partial t}  \hat{p}(k,t)
 \end{equation}
 
-On the **right-hand-side** instead, the only term that depends on $x$ is the complex exponential:
+On the **right-hand side**, instead, the only term that depends on $x$ is the complex exponential:
 
 \begin{equation}
     \frac{\partial^2}{\partial x^2}  \int dk~ e^{ikx} \hat{p}(k,t)  = 
@@ -119,7 +119,7 @@ and we can easily perform the derivative:
     \int dk~ (-Dk~^2)e^{ikx}\hat{p}(k,t)
 \end{equation}
 
-in which the minus sign is because $i^2 = -1$ (convince yourself that \eqref{eqn:heat_FT_right} this is in fact a general property of the fourier Tranform.[[^2]]).
+in which the minus sign is because $i^2 = -1$ (convince yourself that \eqref{eqn:heat_FT_right} is in fact a general property of the Fourier Transform[[^2]]).
 
 
 #### Step 2: Decoupling
@@ -155,7 +155,7 @@ Solving \eqref{eqn:decoupled} is straightforward and the solution reads:
 #### Interlude: Initial Condition
 
 
-For solving \eqref{eqn:heat} we need an _initial condition_. Physically, we may assume that we know where the particle is a $t=0$ and call this position $x_0$. Mathematically this translates into the notation
+For solving \eqref{eqn:heat} we need an _initial condition_. Physically, we may assume that we know where the particle is at $t=0$ and call this position $x_0$. Mathematically this translates into the notation
 
 $$
 p(x,0) = \delta(x-x_0)
@@ -164,7 +164,7 @@ $$
 in which $\delta$ is Dirac's delta.
 
 But since we moved our problem from the physical space to the Fourier space, we must do the same with our initial condition.
-This can be steadily done by using \eqref{eqn:FT}:
+This can be easily done by using \eqref{eqn:FT}:
 
 $$
 \begin{aligned}
@@ -189,7 +189,7 @@ Which is the solution of the Heat equation \eqref{eqn:heat} in the Fourier space
 
 #### Step 3: Anti-Transform
 
-To obtain the solution in the physical space (sometimes called _the propagator_), we simply need to plug anti-transform $\hat{p}$, i.e., to insert \eqref{eqn:solution_FT} into \eqref{eqn:AFT}.
+To obtain the solution in the physical space (sometimes called _the propagator_), we simply need to anti-transform $\hat{p}$, i.e., to insert \eqref{eqn:solution_FT} into \eqref{eqn:AFT}.
 
 \begin{equation} \label{eqn:propagator}
      p(x,t | x_0, 0) = \frac{1}{2\pi} \int dk~ e^{ikx} e^{-ikx_0}e^{- Dk^2t}
@@ -216,7 +216,7 @@ Thus, \eqref{eqn:propagator} becomes:
      p(x,t | x_0, 0) = \frac{e^{-\frac{(x-x_0)^2}{4Dt}}}{2\pi} \int dk~ e^{-Dt(k-i(x-x_0))^{2}}
 \end{equation}
 
-and by using the change of variables $q =k-i(x-x_0)$ we have.
+and by using the change of variables $q =k-i(x-x_0)$ we have:
 
 \begin{equation}
       p(x,t | x_0, 0) = \frac{e^{-\frac{(x-x_0)^2}{4Dt}}}{2\pi} \int dq~ e^{-Dtq^{2}}
@@ -255,7 +255,7 @@ $$
 $$
 
 Which depends **linearly** on time. This is the _defining feature of diffusion processes_! Note that this means the average displacement (i.e., the standard deviation $\sigma$) of the Brownian particle is _not_ proportional to the time elapsed but to its square root!
-This fact  explains why previous experimental results concerning the velocity of Brownian particles led to incoherent results: linear time dependence was incorrectly assumed (in fact, try to think on how you would define the velocity of this process...).
+This fact  explains why previous experimental results concerning the velocity of Brownian particles led to incoherent results: linear time dependence was incorrectly assumed (in fact, try to think about how you would define the velocity of this process...).
 
 This is already quite an astonishing result on its own, as it allows experimentalists to test Einstein's approach by measuring this quantity to see whether it matches the predictions or not. 
 But Einstein did not stop there. 
@@ -263,12 +263,12 @@ As we will see in the next blog post, he used this result to prove the existence
 
 -------------------------------------------------------
 
-[^1]: as $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
+[^1]: As $p$ is a function of space and time, we need to specify to which argument we are applying the transform. 
     The reason for choosing $x$ will be clear later.
 
-[^2]: If you wanna sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
+[^2]: If you want to sound fancy, you may say that this is due to the fact that _the Fourier modes are eigenfunctions of the [Laplace operator](https://en.wikipedia.org/wiki/Laplace_operator) with eigenvalues_ $-k^2$.
 
-[^3]: The method of completing the squares simply relies on the fact that since
+[^3]: The method of completing the square simply relies on the fact that since
     $$
     (ax+b)^2 = ax^2 + b^2 +2axb
     $$
@@ -276,7 +276,7 @@ As we will see in the next blog post, he used this result to prove the existence
     $$
     ax^2 + 2axb =  (ax+b)^2 -b^2
     $$
-    .In our example one has $a=-Dt$ and $b = \frac{-i(x-x_0}{2Dt}$, and we can use this formula to rewrite the exponent.
+    In our example, one has $a=-Dt$ and $b = \frac{-i(x-x_0)}{2Dt}$, and we can use this formula to rewrite the exponent.
     
 
 

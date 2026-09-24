@@ -16,8 +16,8 @@ In this first part, we will show how Einstein drew the analogy between the Brown
 
 In his [_annus mirabilis_](https://en.wikipedia.org/wiki/Annus_mirabilis_papers), 25-year-old Albert Einstein published four papers destined to change the history of physics completely. 
 In two of them, the _theory of special relativity_ (possibly the most famous physical theory) was introduced and developed. 
-Another work involved the explanation of the _photoelectric effect_, a fundamental problem in quantum mechanics, which will be the motivation for which he was awarded the Nobel Prize in Physics  in 1921.
-But, arguably, the most important of his contribution in that year was the paper concerning the *Brownian Motion*, which led to a clear proof of the _atomic hypothesis_, which was still a controversial issue among physicists back then.
+Another work involved the explanation of the _photoelectric effect_, a fundamental problem in quantum mechanics, which would be the reason he was awarded the Nobel Prize in Physics  in 1921.
+But, arguably, the most important of his contributions in that year was the paper concerning the *Brownian Motion*, which led to a clear proof of the _atomic hypothesis_, which was still a controversial issue among physicists back then.
 But how is the movement of particles suspended in a liquid connected to the structure of matter? 
 
 
@@ -25,9 +25,9 @@ But how is the movement of particles suspended in a liquid connected to the stru
 
 In 1828, the botanist Robert Brown observed that pollen particles suspended in water would move following apparently random trajectories.[[^1]]
 Einstein gave the theoretical explanation for this strange behavior many years later.[[^2]] 
-In his reasoning, Einstein hypothesizes that the erratic movement is due to the collision of the suspended particle with the fluid molecules.
+In his reasoning, Einstein hypothesized that the erratic movement is due to the collisions of the suspended particle with the fluid molecules.
 These collisions are too high in number to even try to predict, but we can describe them in _probabilistic_ terms. 
-In turn, this will lead to a probabilistic description of our particle position. 
+In turn, this will lead to a probabilistic description of our particle's position. 
 
 In the one-dimensional case, let us define $p(x,t)$ as the _probability_ (density) of the particle being in the position $x$ at time $t$.
 We are looking for the probability $p(x, t + \tau)$, i.e., the probability distribution after a time $\tau$ has elapsed.
@@ -38,11 +38,11 @@ Some assumptions can be made about this distribution:
 
 * The displacement probability $\phi(\Delta, \tau)$ does **not** depend on the particle position $x$.
 * As a probability distribution, it must be _normalized_ $\int d\Delta \phi(\Delta,\tau)=1$. Physically, this is simply the requirement that the particle must go somewhere.
-* The probability of negative and positive displacement are equal (_isotropy_). This means that the $\phi$ must be an _even_ function, $\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
+* The probabilities of negative and positive displacements are equal (_isotropy_). This means that the $\phi$ must be an _even_ function, $\phi(\Delta,\tau) = \phi(-\Delta,\tau)$.
 
 
 The probability of finding the particle at $x$ at time $t+\tau$ can be computed using the probability that it was in $x-\Delta$ at time $t$ multiplied by the probability that a displacement $\Delta$ occurred and integrating ("summing") over all the possible displacements.
-This approach leads to the[ _Chapman-Kolmogorov Equation_](https://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation), which reads:
+This approach leads to the [_Chapman-Kolmogorov Equation_](https://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation), which reads:
 
 \begin{equation}\label{eqn:CKE}
     p(x, t+\tau) = \int d\Delta ~p(x-\Delta) \phi(\Delta,\tau)
@@ -62,7 +62,7 @@ To do so, we start by Taylor expanding the left-hand side w.r.t. time:
 
 Note that the time interval $\tau$ (usually called *correlation time*) must have two apparently contradicting features: it must be *short* compared to the time scale at which we are observing the process (otherwise, Taylor's expansion wouldn't hold), but *long* enough such that the particle has 'forgotten' the last movement (which is the independence of the displacements). 
 
-Using the taylor approximation w.r.t $x$ leads to
+Using the Taylor approximation w.r.t. $x$ leads to
 
 \begin{equation}\label{eqn:taylor_space}
     p(x-\Delta,t) \approx 
@@ -83,7 +83,7 @@ p(x,t) + \tau \frac{\partial p}{\partial t}
 \end{aligned}
 $$
 
-Let's now examine the right-hand-side term by term:
+Let's now examine the right-hand side term by term:
 
 \begin{equation}
     \int d\Delta ~p(x,t)\phi(\Delta,\tau)=
@@ -108,7 +108,7 @@ Note that $\int d\Delta \Delta\phi(\Delta,\tau) =: \langle \Delta \rangle$ is th
 \frac{\langle \Delta^2 \rangle}{2}\frac{\partial^2 p}{\partial x^2}
 \end{equation}
 
-In which $\langle \Delta^2 \rangle$ is the variance of the displacement.
+in which $\langle \Delta^2 \rangle$ is the variance of the displacement.
 
 ## The Heat Equation
 
@@ -125,7 +125,7 @@ in which we have defined the _diffusion coefficient_:
 \end{equation}
 
 Its dimensions are a squared length over time. 
-This might be somehow puzzling, since it means that it depends on the ratio between the _square_ of the space length we are considering and the time length. 
+This might be somewhat puzzling, since it means that it depends on the ratio between the _square_ of the space length we are considering and the time length. 
 This will be fundamental later.
 
 Eq.\ref{eqn:heat} is known as  the _heat equation_, the diffusion equation, or the Fourier equation. [[^3]] 
@@ -140,4 +140,4 @@ The solution to this equation was known in Einstein's time, so he simply wrote i
 
 [^2]: Einstein, Albert. "Über die von der molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden Flüssigkeiten suspendierten Teilchen." Annalen der physik 4 (1905).
 
-[^3]: The careful reader might have noticed that this is due to the fact that we only took the linear term when performing the Taylor's expansion in time (Eq. \ref{eqn:taylor_time}). By including the second order term, one would have obtained the [Telegraph Equation](https://en.wikipedia.org/wiki/Telegrapher%27s_equations): $$ \partial_t p + \frac{\tau}{2}\partial_t^2 p = D \partial_x^2 p $$.
+[^3]: The careful reader might have noticed that this is due to the fact that we only took the linear term when performing the Taylor expansion in time (Eq. \ref{eqn:taylor_time}). By including the second order term, one would have obtained the [Telegraph Equation](https://en.wikipedia.org/wiki/Telegrapher%27s_equations): $$ \partial_t p + \frac{\tau}{2}\partial_t^2 p = D \partial_x^2 p $$.

@@ -9,8 +9,8 @@ category: dynamical_systems
 
 
 The _butterfly effect_ is the popular concept that "the flap of a butterfly’s wings in Brazil can set off a tornado in Texas". 
-This idea, which is in fact misunderstood and misrepresented in many occasions, came from the seminal work of Edward Lorenz, which was conducting methereological simulations. 
-In this brief post, I will reproduce its experiment using a basic `numpy` simulation to show the origin of its incredible discovery.
+This idea, which is in fact misunderstood and misrepresented on many occasions, came from the seminal work of Edward Lorenz, who was conducting meteorological simulations. 
+In this brief post, I will reproduce his experiment using a basic `numpy` simulation to show the origin of his incredible discovery.
 
 ## The Lorenz system
 
@@ -25,8 +25,8 @@ $$
 $$
 
 
-this sets of equation can not be solved analytically but Lorenz had an early electronic computer, called the Royal McBee, whose vacuum tubes could perform sixty ($60$!) multiplications a second. This seems ridicolous when compared to modern-day computers, but it is still way faster than a human. In fact Lorenz did not conduct this set of equations, but with a more complex one using $12$ variables. 
-This model was later devoloped by him to see whether even such a(n apparently) simple system displayed the puzzling phenomenon. 
+This set of equations cannot be solved analytically, but Lorenz had an early electronic computer, called the Royal McBee, whose vacuum tubes could perform sixty ($60$!) multiplications a second. This seems ridiculous when compared to modern-day computers, but it is still way faster than a human. In fact, Lorenz did not originally work with this set of equations, but with a more complex one using $12$ variables. 
+This model was later developed by him to see whether even such a(n apparently) simple system displayed the puzzling phenomenon. 
 
 ## The experiment
 
@@ -87,7 +87,7 @@ S[0] = np.array( [1., 1., 1.] ) #initial condition
 ```
 
 Now we are ready to run the simulation. 
-We will use the Euler method to integrate the set of equation: I know it is really bad, but we are not interested in a proper integration, we are just trying to prove a point.
+We will use the Euler method to integrate the set of equations: I know it is really bad, but we are not interested in a proper integration, we are just trying to prove a point.
 
 
 ```python
@@ -226,11 +226,11 @@ plt.show()
 ![png]({{ site.url }}/images/2021-02-25/output_15_0.png)
 
 
-Lorenz wanted to examine some of the solutions in more detail, but calculation back in those days were terribly slow. 
+Lorenz wanted to examine some of the solutions in more detail, but calculations back in those days were terribly slow. 
 He used the computer in his office, and he typed in some of the intermediate conditions which the computer had printed out as new initial conditions to start another computation. 
 Let's do the same.
 
-As an intermediate condition, we will use $L = 7000$. So that out new simulation will start from `S[L] = S[7000] = [ 7.387,  3.21,  30.627]`. 
+As an intermediate condition, we will use $L = 70000$, so that our new simulation will start from `S[L] = S[7000] = [ 7.387,  3.21,  30.627]`. 
 
 
 ```python
@@ -238,7 +238,7 @@ L = 70000
 # the values are: [ 7.387  3.21  30.627]
 #so we create a new vector 
 S_n = np.zeros([T+1,3])
-#and we inizialize the 70000-th with those values
+#and we initialize the 70000-th with those values
 S_n[L] = np.array( [7.387,  3.210,  30.627] )
 ```
 
@@ -247,7 +247,7 @@ Now we can run our second simulation:
 
 ```python
 print (L, S_n[L])
-for i in range(L, T): #this times the loop starts from L = 70000
+for i in range(L, T): #this time the loop starts from L = 70000
     S_n[i+1] = S_n[i] + Lorenz(S_n[i], s, b, r)*dt
     if ((i+1)%1000 == 0):
         print (i+1, S_n[i+1])
@@ -288,10 +288,10 @@ and get
     100000 [ 3.401  3.836 20.04 ]
 
 
-The final point for iteration number 100000 was  `[ 2.126  3.898 10.076]`, but now we are in a completly different point! How is this possible?  
+The final point for iteration number 100000 was  `[ 2.126  3.898 10.076]`, but now we are in a completely different point! How is this possible?  
 The whole process is deterministic, there is no place here for noise or stochasticity of any sort.  
 
-Let us plot both trajecories. This time I will highlight with a **star** the state at the 7000-tt step (the "starting" state) and with a **dot** the state they reached at the final iteration:
+Let us plot both trajectories. This time I will highlight with a **star** the state at the 70000-th step (the "starting" state) and with a **dot** the state they reached at the final iteration:
 
 
 ```python
@@ -342,23 +342,23 @@ plt.show()
 ![png]({{ site.url }}/images/2021-02-25/output_23_0.png)
 
 
-At first the two systems seem to stay quite close to each other, but aftwer a while their distance increases ad they end up having to really different orbits.  
+At first the two systems seem to stay quite close to each other, but after a while their distance increases and they end up having two really different orbits.  
 How is this possible?
 
 ## Sensitive dependence on initial conditions
 
-What we did was _manually_ inserting the values into the initial state for the new simulation. This is what Lorenz did: he read some numbers and typed them back. The issue is (and was, for Lorenz) that the computer is printing numbers with a different precision than the one it is using for computation. For the the Lorenz case, the computer was using six decimal places, while he only typed in three (as we did). But the characteristic of the system he was studying were such that evena tiny difference due to a rounding error lead to macroscopic variation in the system state.
+What we did was _manually_ insert the values into the initial state for the new simulation. This is what Lorenz did: he read some numbers and typed them back. The issue is (and was, for Lorenz) that the computer is printing numbers with a different precision than the one it is using for computation. In Lorenz's case, the computer was using six decimal places, while he only typed in three (as we did). But the characteristics of the system he was studying were such that even a tiny difference due to a rounding error led to macroscopic variation in the system state.
 
 Lorenz narrated the story behind his discovery in an interview:
 
 >In the course of doing this I wanted to examine some of the solutions in more detail. I had a small computer in my office then so I typed in some of the intermediate conditions which the computer had printed out as new initial conditions to start another computation and then went out for awhile. When I came back I found that the solution was not the same as the one I had before. The computer was behaving differently. I suspected computer trouble at first. But I soon found that the reason was that the numbers I had typed in were not the same as the original ones. These were rounded off numbers. And the small difference between something retained to six decimal places and rounded off to three had amplified in the course of two months of simulated weather until the difference was as big as the signal itself. And to me this implied that if the real atmosphere behaved in this method then we simply couldn't make forecasts two months ahead. The small errors in observation would amplify until they became large.
 
 
-Scientists now refer to this phenomenon as _sensitive dependence on initial conditions_: systems which display this features ampliflies small differences in their starting points while evolving, ending up in different states as time passes. 
-This fact has a crucial implication: let's say that we are interested in predicting the system state in the future  while kwowing the current state. This is the typical case in weather forecasting, for example.
-So, we go out and measure our system initial state $x(0)$. Then, we run our model to predict the future state for time $T$, $x(T)$. But for sure, our measuring of the initial state was not perfect: error are impossible to avoid when measuring something and our system was actually in the state $x_{\text{true}}(0)$. Of course, using better instruments it is possible to reduce the discrepancy between $x(0)$ and  $x_{\text{true}}(0)$, but it will always be non-null.  
-Is this a proble? Well, it might. If our system displays sensitive dependence on initial conditions, this means that the small error we made  will amplify as time passes and $x_{\text{true}}(T)$ will be totally different from $x_{\text{true}}(T)$. And it is important to remark that this happens __even if your model is perfect__! This is why weater forecasting is so difficult in practice: small errors amplify!
+Scientists now refer to this phenomenon as _sensitive dependence on initial conditions_: systems which display this feature amplify small differences in their starting points while evolving, ending up in different states as time passes. 
+This fact has a crucial implication: let's say that we are interested in predicting the system state in the future  while knowing the current state. This is the typical case in weather forecasting, for example.
+So, we go out and measure our system initial state $x(0)$. Then, we run our model to predict the future state for time $T$, $x(T)$. But for sure, our measurement of the initial state was not perfect: errors are impossible to avoid when measuring something and our system was actually in the state $x_{\text{true}}(0)$. Of course, using better instruments it is possible to reduce the discrepancy between $x(0)$ and  $x_{\text{true}}(0)$, but it will always be non-null.  
+Is this a problem? Well, it might. If our system displays sensitive dependence on initial conditions, this means that the small error we made  will amplify as time passes and $x(T)$ will be totally different from $x_{\text{true}}(T)$. And it is important to remark that this happens __even if your model is perfect__! This is why weather forecasting is so difficult in practice: small errors amplify!
 
 
-I hope that this brief introduction managed to make you excited as I am about this strange phenomena. Incoming posts are going to be devoted to deepen this fascinating topic.
+I hope that this brief introduction managed to make you as excited as I am about this strange phenomenon. Upcoming posts are going to be devoted to exploring this fascinating topic.
 
