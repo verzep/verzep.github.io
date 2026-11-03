@@ -217,6 +217,11 @@ img {
   font-weight: 600;
   font-size: 28px;
   letter-spacing: 1px;
+  line-height: 1.7;
+
+  @include mobile {
+    line-height: 1.4;
+  }
 
   a {
     color: $teal;

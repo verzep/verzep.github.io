@@ -7,11 +7,11 @@ layout: default
   
   <div class="post-metadata">
     <span class="post-date">
-      <i class="meta-icon">📅</i>
+      <i class="meta-icon" aria-hidden="true">📅</i>
       {{ page.date | date: "%B %e, %Y" }}
     </span>
     <span class="post-reading-time">
-      <i class="meta-icon">⏱️</i>
+      <i class="meta-icon" aria-hidden="true">⏱️</i>
       {% assign words = content | number_of_words %}
       {% if words < 360 %}
         Less than 1 min

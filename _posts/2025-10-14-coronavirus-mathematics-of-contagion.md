@@ -156,7 +156,7 @@ In other words, the value of $R_0$ determines whether an *outbreak* will occur o
 
 In the figure below, I plotted the evolution of the infected population for diseases with different $R_0$ values.
 
-![png]({{ site.url }}/images/2025-10-15/sir_R0_vs_mu.png)
+![Infected fraction over time for different R0 values]({{ site.url }}/images/2025-10-15/sir_R0_vs_mu.png)
 
 As expected, the number of infected individuals starts to decline immediately when $R_0 < 1$, while in the other cases it first rises to a peak before beginning to fall.
 
@@ -165,7 +165,7 @@ This phenomenon is due to **saturation**. As we mentioned earlier, the exponenti
 One might wonder: what role does the $\mu$ that appears in the exponential formula, next to $R_0$, actually play?  
 It is simply a **time-scaling factor**: diseases with the same $R_0$ but different $\mu$ values will spread in the same way, but over different time scales.
 
-![png]({{ site.url }}/images/2025-10-15/sir_mu_vs_R0(1).png)
+![Infected fraction over time for the same R0 and different mu]({{ site.url }}/images/2025-10-15/sir_mu_vs_R0(1).png)
 
 Notice in the figure that the **maximum fraction of infected individuals** reached is always the same — only shifted in time depending on the value of $\mu$.
 
@@ -174,7 +174,7 @@ Notice in the figure that the **maximum fraction of infected individuals** reach
 Let’s now try to understand what these values actually mean.  
 Imagine a disease with $R_0 = 2$ — let’s be optimistic compared to the coronavirus — and look at how the number of infected individuals evolves over time.
 
-![png]({{ site.url }}/images/2025-10-15/sir_i_only.png)
+![Infected fraction for R0 = 2, SIR model versus exponential growth]({{ site.url }}/images/2025-10-15/sir_i_only.png)
 
 First of all, we can see that the exponential prediction quickly diverges from reality: assuming the time scale is measured in days, after about three weeks saturation has already begun.  
 The peak of infections occurs around day 40, after which the curve starts to decline. By day 150, there are no infected individuals left.  
@@ -187,7 +187,7 @@ In a population of 60 million, that means nearly **11 million people**.
 This is an enormous — and alarming — number. But that’s not the end of the story.  
 Let’s also examine how $s$ and $r$ evolve over time, alongside the infected population.
 
-![png]({{ site.url }}/images/2025-10-15/sir_full.png)
+![Susceptible, infected and removed fractions over time for R0 = 2]({{ site.url }}/images/2025-10-15/sir_full.png)
 
 Incredible, isn’t it? By the end of the epidemic — that is, when $i = 0$ — almost **80% of the population** has been infected and moved into the *removed* category!
 

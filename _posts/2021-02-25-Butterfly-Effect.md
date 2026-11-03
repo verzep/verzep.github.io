@@ -223,7 +223,7 @@ plt.show()
 ```
 
 
-![png]({{ site.url }}/images/2021-02-25/output_15_0.png)
+![3D plot of the Lorenz attractor]({{ site.url }}/images/2021-02-25/output_15_0.png)
 
 
 Lorenz wanted to examine some of the solutions in more detail, but calculations back in those days were terribly slow. 
@@ -317,7 +317,7 @@ ax.set_title("Lorenz Attractor")
 ```
 
 
-![png]({{ site.url }}/images/2021-02-25/output_21_1.png)
+![Lorenz attractor with the original and the perturbed trajectory]({{ site.url }}/images/2021-02-25/output_21_1.png)
 
 
 Apparently, the two systems start from the same point but, after a while, they diverge.
@@ -339,7 +339,7 @@ plt.show()
 ```
 
 
-![png]({{ site.url }}/images/2021-02-25/output_23_0.png)
+![Distance between the original and the perturbed trajectory over time]({{ site.url }}/images/2021-02-25/output_23_0.png)
 
 
 At first the two systems seem to stay quite close to each other, but after a while their distance increases and they end up having two really different orbits.  

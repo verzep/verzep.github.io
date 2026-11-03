@@ -27,31 +27,31 @@ Imagine I show you this picture and ask:
 
 > Is this a tree?
 
-![]({{ site.url }}/images/2026-06-17/tree.jpg)
+![A tree]({{ site.url }}/images/2026-06-17/tree.jpg)
 
 Easy. Yes.
 
 What about this one?
 
-![]({{ site.url }}/images/2026-06-17/Broccoli.png)
+![A broccoli floret]({{ site.url }}/images/2026-06-17/Broccoli.png)
 
 Presumably, you answered: no.[[^2]] But it is not a completely absurd question. It sort of looks like a tree. It has a trunk-like structure, branch-like structures, and a crown-like top. It is not a tree, but it is strangely tree-shaped. Still, you are somehow able to tell that it is not a tree.
 
 Now consider this one:
 
-![]({{ site.url }}/images/2026-06-17/fir_tree.jpg)
+![A fir tree]({{ site.url }}/images/2026-06-17/fir_tree.jpg)
 
 Again, this is a tree, even though it is quite different from the first one. It has a conical structure, needles instead of broad leaves, and a very different overall shape.
 
 And now this:
 
-![]({{ site.url }}/images/2026-06-17/palm.jpg)
+![A palm tree]({{ site.url }}/images/2026-06-17/palm.jpg)
 
 Is this a tree? Most people would still say yes. But if we start asking for the precise rule, things become less obvious. What exactly makes something a tree? Does it need a wooden trunk? Branches? Leaves? A certain height? Secondary growth? Does a palm count? Does bamboo count? What about a banana plant?
 
 Finally, imagine I show you this:
 
-![]({{ site.url }}/images/2026-06-17/Tralalero_Tralala.png)
+![Tralalero Tralala]({{ site.url }}/images/2026-06-17/Tralalero_Tralala.png)
 
 Is this a tree?
 
