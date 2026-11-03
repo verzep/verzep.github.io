@@ -10,14 +10,14 @@ The site is also edited from other machines and the GitHub web UI, so always fet
 
 ## Local preview
 
-A `Gemfile` is committed, so the system `jekyll` tries to load gems through Bundler. Either install them once (`bundle config set --local path vendor/bundle && bundle install`, both gitignored) and use:
+The `Gemfile` uses the `github-pages` gem (Jekyll 3.10 and the same plugins, Sass and Rouge versions as the live build), so a local build matches what Pages serves. Full steps are in `README.md`. In short, install once (`bundle config set --local path vendor/bundle && bundle install`, both gitignored) and use:
 
 ```bash
-bundle exec jekyll serve            # http://localhost:4000, rebuilds on change
-bundle exec jekyll serve --drafts   # also render posts in _drafts/
+LANG=C.UTF-8 bundle exec jekyll serve            # http://localhost:4000, rebuilds on change
+LANG=C.UTF-8 bundle exec jekyll serve --drafts   # also render posts in _drafts/
 ```
 
-or bypass Bundler with the system Jekyll: `JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve`. `_config.yml` changes need a server restart.
+A UTF-8 locale is required (the Sass step aborts under `LANG=C`). `_config.yml` changes need a server restart. Do not use the system Jekyll 4: it renders some pages and code highlighting differently from Pages.
 
 ## Structure
 
