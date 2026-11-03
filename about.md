@@ -29,4 +29,4 @@ Poppeldorfer Allee 24\
 
 ### Contact me
 
-[name.surnameATgmail.com](mailto:namedotsurnameatgmaildotcom)
+{% include email.html %}

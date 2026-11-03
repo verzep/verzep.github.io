@@ -1,0 +1,19 @@
+{%- comment -%}
+Email link assembled in the browser, so the plain address is not in the HTML source.
+Usage: {% include email.html %} (once or more per page).
+{%- endcomment -%}
+<span class="js-email"><noscript>pietro dot verzelli at gmail dot com</noscript></span>
+<script>
+  (function () {
+    var addr = ["pietro", "verzelli"].join(".") + String.fromCharCode(64) + ["gmail", "com"].join(".");
+    // no less-than signs or ampersands here: kramdown escapes them when included from a .md page
+    var spans = document.querySelectorAll(".js-email:not([data-done])");
+    Array.prototype.forEach.call(spans, function (span) {
+      var a = document.createElement("a");
+      a.href = "mailto:" + addr;
+      a.textContent = addr;
+      span.appendChild(a);
+      span.setAttribute("data-done", "");
+    });
+  })();
+</script>
