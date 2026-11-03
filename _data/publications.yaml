@@ -1,5 +1,5 @@
 - title: "Astrocytes enhance plasticity response during reversal learning"
-  authors: L. Squadrani, C. Wert-Carvajal, D. Mueller-Komorowska, K. Bohmbach, C. Henneberger, P.   Verzelli *, T. Tchumatchenko*
+  authors: L. Squadrani, C. Wert-Carvajal, D. Mueller-Komorowska, K. Bohmbach, C. Henneberger, P. Verzelli*, T. Tchumatchenko*
   venue: "Communications Biology"
   link: https://doi.org/10.1038/s42003-024-06540-8
   code: https://github.com/CompNeuroTchuGroup/TheDserineHypothesis
@@ -9,7 +9,7 @@
   year: 2024
 
 - title: "Physics-Informed Graph Neural Cellular Automata: An Application to Compartmental Modelling."
-  authors: N.Navarin, P. Frazzetto, L. Pasa, P. Verzelli, F. Visentin, A. Sperduti, C. Alippi
+  authors: N. Navarin, P. Frazzetto, L. Pasa, P. Verzelli, F. Visentin, A. Sperduti, C. Alippi
   venue: "International Joint Conference on Neural Networks (IJCNN)"
   link:  https://doi.org/10.1109/IJCNN60899.2024.10650578
   code:
@@ -30,7 +30,7 @@
 
 
 - title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
-  authors: P. Verzelli, A. Nolds,  C. Sun, M. Heilemann, E. Schuman , T. Tchumatchenko
+  authors: P. Verzelli, A. Nolds, C. Sun, M. Heilemann, E. Schuman, T. Tchumatchenko
   venue: "Scientific Reports"
   link: https://www.nature.com/articles/s41598-022-27074-1
   code: https://github.com/NoldAndreas/FINDER

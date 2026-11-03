@@ -1,0 +1,23 @@
+# "Preprints and in preparation" on the Publications page (publications.html).
+# Listed in this order; the section is hidden when this file has no entries.
+# Fields: title, authors (P. Verzelli is bolded automatically), status (shown after the authors),
+# optional link / preprint / code (full URLs).
+# Marks: † co-first author, * co-corresponding author (legend shown under the list).
+#
+# Example:
+# - title: "Paper title"
+#   authors: A. Author, P. Verzelli
+#   status: "Under review"
+#   preprint: https://arxiv.org/abs/...
+
+- title: "Proxy Failure as an Emergent Property of Complex Causal Systems"
+  authors: P. Banse, P. Verzelli, W. Barfuss, O. Braganza
+  status: "PNAS, revision under review"
+
+- title: "Early Seizure Prediction from Behavioral Dynamics Using Animal Pose"
+  authors: P. Verzelli†, A. Mohammadi†, B. Mitlasóczki, M. Kamali, N. Neumann, L. Henning, J. Pitsch, M. Wenzel*, M. Schwarz*, T. Tchumatchenko*
+  status: "In preparation"
+
+- title: "A mechanistic model explains frequency-selective astrocytic control of dendritic integration through D-serine"
+  authors: L. Squadrani, J. Petkovic, P. Verzelli*, T. Tchumatchenko*
+  status: "In preparation"

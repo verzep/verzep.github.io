@@ -1,0 +1,26 @@
+{%- comment -%}
+One publication or preprint. Usage: {% include pub-entry.html pub=pub %}
+Bolds "P. Verzelli" in the authors, strips a trailing period from the title, and shows one
+link row (Code · Preprint · DOI). Preprints use `status` in place of venue and year.
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign title = pub.title | strip -%}
+{%- assign last = title | slice: -1 -%}
+{%- if last == "." -%}{%- assign n = title.size | minus: 1 -%}{%- assign title = title | slice: 0, n -%}{%- assign last = title | slice: -1 -%}{%- endif -%}
+{%- assign authors = pub.authors | strip | replace: "P. Verzelli", "<strong>P. Verzelli</strong>" -%}
+{%- assign href = pub.link | default: pub.doi | default: pub.preprint -%}
+<li class="pub">
+  <span class="pub-title">{% if href %}<a href="{{ href }}">{{ title }}</a>{% else %}{{ title }}{% endif %}{% unless last == "?" or last == "!" %}.{% endunless %}</span>
+  <span class="pub-authors">{{ authors }}.</span>
+  {% if pub.status %}<span class="pub-venue">{{ pub.status }}.</span>{% elsif pub.venue %}<span class="pub-venue"><em>{{ pub.venue | strip }}</em>{% if pub.year %}, {{ pub.year }}{% endif %}.</span>{% endif %}
+  {%- capture links -%}
+    {%- if pub.code %}<a href="{{ pub.code }}">{% include icon.html name="github" %} Code</a>{% endif -%}
+    {%- if pub.code-tf %}<a href="{{ pub.code-tf }}">{% include icon.html name="github" %} Code (TF/Keras)</a>{% endif -%}
+    {%- if pub.code-pt %}<a href="{{ pub.code-pt }}">{% include icon.html name="github" %} Code (PyTorch)</a>{% endif -%}
+    {%- if pub.preprint %}<a href="{{ pub.preprint }}">{% include icon.html name="file" %} Preprint</a>{% endif -%}
+    {%- if pub.doi %}<a href="{{ pub.doi }}">{% include icon.html name="book" %} DOI</a>{% endif -%}
+  {%- endcapture -%}
+  {%- if links != "" %}
+  <span class="pub-links">{{ links }}</span>
+  {%- endif %}
+</li>

@@ -4,47 +4,43 @@ title: Publications and Talks
 permalink: /publications/
 ---
 
-<h2> Journals and Proceedings</h2>
+{%- assign preprints = site.data.preprints -%}
+{%- if preprints and preprints.size > 0 %}
+<section class="pub-section">
+  <h2>Preprints and in preparation</h2>
+  <ul class="pub-list">
+    {%- for pub in preprints %}
+    {% include pub-entry.html pub=pub %}
+    {%- endfor %}
+  </ul>
+  <p class="pub-legend">† co-first author · * co-corresponding author</p>
+</section>
+{%- endif %}
 
-<div style="margin-bottom: 1rem;"></div>
+<section class="pub-section">
+  <h2>Journals and Proceedings</h2>
+  {%- assign by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+  {%- for group in by_year %}
+  <h3 class="pub-year">{{ group.name }}</h3>
+  <ul class="pub-list">
+    {%- for pub in group.items %}
+    {% include pub-entry.html pub=pub %}
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</section>
 
-{% for pub in site.data.publications %}
-    <a href="{{pub.link}}">{{pub.title}}.</a>
-    <br>
-    <i>{{pub.authors}}.</i>
-    <br>
-    <i>{{pub.venue}} ({{pub.year}})</i>.
-    {% if pub.code or pub.code-tf or pub.code-pt or pub.doi or pub.preprint %}
-    <br>
-    {% endif %}
-    {% if pub.code %} 
-    <a href="{{pub.code}}" style="border-bottom: none;">{% include icon.html name="github" %} Code</a>&nbsp;
-    {% endif %}
-    {% if pub.code-tf %} 
-    <a href="{{pub.code-tf}}" style="border-bottom: none;">{% include icon.html name="github" %} Code (TF/Keras)</a>&nbsp;
-    {% endif %}
-    {% if pub.code-pt %} 
-    <a href="{{pub.code-pt}}" style="border-bottom: none;">{% include icon.html name="github" %} Code (PyTorch)</a>&nbsp;
-    {% endif %}
-    {% if pub.doi %} 
-    <a href="{{pub.doi}}" style="border-bottom: none;">{% include icon.html name="book" %} DOI</a>&nbsp;
-    {% endif %}
-    {% if pub.preprint %}
-    <a href="{{pub.preprint}}" style="border-bottom: none;">{% include icon.html name="file" %} Preprint</a>&nbsp;
-    {% endif %}
-    <br><br>
-{% endfor %}
-
-<img src="{{ site.url }}/images/ICANN_talk.jpg" alt="Pietro Verzelli giving a talk at ICANN">
-<h2> Conference Talks and Posters </h2>
-
-<div style="margin-bottom: 1rem;"></div>
-
-{%for conf in site.data.talks %}
-    <a href="{{conf.link}}">{{conf.conference}} ({{conf.year}})</a>
-    <br>
-    {{ conf.contribution }}: <i>{{ conf.title }}</i>
-    <br><br>
-{% endfor %}
-
-
+<section class="pub-section">
+  <h2>Conference Talks and Posters</h2>
+  <figure class="talk-photo">
+    <img src="{{ '/images/ICANN_talk.jpg' | relative_url }}" alt="Pietro Verzelli giving a talk at ICANN" loading="lazy" />
+  </figure>
+  <ul class="talk-list">
+    {%- for conf in site.data.talks %}
+    <li>
+      <span class="talk-year">{{ conf.year }}</span>
+      <span class="talk-body"><em>{{ conf.title | strip }}</em> · {{ conf.contribution | strip }}, <a href="{{ conf.link }}">{{ conf.conference | strip }}</a></span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
