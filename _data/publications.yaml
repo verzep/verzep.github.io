@@ -33,10 +33,11 @@
   authors: P. Verzelli, A. Nolds,  C. Sun, M. Heilemann, E. Schuman , T. Tchumatchenko
   venue: "Scientific Reports"
   link: https://www.nature.com/articles/s41598-022-27074-1
-  code:
+  code: https://github.com/NoldAndreas/FINDER
   code-tf:
   code-pt:
   doi: https://doi.org/10.1038/s41598-022-27074-1
+  preprint: https://doi.org/10.1101/2021.02.22.432198
   year: 2022
 
 
@@ -48,16 +49,18 @@
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1063/5.0056425
+  preprint: https://arxiv.org/abs/2010.02860
   year: 2021
 
 - title: Input-to-State Representation in Linear Reservoirs Dynamics
   authors: P. Verzelli, C. Alippi, L. Livi, P. Tino
   venue: IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
   link: https://ieeexplore.ieee.org/document/9366982
-  code: 
+  code: https://github.com/verzep/Input_Representation
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1109/TNNLS.2021.3059389
+  preprint: https://arxiv.org/abs/2003.10585
   year: 2021
 
 
@@ -66,17 +69,18 @@
   authors: P. Verzelli, C. Alippi, L. Livi
   venue: Scientific Reports
   link: https://www.nature.com/articles/s41598-019-50158-4
-  code: 
+  code: https://github.com/verzep/spherical_reservoir
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1038/s41598-019-50158-4
+  preprint: https://arxiv.org/abs/1903.11691
   year: 2019
 
 - title: Hyper-spherical Reservoirs for Echo State Networks
   authors: P. Verzelli, C. Alippi, L. Livi
   venue: International Conference on Artificial Neural Networks (ICANN)
   link: https://link.springer.com/chapter/10.1007/978-3-030-30493-5_9
-  code: 
+  code: https://github.com/verzep/spherical_reservoir
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1007/978-3-030-30493-5_9
@@ -91,6 +95,7 @@
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1016/j.biosystems.2019.104014
+  preprint: https://arxiv.org/abs/1903.08460
   year: 2019
 
 
@@ -98,10 +103,11 @@
   authors: P. Verzelli, L. Livi, C. Alippi
   venue: International Workshop on Machine Learning for Signal Processing (MLSP)
   link: https://ieeexplore.ieee.org/document/8516959
-  code: 
+  code: https://github.com/verzep/bESN
   code-tf: 
   code-pt: 
   doi: https://doi.org/10.1109/MLSP.2018.8516959
+  preprint: https://arxiv.org/abs/1810.01742
   year: 2018
 
 

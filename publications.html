@@ -14,7 +14,7 @@ permalink: /publications/
     <i>{{pub.authors}}.</i>
     <br>
     <i>{{pub.venue}} ({{pub.year}})</i>.
-    {% if pub.code or pub.code-tf or pub.code-pt or pub.doi %}
+    {% if pub.code or pub.code-tf or pub.code-pt or pub.doi or pub.preprint %}
     <br>
     {% endif %}
     {% if pub.code %} 
@@ -28,6 +28,9 @@ permalink: /publications/
     {% endif %}
     {% if pub.doi %} 
     <a href="{{pub.doi}}" style="border-bottom: none;">{% include icon.html name="book" %} DOI</a>&nbsp;
+    {% endif %}
+    {% if pub.preprint %}
+    <a href="{{pub.preprint}}" style="border-bottom: none;">{% include icon.html name="file" %} Preprint</a>&nbsp;
     {% endif %}
     <br><br>
 {% endfor %}
