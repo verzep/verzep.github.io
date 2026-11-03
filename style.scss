@@ -1086,6 +1086,28 @@ footer {
   }
 }
 
+.pub-links .pub-tag {
+  display: inline-block;
+  margin-left: 0.6rem;
+  padding: 0.05rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  border: 1px solid var(--border, rgba(127, 127, 127, 0.35));
+  white-space: nowrap;
+
+  &::before { content: none !important; }
+}
+
+a.pub-tag:hover {
+  color: inherit;
+  border-color: currentColor;
+}
+
+.pub-links .pub-tag:first-child { margin-left: 0; }
+
+.project-card { scroll-margin-top: 5rem; }
+
 .pub-legend {
   font-size: 0.85rem;
   color: var(--muted);

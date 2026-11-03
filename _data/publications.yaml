@@ -7,6 +7,7 @@
   code-pt:
   doi: https://doi.org/10.1038/s42003-024-06540-8
   year: 2024
+  project: plasticity
 
 - title: "Physics-Informed Graph Neural Cellular Automata: An Application to Compartmental Modelling."
   authors: N. Navarin, P. Frazzetto, L. Pasa, P. Verzelli, F. Visentin, A. Sperduti, C. Alippi
@@ -17,6 +18,7 @@
   code-pt:
   doi: https://doi.org/10.1109/IJCNN60899.2024.10650578
   year: 2024
+  project: other
 
 - title: "Editorial overview: Computational neuroscience as a bridge between artificial intelligence, modeling and data"
   authors: P. Verzelli, T. Tchumatchenko, J. Kotaleski
@@ -27,7 +29,7 @@
   code-pt:
   doi: https://doi.org/10.1016/j.conb.2023.102835
   year: 2024
-
+  project: other
 
 - title: "Unbiased choice of global clustering parameters for single-molecule localization microscopy"
   authors: P. Verzelli, A. Nolds, C. Sun, M. Heilemann, E. Schuman, T. Tchumatchenko
@@ -39,7 +41,7 @@
   doi: https://doi.org/10.1038/s41598-022-27074-1
   preprint: https://doi.org/10.1101/2021.02.22.432198
   year: 2022
-
+  project: other
 
 - title: "Learn to Synchronize, Synchronize to Learn"
   authors: P. Verzelli, C. Alippi, L. Livi
@@ -51,6 +53,7 @@
   doi: https://doi.org/10.1063/5.0056425
   preprint: https://arxiv.org/abs/2010.02860
   year: 2021
+  project: reservoir
 
 - title: Input-to-State Representation in Linear Reservoirs Dynamics
   authors: P. Verzelli, C. Alippi, L. Livi, P. Tino
@@ -62,8 +65,7 @@
   doi: https://doi.org/10.1109/TNNLS.2021.3059389
   preprint: https://arxiv.org/abs/2003.10585
   year: 2021
-
-
+  project: reservoir
 
 - title: Echo State Networks with Self-Normalizing Activations on the Hyper-Sphere
   authors: P. Verzelli, C. Alippi, L. Livi
@@ -75,6 +77,7 @@
   doi: https://doi.org/10.1038/s41598-019-50158-4
   preprint: https://arxiv.org/abs/1903.11691
   year: 2019
+  project: reservoir
 
 - title: Hyper-spherical Reservoirs for Echo State Networks
   authors: P. Verzelli, C. Alippi, L. Livi
@@ -85,7 +88,7 @@
   code-pt: 
   doi: https://doi.org/10.1007/978-3-030-30493-5_9
   year: 2019
-
+  project: reservoir
 
 - title: A study of Dependency Features of Spike Trains Through Copulas
   authors: P. Verzelli, L. Sacerdote
@@ -97,7 +100,7 @@
   doi: https://doi.org/10.1016/j.biosystems.2019.104014
   preprint: https://arxiv.org/abs/1903.08460
   year: 2019
-
+  project: other
 
 - title: A characterization of the Edge of Criticality in Binary Echo State Networks
   authors: P. Verzelli, L. Livi, C. Alippi
@@ -109,5 +112,4 @@
   doi: https://doi.org/10.1109/MLSP.2018.8516959
   preprint: https://arxiv.org/abs/1810.01742
   year: 2018
-
-
+  project: reservoir

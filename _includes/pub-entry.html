@@ -1,7 +1,8 @@
 {%- comment -%}
 One publication or preprint. Usage: {% include pub-entry.html pub=pub %}
 Bolds "P. Verzelli" in the authors, strips a trailing period from the title, and shows one
-link row (Code · Preprint · DOI). Preprints use `status` in place of venue and year.
+link row (Code · Preprint · DOI), and a project tag from `project:` (an id in
+_data/projects.yaml, or "other"). Preprints use `status` in place of venue and year.
 {%- endcomment -%}
 {%- assign pub = include.pub -%}
 {%- assign title = pub.title | strip -%}
@@ -20,7 +21,13 @@ link row (Code · Preprint · DOI). Preprints use `status` in place of venue and
     {%- if pub.preprint %}<a href="{{ pub.preprint }}">{% include icon.html name="file" %} Preprint</a>{% endif -%}
     {%- if pub.doi %}<a href="{{ pub.doi }}">{% include icon.html name="book" %} DOI</a>{% endif -%}
   {%- endcapture -%}
-  {%- if links != "" %}
-  <span class="pub-links">{{ links }}</span>
+  {%- assign tag = nil -%}
+  {%- if pub.project %}
+    {%- assign proj = site.data.projects | where: "id", pub.project | first -%}
+    {%- if proj %}{%- capture tag %}<a class="pub-tag" href="{{ '/research/' | relative_url }}#project-{{ proj.id }}">{{ proj.title }}</a>{% endcapture -%}
+    {%- else %}{%- capture tag %}<span class="pub-tag">Other work</span>{% endcapture -%}{%- endif -%}
+  {%- endif %}
+  {%- if links != "" or tag %}
+  <span class="pub-links">{{ links }}{{ tag }}</span>
   {%- endif %}
 </li>

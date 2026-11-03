@@ -8,15 +8,13 @@ Cards without an image show their icon on a tinted panel of the same size.
 {%- if include.heading %}<h2 id="projects-heading">{{ include.heading }}</h2>{% endif %}
 <div class="project-grid">
 {%- for p in projects %}
-{%- assign href = nil -%}
-{%- if p.link and p.link != "" -%}{%- if p.link contains "://" -%}{%- assign href = p.link -%}{%- else -%}{%- assign href = p.link | relative_url -%}{%- endif -%}{%- endif %}
-<article class="project-card">
+<article class="project-card"{% if p.id %} id="project-{{ p.id }}"{% endif %}>
 <div class="project-media{% if p.image %} has-image{% endif %}">
 {%- if p.image -%}<img src="{{ p.image | relative_url }}" alt="{{ p.image_alt | default: p.title | escape }}" loading="lazy" />
 {%- else -%}{% include icon.html name=p.icon px="56" %}{%- endif -%}
 </div>
 <div class="project-body">
-<h3 class="project-title">{% if href %}<a href="{{ href }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+<h3 class="project-title">{{ p.title }}</h3>
 <p class="project-text">{{ p.text }}</p>
 {%- if p.image and p.image_credit and p.image_credit != "" %}
 <p class="project-credit">Image: {{ p.image_credit }}</p>{% endif %}
