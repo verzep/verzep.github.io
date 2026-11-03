@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Veneto
---
+---
 # Storia
 
 # Clima e Territorio
