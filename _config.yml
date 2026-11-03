@@ -10,27 +10,24 @@ title: Pietro Verzelli
 # Short bio or description (displayed in the header)
 description: Senior Research Fellow in Computational Neuroscience
 
+# Affiliation, shown under the name on the home page
+affiliation: Zimmer Lab, University of Vienna
+
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/33346242?v=4
-# Flags below are optional
-#
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble:
-  email:
-  facebook: pietro.verzelli
-  flickr:
+# Profile IDs for the home-page link row and the footer icons (_includes/profile-links.html,
+# _includes/social-links.html). A key left empty hides its link.
+profiles:
+  google_scholar:   # the user=... value of the Google Scholar profile URL
+  orcid:            # e.g. 0000-0000-0000-0000
   github: verzep
-  instagram: gesuita.euclideo
   linkedin: pietro-verzelli-809939142
-  pinterest:
-  rss: # just type anything here for a working RSS icon
-  twitter: FascinoMaligno
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+  bluesky:          # handle, e.g. name.bsky.social
 
+# CV: a path in this repo (e.g. /files/cv.pdf; the nav and home links appear only once that
+# file exists) or a full https:// URL (always shown). Empty: no CV link.
+cv: /files/Pietro_Verzelli_CV.pdf
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account

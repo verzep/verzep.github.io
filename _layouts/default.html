@@ -18,19 +18,18 @@
   <body>
     <div class="wrapper-masthead">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="{{ site.name }}" /></a>
+        <header class="masthead">
+          <a href="{{ site.baseurl }}/" class="site-brand">
+            <img class="site-avatar" src="{{ site.avatar }}" alt="" width="44" height="44" />
+            <span class="site-name">{{ site.name }}</span>
+          </a>
 
-          <div class="site-info">
-            <p class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></p>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav class="site-nav">
-            <a href="{{ site.baseurl }}/Blog" {% if page.title == 'Blog' %}class="active"{% endif %}>Blog</a>
-            <a href="{{ site.baseurl }}/research" {% if page.title == 'Research' %}class="active"{% endif %}>Research</a>
-            <a href="{{ site.baseurl }}/publications" {% if page.title == 'Publications' %}class="active"{% endif %}>Publications</a>
-            <a href="{{ site.baseurl }}/teaching" {% if page.title == 'Teaching' %}class="active"{% endif %}>Teaching</a>
+          <nav class="site-nav" aria-label="Main">
+            <a href="{{ site.baseurl }}/Blog/" {% if page.url == '/Blog/' or page.layout == 'post' %}class="active" aria-current="page"{% endif %}>Blog</a>
+            <a href="{{ site.baseurl }}/research/" {% if page.url == '/research/' %}class="active" aria-current="page"{% endif %}>Research</a>
+            <a href="{{ site.baseurl }}/publications/" {% if page.url == '/publications/' %}class="active" aria-current="page"{% endif %}>Publications</a>
+            <a href="{{ site.baseurl }}/teaching/" {% if page.url == '/teaching/' %}class="active" aria-current="page"{% endif %}>Teaching</a>
+            {% include cv-link.html %}
           </nav>
         </header>
       </div>
@@ -43,7 +42,7 @@
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
-          {% include svg-icons.html %}
+          {% include social-links.html %}
           <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name }}. Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>; site code under the <a href="https://github.com/verzep/verzep.github.io/blob/main/LICENSE">MIT License</a>.</p>
         </footer>
       </div>

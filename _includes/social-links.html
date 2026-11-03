@@ -1,0 +1,11 @@
+{%- comment -%}
+Footer icons from site.profiles in _config.yml; an empty key hides its icon.
+{%- endcomment -%}
+{%- assign pr = site.profiles -%}
+<nav class="social-links" aria-label="Profiles">
+{%- if pr.google_scholar %}<a href="https://scholar.google.com/citations?user={{ pr.google_scholar }}" aria-label="Google Scholar" title="Google Scholar">{% include icon.html name="scholar" size="22" %}</a>{% endif -%}
+{%- if pr.orcid %}<a href="https://orcid.org/{{ pr.orcid }}" aria-label="ORCID" title="ORCID">{% include icon.html name="orcid" size="22" %}</a>{% endif -%}
+{%- if pr.github %}<a href="https://github.com/{{ pr.github }}" aria-label="GitHub" title="GitHub">{% include icon.html name="github" size="22" %}</a>{% endif -%}
+{%- if pr.linkedin %}<a href="https://www.linkedin.com/in/{{ pr.linkedin }}" aria-label="LinkedIn" title="LinkedIn">{% include icon.html name="linkedin" size="22" %}</a>{% endif -%}
+{%- if pr.bluesky %}<a href="https://bsky.app/profile/{{ pr.bluesky }}" aria-label="Bluesky" title="Bluesky">{% include icon.html name="bluesky" size="22" %}</a>{% endif -%}
+</nav>

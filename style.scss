@@ -252,105 +252,74 @@ hr {
 .wrapper-masthead {
   margin-bottom: 50px;
   border-bottom: 2px solid var(--surface-alt);
+
+  @include mobile {
+    margin-bottom: 24px;
+  }
 }
 
 .masthead {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 20px 0;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 18px 0;
 
   @include mobile {
-    display: block;
-    text-align: center;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 14px 0;
+  }
+}
+
+// Avatar + name, one line
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 
 .site-avatar {
-  flex: 0 0 70px;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-  border-radius: 8px;
-  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
   box-shadow: 0 2px 8px var(--shadow);
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto 15px;
-  }
-
-  img {
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.site-info {
-  flex: 1 1 auto;
-  min-width: 0;
-
-  @include mobile {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 .site-name {
-  margin: 0;
-  color: var(--text);
-  cursor: pointer;
+  color: var(--accent);
   font-family: $helveticaNeue;
   font-weight: 600;
-  font-size: 28px;
-  letter-spacing: 1px;
-  line-height: 1.7;
-
-  @include mobile {
-    line-height: 1.4;
-  }
-
-  a {
-    color: var(--accent);
-  }
-}
-
-.site-description {
-  margin: -5px 0 0 0;
-  color: var(--muted);
-  font-size: 16px;
-
-  @include mobile {
-    margin: 3px 0;
-  }
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .site-nav {
-  margin-top: 0;
-  margin-left: auto;
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.25rem 1.4rem;
   font-family: $helveticaNeue;
   font-size: 16px;
 
   @include mobile {
-    margin-top: 15px;
-    margin-left: 0;
-    display: block;
-    font-size: 16px;
+    justify-content: center;
+    gap: 0.25rem 1rem;
   }
 
   a {
-    margin-left: 25px;
     color: var(--text);
-    text-align: right;
     font-weight: 500;
     letter-spacing: 0.5px;
-    padding-bottom: 5px;
+    padding: 4px 0 3px;
     border-bottom: 3px solid transparent;
     transition: all 0.2s ease;
 
@@ -363,11 +332,6 @@ hr {
       color: var(--accent);
       border-bottom-color: var(--accent-2);
       text-decoration: none;
-    }
-
-    @include mobile {
-      margin: 0 10px;
-      display: inline-block;
     }
   }
 }
@@ -869,6 +833,23 @@ footer {
   text-align: center;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+
+  a {
+    color: var(--muted);
+    display: inline-flex;
+    padding: 4px;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
 .copyright {
   margin: 1rem 0 0 0;
   font-size: 0.9rem;
@@ -878,7 +859,6 @@ footer {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
-@import "svg-icons";
 
 // Inline SVG icons (_includes/icon.html)
 .inline-icon {
