@@ -1,0 +1,60 @@
+# "Current work" cards: home page and Research page (_includes/projects.html).
+# Fields:
+#   title:     card title
+#   text:      one or two short sentences
+#   image:     optional, path in the repo (e.g. /images/research/x.webp); white-background schematics
+#              work best (shown in a 16:9 box, scaled to fit)
+#   image_alt: description of the image (required when image is set)
+#   image_credit: optional credit / source line under the card text (HTML allowed, e.g. a link)
+#   icon:      shown when there is no image; one of neurons, manifold, pulse, synapse, compass
+#   link:      optional, a site path (/Blog/...) or a full URL; makes the title a link
+#
+# Example:
+# - title: Project name
+#   text: What the project asks, in one sentence.
+#   image: /images/research/project.webp
+#   image_alt: Schematic of ...
+#   image_credit: 'Adapted from <a href="https://doi.org/...">Author et al., 2020</a>' 
+#   link: https://doi.org/...
+
+- title: Shared neural activity across worms
+  text: Aligning the neural activity of different worms through their posture. Posture weights learned on other worms carry over to a held-out worm, with no behavior labels and no neuron identities.
+  image: /images/research/worm-alignment.webp
+  image_alt: "Schematic of canonical correlation analysis between posture and neurons: within one worm, then posture weights fitted on other worms carried over to a held-out worm, with no trials, behavior labels or neuron identities"
+  icon: neurons
+  link:   # TODO Pietro: optional link (preprint, poster, blog post)
+
+- title: Seizure prediction from behavior
+  text: Non-invasive early detection of seizures from behavior. Video is turned into pose estimates, paired with EEG annotations, and a neural network forecasts upcoming seizures.
+  image: /images/research/seizure-prediction.webp
+  image_alt: "Pipeline schematic: video recording of a mouse, pose estimation, a dataset annotated from EEG, a neural network on real-time input, and a seizure forecast, with seizure intervention as an outlook"
+  icon: pulse
+  link:   # TODO Pietro: optional link
+
+- title: Behavioral manifolds
+  text: Reducing high-dimensional behavioral recordings to low-dimensional representations that describe actions and decisions directly from observation.
+  image: /images/research/behavioral-manifolds.webp
+  image_alt: "Meme: astronauts saying 'Wait, it's all behavior?' and 'Always has been', over published neural-manifold examples from worms and mice"
+  image_credit:   # TODO Pietro: source of the neural-manifold figure under the meme (shown as a small credit line)
+  icon: manifold
+  link:   # TODO Pietro: optional link
+
+- title: Synchronization in reservoir computing
+  text: A reservoir is driven by a chaotic source, then run autonomously on its own output. Does it stay on the attractor or leave it?
+  image: /images/research/reservoir-sync.webp
+  image_alt: "Schematic in two steps: a chaotic source drives a recurrent reservoir whose readout is fitted; then the source is disconnected and the decoded output is fed back, so the reservoir either stays on the attractor or leaves it"
+  icon: synapse
+  link:   # TODO Pietro: optional link
+
+- title: Stable learning and plasticity
+  text: Biologically plausible models of learning and plasticity, and how learning stays stable and adaptive in the presence of stochasticity, variability and environmental change.
+  image:  # TODO Pietro: image to be chosen
+  icon: synapse
+  link:   # TODO Pietro: optional link (e.g. the astrocytes / D-serine paper?)
+
+# TODO Pietro: Research.md only mentions this in one phrase; expand the text or remove the card.
+- title: Communication during navigation
+  text: Models of communication between agents during navigation.
+  image:
+  icon: compass
+  link:

@@ -337,51 +337,253 @@ hr {
 }
 
 // ==================
-// HERO SECTION
+// HOME: INTRO (photo, name, role, statement, links)
 // ==================
 
-.hero-section {
-  text-align: center;
-  padding: 3rem 0;
+.intro {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.25rem;
+  align-items: center;
+  margin: 0 0 2rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+}
+
+.intro-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface);
+  box-shadow: 0 10px 24px var(--shadow-strong);
+
+  @include mobile {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+}
+
+.intro-name {
+  margin: 0 0 0.25rem;
+  font-size: 2.6rem;
+  line-height: 1.15;
+
+  @include mobile {
+    font-size: 2.1rem;
+  }
+}
+
+.intro-role {
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.intro-affiliation {
+  color: var(--muted);
+}
+
+.intro-statement {
+  margin: 0 0 1.1rem;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--text);
+  border-left: 3px solid var(--accent-2);
+  padding-left: 0.8rem;
+
+  @include mobile {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+.profile-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  @include mobile {
+    justify-content: center;
+  }
+}
+
+.link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--border-accent);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--link);
+  font-size: 0.92rem;
+  font-weight: 500;
+  position: relative;
+
+  &:hover, &:focus-within {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  // the email pill wraps a script-built link: make the whole pill clickable
+  a {
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.bio {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface-alt);
+  border-radius: 10px;
+
+  p {
+    margin: 0 0 0.8rem;
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mobile {
+    padding: 1rem 1.1rem;
+  }
+}
+
+// ==================
+// CURRENT WORK (project cards, _includes/projects.html)
+// ==================
+
+.projects {
   margin-bottom: 3rem;
 
-  @include mobile {
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
 }
 
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
+  gap: 1.25rem;
+}
 
-  @include mobile {
-    font-size: 2rem;
+.project-card {
+  --card-accent: var(--accent);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--card-accent);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:nth-child(even) {
+    --card-accent: var(--accent-2);
   }
-}
-
-.hero-tagline {
-  font-size: 1.25rem;
-  color: var(--muted);
-  margin-bottom: 2rem;
-  font-weight: 400;
-}
-
-.hero-cta {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: var(--accent-2);
-  color: var(--on-accent);
-  font-weight: 600;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  text-decoration: none;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 6px 16px var(--shadow-strong);
   }
+}
+
+.project-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--card-accent);
+  // no image: tinted panel with a large icon
+  background:
+    radial-gradient(circle at 30% 25%, var(--surface) 0, transparent 60%),
+    var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+
+  svg {
+    opacity: 0.85;
+  }
+
+  // schematics have white backgrounds: keep them on white in dark mode too
+  &.has-image {
+    background: #ffffff;
+  }
+
+  // absolutely placed so a tall image cannot stretch the 16:9 box
+  img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    object-fit: contain;
+  }
+}
+
+.project-body {
+  padding: 0.9rem 1.1rem 1rem;
+}
+
+.project-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--text);
+
+  a {
+    color: inherit;
+  }
+}
+
+.project-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.project-credit {
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+// inside the Research page panel
+.entry .projects {
+  margin-bottom: 2rem;
+}
+
+.all-posts-link {
+  margin: 0;
+  font-weight: 600;
 }
 
 // ==================
@@ -553,53 +755,6 @@ hr {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-// ==================
-// ABOUT SECTION
-// ==================
-
-.about-section {
-  margin-top: 2.5rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--surface-grad) 0%, var(--surface-alt) 100%);
-  border: 1px solid var(--border-accent);
-  border-radius: 14px;
-  box-shadow: 0 6px 20px var(--shadow);
-
-  p {
-    max-width: 68ch;
-    line-height: 1.75;
-    margin: 0 0 1rem 0;
-    color: var(--text);
-  }
-
-  h3 {
-    margin-top: 1.75rem;
-    margin-bottom: 0.6rem;
-    color: var(--accent);
-    font-size: 1.2rem;
-  }
-
-  @include mobile {
-    padding: 1.25rem;
-  }
-}
-
-.home-profile-pic {
-  float: right;
-  border-radius: 12px;
-  margin: 0 0 1rem 1.5rem;
-  box-shadow: 0 10px 24px var(--shadow-strong);
-  border: 3px solid var(--surface);
-  max-width: 280px;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto 1.2rem;
-    max-width: 220px;
-  }
 }
 
 // ==================
@@ -865,3 +1020,4 @@ footer {
   display: inline-block;
   vertical-align: -0.125em;
 }
+

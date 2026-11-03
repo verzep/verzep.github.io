@@ -1,0 +1,11 @@
+{%- comment -%}
+Link row under the home-page hero: Google Scholar, ORCID, GitHub, email.
+Profile IDs come from site.profiles in _config.yml (empty keys are hidden).
+{%- endcomment -%}
+{%- assign pr = site.profiles -%}
+<ul class="profile-links">
+{%- if pr.google_scholar %}<li><a class="link-pill" href="https://scholar.google.com/citations?user={{ pr.google_scholar }}">{% include icon.html name="scholar" %} Google Scholar</a></li>{% endif -%}
+{%- if pr.orcid %}<li><a class="link-pill" href="https://orcid.org/{{ pr.orcid }}">{% include icon.html name="orcid" %} ORCID</a></li>{% endif -%}
+{%- if pr.github %}<li><a class="link-pill" href="https://github.com/{{ pr.github }}">{% include icon.html name="github" %} GitHub</a></li>{% endif -%}
+<li><span class="link-pill link-pill-email">{% include icon.html name="mail" %} {% include email.html label="Email" %}</span></li>
+</ul>

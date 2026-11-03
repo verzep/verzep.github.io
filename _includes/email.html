@@ -1,8 +1,8 @@
 {%- comment -%}
 Email link assembled in the browser, so the plain address is not in the HTML source.
-Usage: {% include email.html %} (once or more per page).
+Usage: {% include email.html %} (once or more per page). label="Email" shows that text instead of the address.
 {%- endcomment -%}
-<span class="js-email"><noscript>pietro dot verzelli at gmail dot com</noscript></span>
+<span class="js-email"{% if include.label %} data-label="{{ include.label }}"{% endif %}><noscript>pietro dot verzelli at gmail dot com</noscript></span>
 <script>
   (function () {
     var addr = ["pietro", "verzelli"].join(".") + String.fromCharCode(64) + ["gmail", "com"].join(".");
@@ -11,7 +11,7 @@ Usage: {% include email.html %} (once or more per page).
     Array.prototype.forEach.call(spans, function (span) {
       var a = document.createElement("a");
       a.href = "mailto:" + addr;
-      a.textContent = addr;
+      a.textContent = span.getAttribute("data-label") || addr;
       span.appendChild(a);
       span.setAttribute("data-done", "");
     });

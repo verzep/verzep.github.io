@@ -2,25 +2,32 @@
 layout: default
 ---
 
-<div class="hero-section">
-  <h1 class="hero-title">{{ site.name }}</h1>
-  <p class="hero-tagline">{{ site.description }}</p>
-  <a href="{{ site.baseurl }}/Blog" class="hero-cta">Read Latest Posts</a>
-</div>
+<section class="intro" aria-label="About">
+  <img class="intro-photo" src="{{ '/images/propic.jpg' | relative_url }}" alt="Portrait of {{ site.name }}" width="220" height="220" />
+  <div class="intro-text">
+    <h1 class="intro-name">{{ site.name }}</h1>
+    <p class="intro-role">{{ site.description }}<br /><span class="intro-affiliation">{{ site.affiliation }}</span></p>
+    {% if page.statement %}<p class="intro-statement">{{ page.statement }}</p>{% endif %}
+    {% include profile-links.html %}
+  </div>
+</section>
+
+<section class="bio">
+  {{ content }}
+</section>
+
+{% include projects.html heading="Current work" %}
 
 <section class="news-section">
   {% include news.html %}
 </section>
 
 <section class="featured-posts-section">
-  <h2>Featured Posts</h2>
+  <h2>Latest posts</h2>
   <div class="featured-posts-grid">
-    {% for post in site.posts limit: 6 %}
+    {% for post in site.posts limit: 4 %}
       {% include featured-post-card.html post=post %}
     {% endfor %}
   </div>
-</section>
-
-<section class="about-section">
-  {{ content }}
+  <p class="all-posts-link"><a href="{{ '/Blog/' | relative_url }}">All posts →</a></p>
 </section>

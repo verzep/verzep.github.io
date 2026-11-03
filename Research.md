@@ -4,6 +4,10 @@ title: Research
 permalink: /research/
 ---
 
+{% include projects.html heading="Current work" %}
+
+<h2>Research themes</h2>
+
 <div class="research-intro">
 	<p>As a computational neuroscientist, I study how neural activity gives rise to behavior. My work is mainly theoretical, but it is closely connected to experimental data, with the goal of developing models that are both mathematically principled and biologically meaningful.</p>
 	<p>If you are interested in my research, please feel free to get in touch. The lab I am part of is often looking for motivated people at different career stages, from internships to postdoctoral positions.</p>
