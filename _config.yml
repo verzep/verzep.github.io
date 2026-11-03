@@ -11,7 +11,7 @@ title: Pietro Verzelli
 description: Senior Research Fellow in Computational Neuroscience
 
 # Affiliation, shown under the name on the home page
-affiliation: 'Zimmer Lab, University of Vienna<br /><a href="http://www.tchumatchenko.de/">Tchumatchenko Lab</a>, University Hospital Bonn' # HTML allowed
+affiliation: '<a href="https://neurodevbio.univie.ac.at/zimmer-research/">Zimmer Lab</a>, University of Vienna<br /><a href="http://www.tchumatchenko.de/">Tchumatchenko Lab</a>, University Hospital Bonn' # HTML allowed
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/33346242?v=4
