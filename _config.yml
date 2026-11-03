@@ -4,6 +4,8 @@
 
 # Name of your site (displayed in the header)
 name: Pietro Verzelli
+# Same as name; used by jekyll-seo-tag, jekyll-feed and github-metadata
+title: Pietro Verzelli
 
 # Short bio or description (displayed in the header)
 description: Post-Doc Researcher in Computational Neuroscience
@@ -60,10 +62,39 @@ markdown:    kramdown
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-# Use the following plug-ins
+# Use the following plug-ins (all whitelisted on GitHub Pages)
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag # <title>-independent meta tags: description, canonical, Open Graph, Twitter card
+
+# jekyll-seo-tag
+author:
+  name: Pietro Verzelli
+  twitter: FascinoMaligno
+twitter:
+  username: FascinoMaligno
+  card: summary
+social:
+  name: Pietro Verzelli
+  links:
+    - https://github.com/verzep
+    - https://www.linkedin.com/in/pietro-verzelli-809939142
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/propic.jpg
+  # Unrelated to the academic site: keep the pages but leave them out of the sitemap
+  - scope:
+      path: "vino"
+    values:
+      sitemap: false
+  - scope:
+      path: "R-BCM.html"
+    values:
+      sitemap: false
 
 # Exclude these files from your production _site
 exclude:
