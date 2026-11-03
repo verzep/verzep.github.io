@@ -19,15 +19,11 @@ avatar: https://avatars.githubusercontent.com/u/33346242?v=4
 # Profile IDs for the home-page link row and the footer icons (_includes/profile-links.html,
 # _includes/social-links.html). A key left empty hides its link.
 profiles:
-  google_scholar:   # the user=... value of the Google Scholar profile URL
-  orcid:            # e.g. 0000-0000-0000-0000
+  google_scholar: 90ff92UAAAAJ   # the user=... value of the Google Scholar profile URL
+  orcid: 0000-0003-4470-7182
   github: verzep
   linkedin: pietro-verzelli-809939142
   bluesky:          # handle, e.g. name.bsky.social
-
-# CV: a path in this repo (e.g. /files/cv.pdf; the nav and home links appear only once that
-# file exists) or a full https:// URL (always shown). Empty: no CV link.
-cv: /files/Pietro_Verzelli_CV.pdf
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
