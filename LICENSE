@@ -1,6 +1,16 @@
+This repository is under two licenses:
+
+- Code and theme (layouts, includes, Sass/CSS, scripts, configuration): the MIT
+  License below.
+- Content (blog posts, pages, images and other media): Creative Commons
+  Attribution 4.0 International (CC BY 4.0), see LICENSE-content.
+
+-------------------------------------------------------------------------------
+
 The MIT License (MIT)
 
 Copyright (c) 2015 Barry Clark
+Copyright (c) 2021-2026 Pietro Verzelli (modifications)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

@@ -25,3 +25,10 @@ LANG=C.UTF-8 bundle exec jekyll serve --drafts   # also render posts in _drafts/
 `Invalid US-ASCII character`. Changes to `_config.yml` need a server restart.
 
 To follow a new Pages release: `bundle update github-pages`.
+
+## License
+
+- Code and theme (layouts, includes, styles, configuration): MIT, see [LICENSE](LICENSE)
+  (original Jekyll Now theme by Barry Clark, modifications by Pietro Verzelli).
+- Content (posts, pages, images): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), see
+  [LICENSE-content](LICENSE-content).

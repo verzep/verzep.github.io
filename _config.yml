@@ -101,6 +101,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - LICENSE-content
   - README.md
   - CNAME
   - CLAUDE.md
