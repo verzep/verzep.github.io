@@ -33,7 +33,7 @@
 
 - id: manifolds
   title: Behavioral manifolds
-  text: Reducing high-dimensional behavioral recordings to low-dimensional representations that describe actions and decisions directly from observation.
+  text: Many neural manifolds may simply reflect behavior. Comparing neural and behavioral manifolds across worms, monkeys and rats.
   image: /images/research/behavioral-manifolds.webp
   image_alt: "Meme: astronauts saying 'Wait, it's all behavior?' and 'Always has been', over published neural-manifold examples from worms and mice"
   icon: manifold
