@@ -24,7 +24,7 @@ A UTF-8 locale is required (the Sass step aborts under `LANG=C`). `_config.yml` 
 - **Blog posts**: `_posts/YYYY-MM-DD-Title.md`, front matter `layout: post`, `title`, `tags`, `category`. Permalinks are `/:title/` (date not in URL). Post cards (home page, `/Blog/`, "More Posts" under each post) show the first paragraph as the excerpt, truncated to 30 words, so posts should open with a prose paragraph rather than code.
 - **Drafts**: `_drafts/` (unpublished, no date in filename).
 - **Post images**: `images/<YYYY-MM-DD>/...`, referenced as `{{ site.url }}/images/<date>/file.png`.
-- **Math**: MathJax 2.7.9 (cdnjs) is loaded site-wide in `_includes/script.html`; use `$...$` inline and `$$...$$` display, AMS equation numbering enabled. Footnotes use kramdown syntax (`[^1]`).
+- **Math**: MathJax 2.7.9 (cdnjs, `_includes/script.html`) is loaded only on posts whose rendered content contains math (`$`, or the `\(`/`\[` kramdown makes from `$$`) and on pages with `math: true` in front matter (`math: false` turns it off; see `_layouts/default.html`); use `$...$` inline and `$$...$$` display, AMS equation numbering enabled. Footnotes use kramdown syntax (`[^1]`).
 - **Home page**: `index.html` (bio text) uses `_layouts/home.html`, which renders the hero, the News section (`_includes/news.html`, from `_data/news.yaml`, sorted by date) and the 6 latest posts.
 - **Data-driven pages**: `publications.html`, `teaching.html` and the news list render from YAML in `_data/` (`publications.yaml`, `talks.yaml`, `courses.yaml`, `news.yaml`). To add a paper/talk/course/news item, edit the YAML rather than the HTML.
 - **Nav** links are hardcoded in `_layouts/default.html` (Blog, Research, Publications, Teaching). `about.md` still exists but is not linked.

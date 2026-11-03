@@ -47,8 +47,17 @@
           <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
         </footer>
       </div>
-      <!-- Script -->
+      {% comment %}
+        MathJax only where needed: math: true in front matter, or a post whose rendered content has math
+        ($...$, or kramdown's \( \) / \[ \] output for $$...$$). math: false turns it off.
+      {% endcomment %}
+      {% assign has_math = false %}
+      {% if page.layout == 'post' and page.math != false %}
+        {% if content contains '$' or content contains '\(' or content contains '\[' %}{% assign has_math = true %}{% endif %}
+      {% endif %}
+      {% if page.math == true or has_math %}
       {% include script.html %}
+      {% endif %}
 
     </div>
 
