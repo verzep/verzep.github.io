@@ -260,9 +260,10 @@ hr {
 
 .masthead {
   display: flex;
+  flex-wrap: wrap; // if brand + nav don't fit, the whole nav moves below, never a single link
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem 1rem;
   padding: 18px 0;
 
   @include mobile {
@@ -304,7 +305,8 @@ hr {
 .site-nav {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   justify-content: flex-end;
   gap: 0.25rem 1.4rem;
   font-family: $helveticaNeue;
@@ -313,6 +315,15 @@ hr {
   @include mobile {
     justify-content: center;
     gap: 0.25rem 1rem;
+  }
+
+  // very narrow phones: tighter, and wrap only as a last resort
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.8rem;
+    font-size: 15px;
+
+    a { letter-spacing: 0; }
   }
 
   a {
