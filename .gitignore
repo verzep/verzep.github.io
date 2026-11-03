@@ -11,5 +11,6 @@ vendor/bundle/
 # OS/editor noise
 .DS_Store
 *.swp
+.*.swp
 *.swo
 *~
