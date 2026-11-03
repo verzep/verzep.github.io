@@ -64,14 +64,12 @@ plugins:
 # jekyll-seo-tag
 author:
   name: Pietro Verzelli
-  twitter: FascinoMaligno
-twitter:
-  username: FascinoMaligno
-  card: summary_large_image
 social:
   name: Pietro Verzelli
   links:
     - https://github.com/verzep
+    - https://scholar.google.com/citations?user=90ff92UAAAAJ
+    - https://orcid.org/0000-0003-4470-7182
     - https://www.linkedin.com/in/pietro-verzelli-809939142
 
 defaults:

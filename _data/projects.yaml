@@ -36,7 +36,6 @@
   text: Reducing high-dimensional behavioral recordings to low-dimensional representations that describe actions and decisions directly from observation.
   image: /images/research/behavioral-manifolds.webp
   image_alt: "Meme: astronauts saying 'Wait, it's all behavior?' and 'Always has been', over published neural-manifold examples from worms and mice"
-  image_credit:   # TODO Pietro: source of the neural-manifold figure under the meme (shown as a small credit line)
   icon: manifold
 
 - id: reservoir
