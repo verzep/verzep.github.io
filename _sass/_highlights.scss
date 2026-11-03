@@ -23,9 +23,9 @@ pre.highlight {
 
 p code.highlighter-rouge,
 p kbd {
-    color: #cc6666;
+    color: var(--code-inline-text);
     font-size: 1rem;
-    background-color: lighten($tea, 5%);
+    background-color: var(--code-inline-bg);
     padding: 2px 4px;
     border-radius: 2px;
     word-break: break-word;
@@ -94,7 +94,7 @@ figure pre {
 .highlight,
 .highlight pre,
 .highlight table {
-    background: $code-bg;
+    background: var(--code-bg);
     color: $gray-200;
     border-radius: 4px;
     font-size: 1rem;

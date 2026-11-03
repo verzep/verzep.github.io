@@ -9,6 +9,64 @@
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
+/****************/
+/* COLOR TOKENS */
+/****************/
+
+// All colors live here. Dark mode follows the visitor's system setting
+// (prefers-color-scheme) and only redefines these properties.
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;              // page background
+  --surface: #ffffff;         // cards
+  --surface-alt: #f8f9fa;     // tinted panels (news, pages), "cream"
+  --surface-grad: #ffffff;    // start of the page-panel gradient
+  --footer-bg: #f5f5f5;
+  --text: #2c3e50;
+  --muted: #5f6b76;
+  --border: #e9ecef;
+  --border-accent: rgba(23, 162, 184, 0.2);
+  --accent: #17a2b8;          // teal: headings, accents
+  --accent-2: #ff6b6b;        // coral: badges, underlines
+  --link: #11808f;            // teal dark enough for body-text links
+  --on-accent: #ffffff;       // text on teal/coral badges
+  --shadow: rgba(44, 62, 80, 0.08);
+  --shadow-strong: rgba(44, 62, 80, 0.16);
+  --code-bg: #2e3e4e;
+  --code-text: #a7ecee;
+  --code-inline-bg: #f3f2ef;
+  --code-inline-text: #c0392b;
+  --img-dim: 1;
+}
+
+@mixin dark-tokens {
+  --bg: #0f1720;
+  --surface: #16212c;
+  --surface-alt: #1a2531;
+  --surface-grad: #16212c;
+  --footer-bg: #0b1219;
+  --text: #e2e8ee;
+  --muted: #a5b1bd;
+  --border: #2a3846;
+  --border-accent: rgba(43, 184, 204, 0.25);
+  --accent: #2bb8cc;
+  --accent-2: #ff7b7b;
+  --link: #5fd0e0;
+  --on-accent: #0f1720;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --shadow-strong: rgba(0, 0, 0, 0.5);
+  --code-bg: #0b131b;
+  --code-text: #a7ecee;
+  --code-inline-bg: #223140;
+  --code-inline-text: #ff9e9e;
+  --img-dim: 0.92;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { @include dark-tokens; }
+}
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -18,21 +76,22 @@ html {
 }
 
 body {
-	background: $white;
+  background: var(--bg);
   font: 18px/1.4 $helvetica;
-  color: $darkText;
+  color: var(--text);
 }
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
+  max-width: 860px;
+  padding: 0 16px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkText;
+  color: var(--text);
   font-weight: bold;
 
   line-height: 1.7;
@@ -46,28 +105,36 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5rem;
-  color: $teal;
+  color: var(--accent);
   a {
     color: inherit;
+  }
+
+  @include mobile {
+    font-size: 2rem;
   }
 }
 
 h2 {
   font-size: 2rem;
-  color: $teal;
-  border-bottom: 3px solid $coral;
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent-2);
   padding-bottom: 0.5rem;
   display: inline-block;
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
 }
 
 h3 {
   font-size: 1.5rem;
-  color: $darkText;
+  color: var(--text);
 }
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: var(--muted);
 }
 
 p {
@@ -76,12 +143,12 @@ p {
 }
 
 a {
-  color: $teal;
+  color: var(--link);
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   transition: all 0.2s ease;
   &:hover, &:active {
-    color: $coral;
+    color: var(--accent-2);
     text-decoration: underline;
   }
 }
@@ -117,6 +184,29 @@ strong, b {
 
 img {
   max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  display: block;
+  overflow-x: auto;
+
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.7rem;
+  }
+
+  th {
+    background: var(--surface-alt);
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -126,17 +216,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: var(--muted);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $white;
-  background: $teal;
+  color: #fff;
+  background: #17a2b8;
 }
 ::selection {
-  color: $white;
-  background: $teal;
+  color: #fff;
+  background: #17a2b8;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -161,7 +251,7 @@ img {
 
 .wrapper-masthead {
   margin-bottom: 50px;
-  border-bottom: 2px solid $cream;
+  border-bottom: 2px solid var(--surface-alt);
 }
 
 .masthead {
@@ -183,7 +273,7 @@ img {
   margin-right: 15px;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px var(--shadow);
 
   @include mobile {
     float: none;
@@ -211,7 +301,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkText;
+  color: var(--text);
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 600;
@@ -224,13 +314,13 @@ img {
   }
 
   a {
-    color: $teal;
+    color: var(--accent);
   }
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: var(--muted);
   font-size: 16px;
 
   @include mobile {
@@ -256,7 +346,7 @@ img {
 
   a {
     margin-left: 25px;
-    color: $darkText;
+    color: var(--text);
     text-align: right;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -265,13 +355,14 @@ img {
     transition: all 0.2s ease;
 
     &.active {
-      color: $teal;
-      border-bottom-color: $coral;
+      color: var(--accent);
+      border-bottom-color: var(--accent-2);
     }
 
     &:hover {
-      color: $teal;
-      border-bottom-color: $coral;
+      color: var(--accent);
+      border-bottom-color: var(--accent-2);
+      text-decoration: none;
     }
 
     @include mobile {
@@ -299,7 +390,7 @@ img {
 .hero-title {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: $teal;
+  color: var(--accent);
 
   @include mobile {
     font-size: 2rem;
@@ -308,7 +399,7 @@ img {
 
 .hero-tagline {
   font-size: 1.25rem;
-  color: $gray;
+  color: var(--muted);
   margin-bottom: 2rem;
   font-weight: 400;
 }
@@ -316,15 +407,14 @@ img {
 .hero-cta {
   display: inline-block;
   padding: 12px 30px;
-  background-color: $coral;
-  color: $white;
+  background-color: var(--accent-2);
+  color: var(--on-accent);
   font-weight: 600;
   border-radius: 5px;
   transition: all 0.3s ease;
   text-decoration: none;
 
   &:hover {
-    background-color: #ff5252;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
   }
@@ -358,27 +448,28 @@ img {
 }
 
 .featured-post-card {
-  background: $white;
-  border: 1px solid $borderGray;
-  border-left: 5px solid $teal;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
   border-radius: 6px;
   padding: 1.5rem;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-sizing: border-box;
 
   &:hover {
-    box-shadow: 0 6px 16px rgba(23, 162, 184, 0.15);
-    border-left-color: $coral;
+    box-shadow: 0 6px 16px var(--shadow-strong);
+    border-left-color: var(--accent-2);
     transform: translateY(-2px);
   }
 }
 
 .post-card-date {
   font-size: 0.85rem;
-  color: $white;
-  background-color: $coral;
+  color: var(--on-accent);
+  background-color: var(--accent-2);
   padding: 4px 10px;
   border-radius: 3px;
   display: inline-block;
@@ -390,19 +481,19 @@ img {
 .post-card-title {
   margin: 0.5rem 0 1rem 0;
   font-size: 1.25rem;
-  color: $darkText;
+  color: var(--text);
 
   a {
-    color: $darkText;
+    color: var(--text);
 
     &:hover {
-      color: $teal;
+      color: var(--accent);
     }
   }
 }
 
 .post-card-excerpt {
-  color: $gray;
+  color: var(--muted);
   margin: 0.75rem 0 1rem 0;
   line-height: 1.5;
   flex-grow: 1;
@@ -410,13 +501,13 @@ img {
 }
 
 .read-more-link {
-  color: $coral;
+  color: var(--accent-2);
   font-weight: 600;
   margin-top: auto;
   transition: all 0.2s ease;
 
   &:hover {
-    color: $teal;
+    color: var(--accent);
   }
 }
 
@@ -425,11 +516,11 @@ img {
 // ==================
 
 .news-section {
-  background: $cream;
+  background: var(--surface-alt);
   border-radius: 8px;
   padding: 2rem;
   margin-bottom: 3rem;
-  border-left: 5px solid $teal;
+  border-left: 5px solid var(--accent);
 
   @include mobile {
     padding: 1.5rem;
@@ -437,8 +528,8 @@ img {
 
   h2 {
     margin-top: 0;
-    color: $teal;
-    border-bottom: 3px solid $coral;
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent-2);
     padding-bottom: 0.5rem;
     display: inline-block;
     font-size: 1.75rem;
@@ -458,23 +549,23 @@ img {
 }
 
 .news-card {
-  background: $white;
-  border: 1px solid $borderGray;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
   padding: 1.25rem;
-  border-left: 4px solid $coral;
+  border-left: 4px solid var(--accent-2);
   transition: all 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.15);
+    box-shadow: 0 4px 12px var(--shadow-strong);
     transform: translateY(-2px);
   }
 }
 
 .news-card-date {
   display: inline-block;
-  background-color: $coral;
-  color: $white;
+  background-color: var(--accent-2);
+  color: var(--on-accent);
   padding: 4px 10px;
   border-radius: 3px;
   font-size: 0.8rem;
@@ -489,13 +580,13 @@ img {
 .news-card-title {
   margin: 0.5rem 0 0.5rem 0;
   font-size: 1.1rem;
-  color: $darkText;
+  color: var(--text);
   font-weight: 600;
 }
 
 .news-card-desc {
   margin: 0.5rem 0 0 0;
-  color: $gray;
+  color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -507,22 +598,22 @@ img {
 .about-section {
   margin-top: 2.5rem;
   padding: 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, $cream 100%);
-  border: 1px solid rgba(23, 162, 184, 0.2);
+  background: linear-gradient(135deg, var(--surface-grad) 0%, var(--surface-alt) 100%);
+  border: 1px solid var(--border-accent);
   border-radius: 14px;
-  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.08);
+  box-shadow: 0 6px 20px var(--shadow);
 
   p {
     max-width: 68ch;
     line-height: 1.75;
     margin: 0 0 1rem 0;
-    color: $darkText;
+    color: var(--text);
   }
 
   h3 {
     margin-top: 1.75rem;
     margin-bottom: 0.6rem;
-    color: $teal;
+    color: var(--accent);
     font-size: 1.2rem;
   }
 
@@ -535,8 +626,8 @@ img {
   float: right;
   border-radius: 12px;
   margin: 0 0 1rem 1.5rem;
-  box-shadow: 0 10px 24px rgba(44, 62, 80, 0.16);
-  border: 3px solid #ffffff;
+  box-shadow: 0 10px 24px var(--shadow-strong);
+  border: 3px solid var(--surface);
   max-width: 280px;
 
   @include mobile {
@@ -552,11 +643,11 @@ img {
 // ==================
 
 .page {
-  background: linear-gradient(135deg, #ffffff 0%, $cream 100%);
-  border: 1px solid rgba(23, 162, 184, 0.2);
+  background: linear-gradient(135deg, var(--surface-grad) 0%, var(--surface-alt) 100%);
+  border: 1px solid var(--border-accent);
   border-radius: 14px;
   padding: 1.8rem 2rem;
-  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.08);
+  box-shadow: 0 6px 20px var(--shadow);
 
   @include mobile {
     padding: 1.2rem;
@@ -586,22 +677,22 @@ img {
 }
 
 .research-card {
-  background: #ffffff;
-  border: 1px solid rgba(23, 162, 184, 0.2);
-  border-left: 4px solid $teal;
+  background: var(--surface);
+  border: 1px solid var(--border-accent);
+  border-left: 4px solid var(--accent);
   border-radius: 10px;
   padding: 1rem 1rem 0.6rem;
-  box-shadow: 0 2px 10px rgba(44, 62, 80, 0.07);
+  box-shadow: 0 2px 10px var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(44, 62, 80, 0.12);
+    box-shadow: 0 6px 16px var(--shadow-strong);
   }
 
   h3 {
     margin-top: 0;
-    color: $teal;
+    color: var(--accent);
     font-size: 1.1rem;
   }
 }
@@ -626,7 +717,7 @@ img {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--border);
 }
 
 .posts > .post:last-child {
@@ -637,9 +728,9 @@ img {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 4px solid $teal;
+    border-left: 4px solid var(--accent);
     padding: 0.1em 1em;
-    color: $gray;
+    color: var(--muted);
     font-size: 22px;
     font-style: italic;
   }
@@ -659,7 +750,7 @@ img {
 // ==================
 
 .post-title {
-  color: $teal;
+  color: var(--accent);
   margin-bottom: 1.5rem;
 }
 
@@ -668,9 +759,9 @@ img {
   gap: 2rem;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid $cream;
+  border-bottom: 2px solid var(--surface-alt);
   font-size: 0.95rem;
-  color: $gray;
+  color: var(--muted);
 
   @include mobile {
     flex-direction: column;
@@ -692,17 +783,23 @@ img {
 .post-content {
   margin: 2rem 0;
   line-height: 1.8;
+  overflow-wrap: break-word;
+
+  img {
+    opacity: var(--img-dim);
+    border-radius: 4px;
+  }
 
   code {
-    background: $cream;
+    background: var(--code-inline-bg);
     padding: 2px 6px;
     border-radius: 3px;
-    color: $coral;
+    color: var(--code-inline-text);
     font-size: 0.9em;
   }
 
   pre {
-    background: #2e3e4e;
+    background: var(--code-bg);
     border-radius: 6px;
     padding: 1rem;
     overflow-x: auto;
@@ -710,16 +807,22 @@ img {
 
     code {
       background: none;
-      color: #a7ecee;
+      color: var(--code-text);
       padding: 0;
     }
+  }
+
+  // MathJax display equations: scroll instead of overflowing on narrow screens
+  .MathJax_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 }
 
 .post-footer {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 2px solid $cream;
+  border-top: 2px solid var(--surface-alt);
 }
 
 // ==================
@@ -729,10 +832,10 @@ img {
 .related-posts {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 2px solid $cream;
+  border-top: 2px solid var(--surface-alt);
 
   h3 {
-    color: $teal;
+    color: var(--accent);
     margin-bottom: 1.5rem;
   }
 }
@@ -757,8 +860,8 @@ img {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 2px solid $cream;
-  background-color: #f5f5f5;
+  border-top: 2px solid var(--surface-alt);
+  background-color: var(--footer-bg);
 }
 
 footer {
@@ -769,7 +872,7 @@ footer {
 .copyright {
   margin: 1rem 0 0 0;
   font-size: 0.9rem;
-  color: $gray;
+  color: var(--muted);
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
