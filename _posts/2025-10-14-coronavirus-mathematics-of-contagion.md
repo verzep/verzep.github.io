@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Coronavirus: The Mathematics of Contagion"
+image: /images/2025-10-15/sir_R0_vs_mu.png
 tags: epidemiology, dynamical_systems
 category: dynamical_systems
 ---

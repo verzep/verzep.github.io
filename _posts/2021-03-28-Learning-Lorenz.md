@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Learning the Lorenz System"
+image: /images/2021-03-28/output_7_0.png
 tags: dynamical_systems, neural_networks
 category: machine_learning
 ---

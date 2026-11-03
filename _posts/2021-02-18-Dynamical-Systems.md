@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Dynamical Systems
+image: /images/2021-02-18/trajectory.jpg
 tags: dynamical_systems, maps
 category: dynamical_systems
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Butterfly Effect"
+image: /images/2021-02-25/output_15_0.png
 tags: dynamical_systems, lorenz, chaos
 category: dynamical_systems
 ---

@@ -67,7 +67,7 @@ author:
   twitter: FascinoMaligno
 twitter:
   username: FascinoMaligno
-  card: summary
+  card: summary_large_image
 social:
   name: Pietro Verzelli
   links:
@@ -75,10 +75,12 @@ social:
     - https://www.linkedin.com/in/pietro-verzelli-809939142
 
 defaults:
+  # Social preview (og:image / twitter:image): a 1200x630 card made from images/propic.jpg.
+  # Posts with a lead figure override it with `image:` in their front matter.
   - scope:
       path: ""
     values:
-      image: /images/propic.jpg
+      image: /images/og-card.jpg
   # Unrelated to the academic site: keep the pages but leave them out of the sitemap
   - scope:
       path: "vino"
