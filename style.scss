@@ -1125,3 +1125,108 @@ footer {
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
+
+// ==================
+// LORENZ DEMO (assets/js/lorenz-demo.js, Butterfly Effect post)
+// ==================
+
+.lorenz-demo {
+  margin: 1.5rem 0 2rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow);
+  line-height: 1.4;
+  overflow: hidden;
+
+  canvas {
+    display: block;
+    max-width: 100%;
+  }
+
+  button {
+    font: inherit;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid var(--accent);
+    background: var(--surface);
+    color: var(--link);
+    cursor: pointer;
+
+    &:first-child {
+      background: var(--accent);
+      color: var(--on-accent);
+    }
+  }
+
+  @include mobile {
+    padding: 0.6rem;
+  }
+}
+
+.lorenz-figure {
+  // canvases size themselves to this box (ResizeObserver on .lorenz-demo)
+  width: 100%;
+}
+
+.lorenz-legend,
+.lorenz-readout {
+  margin: 0.4rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.lorenz-readout {
+  font-variant-numeric: tabular-nums;
+}
+
+.lorenz-key {
+  display: inline-block;
+  margin-right: 1rem;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    margin-right: 0.35em;
+    vertical-align: -0.05em;
+  }
+}
+
+.lorenz-key-a::before { background: var(--accent); }
+.lorenz-key-b::before { background: var(--accent-2); }
+
+.lorenz-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+  gap: 0.6rem 1.25rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.lorenz-slider {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1rem 0.5rem;
+
+  output {
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+  }
+
+  input {
+    grid-column: 1 / -1;
+    width: 100%;
+    accent-color: var(--accent);
+  }
+}
+
+.lorenz-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+}

@@ -4,6 +4,8 @@ title: "The Butterfly Effect"
 image: /images/2021-02-25/output_15_0.png
 tags: dynamical_systems, lorenz, chaos
 category: dynamical_systems
+scripts:
+  - /assets/js/lorenz-demo.js
 ---
 
 
@@ -345,6 +347,14 @@ plt.show()
 
 At first the two systems seem to stay quite close to each other, but after a while their distance increases and they end up having two really different orbits.  
 How is this possible?
+
+### Try it yourself
+
+Below, the same system runs in your browser: two trajectories start from the same point on the attractor, except for a tiny shift in $x$. Move the sliders to change the parameters and the initial separation, and watch how long the two stay together.
+
+<div class="lorenz-demo" data-lorenz>
+  <noscript>This interactive figure needs JavaScript.</noscript>
+</div>
 
 ## Sensitive dependence on initial conditions
 
