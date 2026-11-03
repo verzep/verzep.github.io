@@ -29,7 +29,7 @@ A UTF-8 locale is required (the Sass step aborts under `LANG=C`). `_config.yml` 
 - **Data-driven pages**: `publications.html`, `teaching.html` and the news list render from YAML in `_data/` (`publications.yaml`, `talks.yaml`, `courses.yaml`, `news.yaml`). To add a paper/talk/course/news item, edit the YAML rather than the HTML.
 - **Nav** links are hardcoded in `_layouts/default.html` (Blog, Research, Publications, Teaching). `about.md` still exists but is not linked.
 - **Styling**: `style.scss` (most of the redesign CSS) imports partials from `_sass/` (`_variables.scss` for colors/fonts).
-- Site-wide config (name, avatar, social links, Google Analytics ID, `exclude` list) is in `_config.yml`. New root-level files that should not be published (like this one) must be added to `exclude`.
+- Site-wide config (name, avatar, social links, plugins, `exclude` list) is in `_config.yml`. New root-level files that should not be published (like this one) must be added to `exclude`.
 
 ## Gotchas
 
