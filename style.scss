@@ -771,3 +771,9 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+// Inline SVG icons (_includes/icon.html)
+.inline-icon {
+  display: inline-block;
+  vertical-align: -0.125em;
+}

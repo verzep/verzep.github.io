@@ -18,16 +18,16 @@ permalink: /publications/
     <br>
     {% endif %}
     {% if pub.code %} 
-    <a href="{{pub.code}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code</a>&nbsp;
+    <a href="{{pub.code}}" style="border-bottom: none;">{% include icon.html name="github" %} Code</a>&nbsp;
     {% endif %}
     {% if pub.code-tf %} 
-    <a href="{{pub.code-tf}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code (TF/Keras)</a>&nbsp;
+    <a href="{{pub.code-tf}}" style="border-bottom: none;">{% include icon.html name="github" %} Code (TF/Keras)</a>&nbsp;
     {% endif %}
     {% if pub.code-pt %} 
-    <a href="{{pub.code-pt}}" style="border-bottom: none;"><i class="fab fa-github"></i> Code (PyTorch)</a>&nbsp;
+    <a href="{{pub.code-pt}}" style="border-bottom: none;">{% include icon.html name="github" %} Code (PyTorch)</a>&nbsp;
     {% endif %}
     {% if pub.doi %} 
-    <a href="{{pub.doi}}" style="border-bottom: none;"><i class="fas fa-book"></i> DOI</a>&nbsp;
+    <a href="{{pub.doi}}" style="border-bottom: none;">{% include icon.html name="book" %} DOI</a>&nbsp;
     {% endif %}
     <br><br>
 {% endfor %}
