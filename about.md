@@ -8,7 +8,7 @@ permalink: /about/
 ### Pietro Verzelli
 
 
-![]({{ site.url }}/images/propic.jpg)
+![Pietro Verzelli]({{ site.url }}/images/propic.jpg)
 
 I am a Senior Research Fellow in Prof. Manuel Zimmer's lab at the University of Vienna, supported by the Argelander Mobility Grant, working on computational and theoretical neuroscience. My research focuses on the relationship between neural activity and behaviors. Before moving to Vienna, I was a postdoc in [Tatjana Tchumatchenko's Lab](http://www.tchumatchenko.de/) in Bonn.
 
