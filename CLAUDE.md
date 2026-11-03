@@ -34,4 +34,6 @@ A UTF-8 locale is required (the Sass step aborts under `LANG=C`). `_config.yml` 
 ## Gotchas
 
 - Some posts are exported from Jupyter notebooks (e.g. `_drafts/TCN.md`). Raw nbconvert output has no YAML front matter (Jekyll will not render a post without it) and uses relative image paths that break under the `/:title/` permalink, so add the `---` front matter block and rewrite images to `{{ site.url }}/images/<date>/...`.
-- `vino/` (personal Italian wine notes) and `R-BCM.html` (a large standalone exported notebook) are unrelated to the blog; leave them alone unless asked.
+- `vino/` (personal Italian wine notes) and `R-BCM.html` (a ~5.8 MB standalone NetLogo Web export of a BCM model, no front matter, not linked from anywhere) are unrelated to the blog; leave them alone unless asked. Both are kept out of the sitemap by `defaults` in `_config.yml` (`sitemap: false`).
+- SEO/meta tags come from `jekyll-seo-tag` (`{% seo title=false %}` in `_includes/meta.html`; the `<title>` is built in `_layouts/default.html`). The email link is `_includes/email.html` (assembled by JS so the address is not in the HTML; keep `<` and `&` out of that script, kramdown escapes them in `.md` pages).
+- Licenses: code/theme MIT (`LICENSE`), content CC BY 4.0 (`LICENSE-content`), stated in the footer too.
