@@ -48,5 +48,6 @@
 - id: plasticity
   title: Stable learning and plasticity
   text: Biologically plausible models of learning and plasticity, and how learning stays stable and adaptive in the presence of stochasticity, variability and environmental change.
-  image:  # TODO Pietro: image to be chosen
+  image: /images/research/plasticity.webp
+  image_alt: "BCM-style plasticity rule: weight change against postsynaptic activity for two thresholds; below the threshold synapses depress, above it they potentiate, and astrocytes (D-serine) tune where the threshold sits"
   icon: synapse
